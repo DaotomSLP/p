@@ -1,0 +1,13 @@
+D:\work\windowbase\Vanpheng Jewelry\Vanpheng Jewelry\bin\Debug\Vanpheng Jewelry.exe.config
+D:\work\windowbase\Vanpheng Jewelry\Vanpheng Jewelry\bin\Debug\Vanpheng Jewelry.exe
+D:\work\windowbase\Vanpheng Jewelry\Vanpheng Jewelry\bin\Debug\Vanpheng Jewelry.pdb
+D:\work\windowbase\Vanpheng Jewelry\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.csprojAssemblyReference.cache
+D:\work\windowbase\Vanpheng Jewelry\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Home.resources
+D:\work\windowbase\Vanpheng Jewelry\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Properties.Resources.resources
+D:\work\windowbase\Vanpheng Jewelry\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.csproj.GenerateResource.cache
+D:\work\windowbase\Vanpheng Jewelry\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.exe
+D:\work\windowbase\Vanpheng Jewelry\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.pdb
+D:\work\windowbase\Vanpheng Jewelry\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Sale.resources
+D:\work\windowbase\Vanpheng Jewelry\Vanpheng Jewelry\bin\Debug\Database1.mdf
+D:\work\windowbase\Vanpheng Jewelry\Vanpheng Jewelry\bin\Debug\Database1_log.ldf
+D:\work\windowbase\Vanpheng Jewelry\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmProduct.resources
