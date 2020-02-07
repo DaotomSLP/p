@@ -73,7 +73,7 @@ namespace Vanpheng_Jewelry
             GroupBox group = new GroupBox();
             group.Text = product[1].ToString();
             group.Font = new Font("Phetsarath OT", 12, FontStyle.Bold);
-            group.Height = 200;
+            group.Height = 240;
             group.Name = product[0].ToString();
             group.ForeColor = Color.Crimson;
 
@@ -85,7 +85,7 @@ namespace Vanpheng_Jewelry
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderSize = 0;
             button.BackColor = Color.Salmon;
-            button.Height = 40;
+            button.Height = 30;
             button.Dock = DockStyle.Bottom;
 
             NumericUpDown numeric = new NumericUpDown();
@@ -101,8 +101,15 @@ namespace Vanpheng_Jewelry
             picture.Image = Image.FromFile("D:\\work\\windowbase\\Vanpheng Jewelry\\image\\pp.jfif");
             picture.Dock = DockStyle.Left;
 
+            Label label = new Label();
+            label.Text = "ນ້ຳໜັກ";
+            label.ForeColor = Color.Crimson;
+            label.Font = new Font("Phetsarath OT", 12, FontStyle.Bold);
+            label.Dock = DockStyle.Bottom;
+
             group.Controls.Add(numeric);
             group.Controls.Add(picture);
+            group.Controls.Add(label);
             group.Controls.Add(button);
             flowLayoutPanel1.Controls.Add(group);
 

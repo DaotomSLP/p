@@ -45,6 +45,12 @@ namespace Vanpheng_Jewelry
                 form.Close();
             }
         }
+        private void showForm(Form form)
+        {
+            form.MdiParent = this;
+            form.Location = new Point(0, 0);
+            form.Show();
+        }
         private void hideAndShowSubMenu(Panel panel)
         {
             if(panel.Visible == true)
@@ -63,11 +69,44 @@ namespace Vanpheng_Jewelry
         private void btnAddProd_Click(object sender, EventArgs e)
         {
             hideForm();
-
             frmProduct frmProduct = new frmProduct();
-            frmProduct.MdiParent = this;
-            frmProduct.Location = new Point(0, 0);
-            frmProduct.Show();
+            showForm(frmProduct);
+
+        }
+
+        private void btnAddProdType_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            frmProdType frmProdType = new frmProdType();
+            showForm(frmProdType);
+        }
+
+        private void btnAddPrice_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            frmDailyPrice frmDailyPrice = new frmDailyPrice();
+            showForm(frmDailyPrice);
+        }
+
+        private void btnAddSupp_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            frmSupplier frmSupplier = new frmSupplier();
+            showForm(frmSupplier);
+        }
+
+        private void btnAddCus_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            frmCustomer frmCustomer = new frmCustomer();
+            showForm(frmCustomer);
+        }
+
+        private void btnAddEmp_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            frmEmployee frmEmployee = new frmEmployee();
+            showForm(frmEmployee);
         }
     }
 }
