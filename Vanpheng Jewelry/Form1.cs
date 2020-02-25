@@ -55,17 +55,28 @@ namespace Vanpheng_Jewelry
         {
             if(panel.Visible == true)
             {
+                panelDataSubMenu.Visible = false;
+                panelUpdateDataSubMenu.Visible = false;
                 panel.Visible = false;
             }else
             {
+                panelDataSubMenu.Visible = false;
+                panelUpdateDataSubMenu.Visible = false;
                 panel.Visible = true;
             }
         }
         private void btnData_Click(object sender, EventArgs e)
         {
+        
+            globalVal.FrmDataStatus = "insert";
             hideAndShowSubMenu(panelDataSubMenu);
         }
 
+        private void btnUpdateData_Click(object sender, EventArgs e)
+        {
+            globalVal.FrmDataStatus= "update";
+            hideAndShowSubMenu(panelUpdateDataSubMenu);
+        }
         private void btnAddProd_Click(object sender, EventArgs e)
         {
             hideForm();
@@ -103,6 +114,48 @@ namespace Vanpheng_Jewelry
         }
 
         private void btnAddEmp_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            frmEmployee frmEmployee = new frmEmployee();
+            showForm(frmEmployee);
+        }
+
+        private void btnEditProd_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            frmProduct frmProduct = new frmProduct();
+            showForm(frmProduct);
+        }
+
+        private void btnEditProdT_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            frmProdType frmProdType = new frmProdType();
+            showForm(frmProdType);
+        }
+
+        private void btnEditPrice_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            frmDailyPrice frmDailyPrice = new frmDailyPrice();
+            showForm(frmDailyPrice);
+        }
+
+        private void btnEditSupp_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            frmSupplier frmSupplier = new frmSupplier();
+            showForm(frmSupplier);
+        }
+
+        private void btnEditCus_Click(object sender, EventArgs e)
+        {
+            hideForm();
+            frmCustomer frmCustomer = new frmCustomer();
+            showForm(frmCustomer);
+        }
+
+        private void btnEditEmp_Click(object sender, EventArgs e)
         {
             hideForm();
             frmEmployee frmEmployee = new frmEmployee();

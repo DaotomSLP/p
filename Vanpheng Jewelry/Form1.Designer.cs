@@ -31,7 +31,20 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnReport = new System.Windows.Forms.Button();
+            this.panelUpdateDataSubMenu = new System.Windows.Forms.Panel();
+            this.btnEditEmp = new System.Windows.Forms.Button();
+            this.btnEditCus = new System.Windows.Forms.Button();
+            this.btnEditSupp = new System.Windows.Forms.Button();
+            this.btnEditPrice = new System.Windows.Forms.Button();
+            this.btnEditProdT = new System.Windows.Forms.Button();
+            this.btnEditProd = new System.Windows.Forms.Button();
+            this.btnUpdateData = new System.Windows.Forms.Button();
             this.panelDataSubMenu = new System.Windows.Forms.Panel();
+            this.btnAddEmp = new System.Windows.Forms.Button();
+            this.btnAddCus = new System.Windows.Forms.Button();
+            this.btnAddSupp = new System.Windows.Forms.Button();
+            this.btnAddPrice = new System.Windows.Forms.Button();
+            this.btnAddProdType = new System.Windows.Forms.Button();
             this.btnAddProd = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnData = new System.Windows.Forms.Button();
@@ -46,12 +59,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.btnAddProdType = new System.Windows.Forms.Button();
-            this.btnAddPrice = new System.Windows.Forms.Button();
-            this.btnAddSupp = new System.Windows.Forms.Button();
-            this.btnAddCus = new System.Windows.Forms.Button();
-            this.btnAddEmp = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panelUpdateDataSubMenu.SuspendLayout();
             this.panelDataSubMenu.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -61,6 +70,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.panel1.Controls.Add(this.btnReport);
+            this.panel1.Controls.Add(this.panelUpdateDataSubMenu);
+            this.panel1.Controls.Add(this.btnUpdateData);
             this.panel1.Controls.Add(this.panelDataSubMenu);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnData);
@@ -79,14 +90,168 @@
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnReport.Location = new System.Drawing.Point(0, 461);
+            this.btnReport.Location = new System.Drawing.Point(0, 758);
             this.btnReport.Name = "btnReport";
             this.btnReport.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnReport.Size = new System.Drawing.Size(217, 40);
-            this.btnReport.TabIndex = 17;
+            this.btnReport.TabIndex = 22;
             this.btnReport.Text = "ລາຍງານ";
             this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReport.UseVisualStyleBackColor = false;
+            // 
+            // panelUpdateDataSubMenu
+            // 
+            this.panelUpdateDataSubMenu.BackColor = System.Drawing.Color.Goldenrod;
+            this.panelUpdateDataSubMenu.Controls.Add(this.btnEditEmp);
+            this.panelUpdateDataSubMenu.Controls.Add(this.btnEditCus);
+            this.panelUpdateDataSubMenu.Controls.Add(this.btnEditSupp);
+            this.panelUpdateDataSubMenu.Controls.Add(this.btnEditPrice);
+            this.panelUpdateDataSubMenu.Controls.Add(this.btnEditProdT);
+            this.panelUpdateDataSubMenu.Controls.Add(this.btnEditProd);
+            this.panelUpdateDataSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelUpdateDataSubMenu.Location = new System.Drawing.Point(0, 501);
+            this.panelUpdateDataSubMenu.Name = "panelUpdateDataSubMenu";
+            this.panelUpdateDataSubMenu.Size = new System.Drawing.Size(217, 257);
+            this.panelUpdateDataSubMenu.TabIndex = 21;
+            this.panelUpdateDataSubMenu.Visible = false;
+            // 
+            // btnEditEmp
+            // 
+            this.btnEditEmp.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditEmp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEditEmp.FlatAppearance.BorderSize = 0;
+            this.btnEditEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditEmp.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditEmp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditEmp.Location = new System.Drawing.Point(0, 200);
+            this.btnEditEmp.Name = "btnEditEmp";
+            this.btnEditEmp.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEditEmp.Size = new System.Drawing.Size(217, 40);
+            this.btnEditEmp.TabIndex = 20;
+            this.btnEditEmp.Text = "ຂໍ້ມູນພະນັກງານ";
+            this.btnEditEmp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditEmp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditEmp.UseVisualStyleBackColor = false;
+            this.btnEditEmp.Click += new System.EventHandler(this.btnEditEmp_Click);
+            // 
+            // btnEditCus
+            // 
+            this.btnEditCus.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditCus.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEditCus.FlatAppearance.BorderSize = 0;
+            this.btnEditCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditCus.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditCus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditCus.Location = new System.Drawing.Point(0, 160);
+            this.btnEditCus.Name = "btnEditCus";
+            this.btnEditCus.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEditCus.Size = new System.Drawing.Size(217, 40);
+            this.btnEditCus.TabIndex = 19;
+            this.btnEditCus.Text = "ຂໍ້ມູນລູກຄ້າ";
+            this.btnEditCus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditCus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditCus.UseVisualStyleBackColor = false;
+            this.btnEditCus.Click += new System.EventHandler(this.btnEditCus_Click);
+            // 
+            // btnEditSupp
+            // 
+            this.btnEditSupp.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditSupp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEditSupp.FlatAppearance.BorderSize = 0;
+            this.btnEditSupp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditSupp.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditSupp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditSupp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditSupp.Location = new System.Drawing.Point(0, 120);
+            this.btnEditSupp.Name = "btnEditSupp";
+            this.btnEditSupp.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEditSupp.Size = new System.Drawing.Size(217, 40);
+            this.btnEditSupp.TabIndex = 18;
+            this.btnEditSupp.Text = "ຂໍ້ມູນຜູ້ສະໜອງ";
+            this.btnEditSupp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditSupp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditSupp.UseVisualStyleBackColor = false;
+            this.btnEditSupp.Click += new System.EventHandler(this.btnEditSupp_Click);
+            // 
+            // btnEditPrice
+            // 
+            this.btnEditPrice.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditPrice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEditPrice.FlatAppearance.BorderSize = 0;
+            this.btnEditPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditPrice.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditPrice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditPrice.Location = new System.Drawing.Point(0, 80);
+            this.btnEditPrice.Name = "btnEditPrice";
+            this.btnEditPrice.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEditPrice.Size = new System.Drawing.Size(217, 40);
+            this.btnEditPrice.TabIndex = 17;
+            this.btnEditPrice.Text = "ຂໍ້ມູນລາຄາປະຈຳວັນ";
+            this.btnEditPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditPrice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditPrice.UseVisualStyleBackColor = false;
+            this.btnEditPrice.Click += new System.EventHandler(this.btnEditPrice_Click);
+            // 
+            // btnEditProdT
+            // 
+            this.btnEditProdT.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditProdT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEditProdT.FlatAppearance.BorderSize = 0;
+            this.btnEditProdT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditProdT.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditProdT.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditProdT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditProdT.Location = new System.Drawing.Point(0, 40);
+            this.btnEditProdT.Name = "btnEditProdT";
+            this.btnEditProdT.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEditProdT.Size = new System.Drawing.Size(217, 40);
+            this.btnEditProdT.TabIndex = 16;
+            this.btnEditProdT.Text = "ຂໍ້ມູນປະເພດສິນຄ້າ";
+            this.btnEditProdT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditProdT.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditProdT.UseVisualStyleBackColor = false;
+            this.btnEditProdT.Click += new System.EventHandler(this.btnEditProdT_Click);
+            // 
+            // btnEditProd
+            // 
+            this.btnEditProd.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditProd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEditProd.FlatAppearance.BorderSize = 0;
+            this.btnEditProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditProd.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditProd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEditProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditProd.Location = new System.Drawing.Point(0, 0);
+            this.btnEditProd.Name = "btnEditProd";
+            this.btnEditProd.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnEditProd.Size = new System.Drawing.Size(217, 40);
+            this.btnEditProd.TabIndex = 15;
+            this.btnEditProd.Text = "ຂໍ້ມູນສິນຄ້າ";
+            this.btnEditProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditProd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEditProd.UseVisualStyleBackColor = false;
+            this.btnEditProd.Click += new System.EventHandler(this.btnEditProd_Click);
+            // 
+            // btnUpdateData
+            // 
+            this.btnUpdateData.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdateData.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUpdateData.FlatAppearance.BorderSize = 0;
+            this.btnUpdateData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateData.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateData.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUpdateData.Location = new System.Drawing.Point(0, 461);
+            this.btnUpdateData.Name = "btnUpdateData";
+            this.btnUpdateData.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnUpdateData.Size = new System.Drawing.Size(217, 40);
+            this.btnUpdateData.TabIndex = 19;
+            this.btnUpdateData.Text = "ແກ້ໄຂຂໍ້ມູນ";
+            this.btnUpdateData.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateData.UseVisualStyleBackColor = false;
+            this.btnUpdateData.Click += new System.EventHandler(this.btnUpdateData_Click);
             // 
             // panelDataSubMenu
             // 
@@ -103,6 +268,106 @@
             this.panelDataSubMenu.Size = new System.Drawing.Size(217, 257);
             this.panelDataSubMenu.TabIndex = 16;
             this.panelDataSubMenu.Visible = false;
+            // 
+            // btnAddEmp
+            // 
+            this.btnAddEmp.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddEmp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddEmp.FlatAppearance.BorderSize = 0;
+            this.btnAddEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddEmp.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAddEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddEmp.Location = new System.Drawing.Point(0, 200);
+            this.btnAddEmp.Name = "btnAddEmp";
+            this.btnAddEmp.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnAddEmp.Size = new System.Drawing.Size(217, 40);
+            this.btnAddEmp.TabIndex = 20;
+            this.btnAddEmp.Text = "ຂໍ້ມູນພະນັກງານ";
+            this.btnAddEmp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddEmp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddEmp.UseVisualStyleBackColor = false;
+            this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
+            // 
+            // btnAddCus
+            // 
+            this.btnAddCus.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddCus.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddCus.FlatAppearance.BorderSize = 0;
+            this.btnAddCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCus.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAddCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddCus.Location = new System.Drawing.Point(0, 160);
+            this.btnAddCus.Name = "btnAddCus";
+            this.btnAddCus.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnAddCus.Size = new System.Drawing.Size(217, 40);
+            this.btnAddCus.TabIndex = 19;
+            this.btnAddCus.Text = "ຂໍ້ມູນລູກຄ້າ";
+            this.btnAddCus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddCus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddCus.UseVisualStyleBackColor = false;
+            this.btnAddCus.Click += new System.EventHandler(this.btnAddCus_Click);
+            // 
+            // btnAddSupp
+            // 
+            this.btnAddSupp.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddSupp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddSupp.FlatAppearance.BorderSize = 0;
+            this.btnAddSupp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddSupp.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSupp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAddSupp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddSupp.Location = new System.Drawing.Point(0, 120);
+            this.btnAddSupp.Name = "btnAddSupp";
+            this.btnAddSupp.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnAddSupp.Size = new System.Drawing.Size(217, 40);
+            this.btnAddSupp.TabIndex = 18;
+            this.btnAddSupp.Text = "ຂໍ້ມູນຜູ້ສະໜອງ";
+            this.btnAddSupp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddSupp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddSupp.UseVisualStyleBackColor = false;
+            this.btnAddSupp.Click += new System.EventHandler(this.btnAddSupp_Click);
+            // 
+            // btnAddPrice
+            // 
+            this.btnAddPrice.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddPrice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddPrice.FlatAppearance.BorderSize = 0;
+            this.btnAddPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPrice.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAddPrice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddPrice.Location = new System.Drawing.Point(0, 80);
+            this.btnAddPrice.Name = "btnAddPrice";
+            this.btnAddPrice.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnAddPrice.Size = new System.Drawing.Size(217, 40);
+            this.btnAddPrice.TabIndex = 17;
+            this.btnAddPrice.Text = "ຂໍ້ມູນລາຄາປະຈຳວັນ";
+            this.btnAddPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddPrice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddPrice.UseVisualStyleBackColor = false;
+            this.btnAddPrice.Click += new System.EventHandler(this.btnAddPrice_Click);
+            // 
+            // btnAddProdType
+            // 
+            this.btnAddProdType.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddProdType.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddProdType.FlatAppearance.BorderSize = 0;
+            this.btnAddProdType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddProdType.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProdType.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnAddProdType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddProdType.Location = new System.Drawing.Point(0, 40);
+            this.btnAddProdType.Name = "btnAddProdType";
+            this.btnAddProdType.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnAddProdType.Size = new System.Drawing.Size(217, 40);
+            this.btnAddProdType.TabIndex = 16;
+            this.btnAddProdType.Text = "ຂໍ້ມູນປະເພດສິນຄ້າ";
+            this.btnAddProdType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddProdType.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddProdType.UseVisualStyleBackColor = false;
+            this.btnAddProdType.Click += new System.EventHandler(this.btnAddProdType_Click);
             // 
             // btnAddProd
             // 
@@ -207,9 +472,9 @@
             this.Brand.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Brand.Location = new System.Drawing.Point(12, 26);
             this.Brand.Name = "Brand";
-            this.Brand.Size = new System.Drawing.Size(185, 60);
+            this.Brand.Size = new System.Drawing.Size(146, 60);
             this.Brand.TabIndex = 1;
-            this.Brand.Text = "TYNA\r\ninspiration of silk";
+            this.Brand.Text = "VANHPHENG\r\nJewelry";
             this.Brand.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -286,106 +551,6 @@
             this.menuStrip2.TabIndex = 6;
             this.menuStrip2.Text = "menuStrip2";
             // 
-            // btnAddProdType
-            // 
-            this.btnAddProdType.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddProdType.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddProdType.FlatAppearance.BorderSize = 0;
-            this.btnAddProdType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddProdType.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProdType.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAddProdType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddProdType.Location = new System.Drawing.Point(0, 40);
-            this.btnAddProdType.Name = "btnAddProdType";
-            this.btnAddProdType.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnAddProdType.Size = new System.Drawing.Size(217, 40);
-            this.btnAddProdType.TabIndex = 16;
-            this.btnAddProdType.Text = "ຂໍ້ມູນປະເພດສິນຄ້າ";
-            this.btnAddProdType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddProdType.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddProdType.UseVisualStyleBackColor = false;
-            this.btnAddProdType.Click += new System.EventHandler(this.btnAddProdType_Click);
-            // 
-            // btnAddPrice
-            // 
-            this.btnAddPrice.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddPrice.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddPrice.FlatAppearance.BorderSize = 0;
-            this.btnAddPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPrice.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAddPrice.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddPrice.Location = new System.Drawing.Point(0, 80);
-            this.btnAddPrice.Name = "btnAddPrice";
-            this.btnAddPrice.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnAddPrice.Size = new System.Drawing.Size(217, 40);
-            this.btnAddPrice.TabIndex = 17;
-            this.btnAddPrice.Text = "ຂໍ້ມູນລາຄາປະຈຳວັນ";
-            this.btnAddPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddPrice.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddPrice.UseVisualStyleBackColor = false;
-            this.btnAddPrice.Click += new System.EventHandler(this.btnAddPrice_Click);
-            // 
-            // btnAddSupp
-            // 
-            this.btnAddSupp.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddSupp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddSupp.FlatAppearance.BorderSize = 0;
-            this.btnAddSupp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddSupp.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddSupp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAddSupp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddSupp.Location = new System.Drawing.Point(0, 120);
-            this.btnAddSupp.Name = "btnAddSupp";
-            this.btnAddSupp.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnAddSupp.Size = new System.Drawing.Size(217, 40);
-            this.btnAddSupp.TabIndex = 18;
-            this.btnAddSupp.Text = "ຂໍ້ມູນຜູ້ສະໜອງ";
-            this.btnAddSupp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddSupp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddSupp.UseVisualStyleBackColor = false;
-            this.btnAddSupp.Click += new System.EventHandler(this.btnAddSupp_Click);
-            // 
-            // btnAddCus
-            // 
-            this.btnAddCus.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddCus.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddCus.FlatAppearance.BorderSize = 0;
-            this.btnAddCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCus.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAddCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddCus.Location = new System.Drawing.Point(0, 160);
-            this.btnAddCus.Name = "btnAddCus";
-            this.btnAddCus.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnAddCus.Size = new System.Drawing.Size(217, 40);
-            this.btnAddCus.TabIndex = 19;
-            this.btnAddCus.Text = "ຂໍ້ມູນລູກຄ້າ";
-            this.btnAddCus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddCus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddCus.UseVisualStyleBackColor = false;
-            this.btnAddCus.Click += new System.EventHandler(this.btnAddCus_Click);
-            // 
-            // btnAddEmp
-            // 
-            this.btnAddEmp.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddEmp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddEmp.FlatAppearance.BorderSize = 0;
-            this.btnAddEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddEmp.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAddEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEmp.Location = new System.Drawing.Point(0, 200);
-            this.btnAddEmp.Name = "btnAddEmp";
-            this.btnAddEmp.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnAddEmp.Size = new System.Drawing.Size(217, 40);
-            this.btnAddEmp.TabIndex = 20;
-            this.btnAddEmp.Text = "ຂໍ້ມູນພະນັກງານ";
-            this.btnAddEmp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEmp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddEmp.UseVisualStyleBackColor = false;
-            this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,6 +568,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
+            this.panelUpdateDataSubMenu.ResumeLayout(false);
             this.panelDataSubMenu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -428,7 +594,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Panel panelDataSubMenu;
         private System.Windows.Forms.Button btnAddProd;
         private System.Windows.Forms.Button btnAddPrice;
@@ -436,6 +601,15 @@
         private System.Windows.Forms.Button btnAddCus;
         private System.Windows.Forms.Button btnAddSupp;
         private System.Windows.Forms.Button btnAddEmp;
+        private System.Windows.Forms.Button btnUpdateData;
+        private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.Panel panelUpdateDataSubMenu;
+        private System.Windows.Forms.Button btnEditEmp;
+        private System.Windows.Forms.Button btnEditCus;
+        private System.Windows.Forms.Button btnEditSupp;
+        private System.Windows.Forms.Button btnEditPrice;
+        private System.Windows.Forms.Button btnEditProdT;
+        private System.Windows.Forms.Button btnEditProd;
     }
 }
 
