@@ -50,7 +50,29 @@ namespace Vanpheng_Jewelry
             comm = new SqlCommand(Q, sqlConn);
             comm.ExecuteNonQuery();
         }
-
+        public string generateBillNo(string Q)
+        {
+            SqlConnection sqlConn = new SqlConnection(connstr);
+            sqlConn.Open();
+            comm = new SqlCommand(Q, sqlConn);
+            SqlDataReader dr = comm.ExecuteReader();
+            dataTable = new DataTable();
+            while (dr.Read())
+            {
+                Id = dr[0].ToString();
+            }
+            dr.Close();
+            int Plus;
+            try
+            {
+                Plus = Convert.ToInt32(Id) + 1;
+            }
+            catch
+            {
+                Plus = 100000;
+            }
+            return Plus.ToString();
+        }
         public string generateId(String Q)
         {
             SqlConnection sqlConn = new SqlConnection(connstr);

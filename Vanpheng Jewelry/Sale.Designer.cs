@@ -40,6 +40,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTatal = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
@@ -90,6 +91,7 @@
             this.button2.TabIndex = 13;
             this.button2.Text = "ພິມໃບບິນ";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnDelLi
             // 
@@ -188,6 +190,15 @@
             this.lblTatal.TabIndex = 23;
             this.lblTatal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(727, 15);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(227, 31);
+            this.txtId.TabIndex = 10;
+            this.txtId.Visible = false;
+            // 
             // Sale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,6 +213,7 @@
             this.Controls.Add(this.btnDelLi);
             this.Controls.Add(this.btnSearchbyNo);
             this.Controls.Add(this.btnSearchbyCate);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.txtSearch1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -230,5 +242,6 @@
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTatal;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

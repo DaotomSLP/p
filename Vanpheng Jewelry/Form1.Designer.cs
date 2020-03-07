@@ -48,6 +48,14 @@
             this.btnAddProd = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnData = new System.Windows.Forms.Button();
+            this.panOder = new System.Windows.Forms.Panel();
+            this.btnImpNew = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnOrder = new System.Windows.Forms.Button();
+            this.panBuy = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnBuy = new System.Windows.Forms.Button();
             this.btnMenuSale = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -62,6 +70,8 @@
             this.panel1.SuspendLayout();
             this.panelUpdateDataSubMenu.SuspendLayout();
             this.panelDataSubMenu.SuspendLayout();
+            this.panOder.SuspendLayout();
+            this.panBuy.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -75,6 +85,10 @@
             this.panel1.Controls.Add(this.panelDataSubMenu);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnData);
+            this.panel1.Controls.Add(this.panOder);
+            this.panel1.Controls.Add(this.btnOrder);
+            this.panel1.Controls.Add(this.panBuy);
+            this.panel1.Controls.Add(this.btnBuy);
             this.panel1.Controls.Add(this.btnMenuSale);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(0, -1);
@@ -90,7 +104,7 @@
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnReport.Location = new System.Drawing.Point(0, 758);
+            this.btnReport.Location = new System.Drawing.Point(0, 1002);
             this.btnReport.Name = "btnReport";
             this.btnReport.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnReport.Size = new System.Drawing.Size(217, 40);
@@ -109,7 +123,7 @@
             this.panelUpdateDataSubMenu.Controls.Add(this.btnEditProdT);
             this.panelUpdateDataSubMenu.Controls.Add(this.btnEditProd);
             this.panelUpdateDataSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelUpdateDataSubMenu.Location = new System.Drawing.Point(0, 501);
+            this.panelUpdateDataSubMenu.Location = new System.Drawing.Point(0, 745);
             this.panelUpdateDataSubMenu.Name = "panelUpdateDataSubMenu";
             this.panelUpdateDataSubMenu.Size = new System.Drawing.Size(217, 257);
             this.panelUpdateDataSubMenu.TabIndex = 21;
@@ -243,7 +257,7 @@
             this.btnUpdateData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateData.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateData.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUpdateData.Location = new System.Drawing.Point(0, 461);
+            this.btnUpdateData.Location = new System.Drawing.Point(0, 705);
             this.btnUpdateData.Name = "btnUpdateData";
             this.btnUpdateData.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnUpdateData.Size = new System.Drawing.Size(217, 40);
@@ -263,7 +277,7 @@
             this.panelDataSubMenu.Controls.Add(this.btnAddProdType);
             this.panelDataSubMenu.Controls.Add(this.btnAddProd);
             this.panelDataSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDataSubMenu.Location = new System.Drawing.Point(0, 204);
+            this.panelDataSubMenu.Location = new System.Drawing.Point(0, 448);
             this.panelDataSubMenu.Name = "panelDataSubMenu";
             this.panelDataSubMenu.Size = new System.Drawing.Size(217, 257);
             this.panelDataSubMenu.TabIndex = 16;
@@ -413,9 +427,9 @@
             this.btnData.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnData.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnData.Location = new System.Drawing.Point(0, 164);
+            this.btnData.Location = new System.Drawing.Point(0, 408);
             this.btnData.Name = "btnData";
-            this.btnData.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnData.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnData.Size = new System.Drawing.Size(217, 40);
             this.btnData.TabIndex = 10;
             this.btnData.Text = "ເພີ່ມຂໍ້ມູນ";
@@ -423,6 +437,149 @@
             this.btnData.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnData.UseVisualStyleBackColor = false;
             this.btnData.Click += new System.EventHandler(this.btnData_Click);
+            // 
+            // panOder
+            // 
+            this.panOder.BackColor = System.Drawing.Color.Goldenrod;
+            this.panOder.Controls.Add(this.btnImpNew);
+            this.panOder.Controls.Add(this.button2);
+            this.panOder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panOder.Location = new System.Drawing.Point(0, 326);
+            this.panOder.Name = "panOder";
+            this.panOder.Size = new System.Drawing.Size(217, 82);
+            this.panOder.TabIndex = 26;
+            this.panOder.Visible = false;
+            // 
+            // btnImpNew
+            // 
+            this.btnImpNew.BackColor = System.Drawing.Color.Transparent;
+            this.btnImpNew.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnImpNew.FlatAppearance.BorderSize = 0;
+            this.btnImpNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImpNew.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImpNew.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnImpNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImpNew.Location = new System.Drawing.Point(0, 40);
+            this.btnImpNew.Name = "btnImpNew";
+            this.btnImpNew.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnImpNew.Size = new System.Drawing.Size(217, 40);
+            this.btnImpNew.TabIndex = 16;
+            this.btnImpNew.Text = "ສິນຄ້າໃໝ່";
+            this.btnImpNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImpNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnImpNew.UseVisualStyleBackColor = false;
+            this.btnImpNew.Click += new System.EventHandler(this.btnImpNew_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(217, 40);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "ສິນຄ້າເກົ່າ";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.Color.Transparent;
+            this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrder.Location = new System.Drawing.Point(0, 286);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnOrder.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnOrder.Size = new System.Drawing.Size(217, 40);
+            this.btnOrder.TabIndex = 24;
+            this.btnOrder.Text = "ນຳເຂົ້າ";
+            this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
+            // panBuy
+            // 
+            this.panBuy.BackColor = System.Drawing.Color.Goldenrod;
+            this.panBuy.Controls.Add(this.button5);
+            this.panBuy.Controls.Add(this.button6);
+            this.panBuy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panBuy.Location = new System.Drawing.Point(0, 204);
+            this.panBuy.Name = "panBuy";
+            this.panBuy.Size = new System.Drawing.Size(217, 82);
+            this.panBuy.TabIndex = 25;
+            this.panBuy.Visible = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(0, 40);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(217, 40);
+            this.button5.TabIndex = 16;
+            this.button5.Text = "ສິນຄ້າຈາກຮ້ານອື່ນ";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(0, 0);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(217, 40);
+            this.button6.TabIndex = 15;
+            this.button6.Text = "ສິນຄ້າຂອງຮ້ານ";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // btnBuy
+            // 
+            this.btnBuy.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBuy.FlatAppearance.BorderSize = 0;
+            this.btnBuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuy.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuy.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBuy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuy.Location = new System.Drawing.Point(0, 164);
+            this.btnBuy.Name = "btnBuy";
+            this.btnBuy.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnBuy.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnBuy.Size = new System.Drawing.Size(217, 40);
+            this.btnBuy.TabIndex = 23;
+            this.btnBuy.Text = "ຮັບຊື້";
+            this.btnBuy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // btnMenuSale
             // 
@@ -435,7 +592,7 @@
             this.btnMenuSale.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuSale.Location = new System.Drawing.Point(0, 124);
             this.btnMenuSale.Name = "btnMenuSale";
-            this.btnMenuSale.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.btnMenuSale.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMenuSale.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnMenuSale.Size = new System.Drawing.Size(217, 40);
             this.btnMenuSale.TabIndex = 11;
@@ -570,6 +727,8 @@
             this.panel1.ResumeLayout(false);
             this.panelUpdateDataSubMenu.ResumeLayout(false);
             this.panelDataSubMenu.ResumeLayout(false);
+            this.panOder.ResumeLayout(false);
+            this.panBuy.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -610,6 +769,14 @@
         private System.Windows.Forms.Button btnEditPrice;
         private System.Windows.Forms.Button btnEditProdT;
         private System.Windows.Forms.Button btnEditProd;
+        private System.Windows.Forms.Button btnBuy;
+        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Panel panBuy;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panOder;
+        private System.Windows.Forms.Button btnImpNew;
+        private System.Windows.Forms.Button button2;
     }
 }
 

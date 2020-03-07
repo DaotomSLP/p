@@ -57,11 +57,15 @@ namespace Vanpheng_Jewelry
             {
                 panelDataSubMenu.Visible = false;
                 panelUpdateDataSubMenu.Visible = false;
+                panOder.Visible = false;
+                panBuy.Visible = false;
                 panel.Visible = false;
             }else
             {
                 panelDataSubMenu.Visible = false;
                 panelUpdateDataSubMenu.Visible = false;
+                panOder.Visible = false;
+                panBuy.Visible = false;
                 panel.Visible = true;
             }
         }
@@ -160,6 +164,24 @@ namespace Vanpheng_Jewelry
             hideForm();
             frmEmployee frmEmployee = new frmEmployee();
             showForm(frmEmployee);
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            hideAndShowSubMenu(panOder);
+        }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            hideAndShowSubMenu(panBuy);
+        }
+
+        private void btnImpNew_Click(object sender, EventArgs e)
+        {
+            globalVal.FrmDataStatus = "add";
+            hideForm();
+            frmProduct frmProduct = new frmProduct();
+            showForm(frmProduct);
         }
     }
 }

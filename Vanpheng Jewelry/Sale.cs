@@ -24,6 +24,8 @@ namespace Vanpheng_Jewelry
             DgvLoad();
         loadProduct("Order by Prod_id DESC");
             ComboBoxLoad();
+            Database database = new Database();
+            txtId.Text = database.generateId("SELECT MAX(Sale_id) FROM Sale").ToString();
         }
 
         private void DgvLoad()
@@ -179,7 +181,7 @@ namespace Vanpheng_Jewelry
             string count = "";
             string name = "";
             string weight = "";
-            string price = "";
+            int price = 0 ;
             string DsPrice = "";
             string id = "";
             Button button = sender as Button;
@@ -205,8 +207,17 @@ namespace Vanpheng_Jewelry
                         {
                             if (text is TextBox)
                             {
-                                price = text.Text;
+                                price = Convert.ToInt32( text.Text);
                             }
+                        }
+                    }
+                    foreach (DataGridViewRow rows in dgv.Rows)
+                    {
+                        //MessageBox.Show(row.Cells[0].Value);
+                        if  (Convert.ToString( rows.Cells[0].Value) == button.Name)
+                        {
+                            total -= Convert.ToInt32(rows.Cells[5].Value.ToString());
+                            dgv.Rows.Remove(rows);
                         }
                     }
 
@@ -230,11 +241,15 @@ namespace Vanpheng_Jewelry
                         }
                         dr.Close();
 
-                        string[] row = new string[] {id, name, DsPrice, weight, count,price };
+                    price *= Convert.ToInt32( count);
+
+                    string[] row = new string[] {id, name, DsPrice, weight, count, price.ToString() };
                         dgv.Rows.Add(row);
                     total += Convert.ToInt32(price);
                     lblTatal.Text = total.ToString();
-                }
+                
+            }
+
             }
         }
 
@@ -262,6 +277,35 @@ namespace Vanpheng_Jewelry
         {
             flowLayoutPanel1.Controls.Clear();
             loadProduct("WHERE ProdType_id = '" + comboBox1.SelectedValue + "' Order by Prod_id DESC");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("ພິມໃບບິນ ? :", "", buttons);
+            if (result == DialogResult.Yes)
+            {
+
+                Database database = new Database();
+                int Bill_no = 0;
+                Bill_no = Convert.ToInt32( database.generateBillNo("SELECT MAX(Bill_no) from Sale")); 
+                database.InsertData(@"INSERT INTO Sale VALUES('"+txtId.Text+ "','" + DateTime.Now.ToString() + "','" + lblTatal.Text + "','" + Bill_no.ToString() + "')");
+               foreach(DataGridViewRow row in dgv.Rows)
+                {
+                    try
+                    {
+                        database.InsertData(@"INSERT INTO Sale_Detail VALUES('" + txtId.Text + "','" + Convert.ToInt32(row.Cells[0].Value) + "','" + row.Cells[4].Value + "','" + Convert.ToDecimal(row.Cells[5].Value) + "')");
+                    }
+                    catch
+                    {
+
+                    }
+                    }
+            }
+            else
+            {
+
+            }
         }
     }
 }

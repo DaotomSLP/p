@@ -27,6 +27,10 @@ namespace Vanpheng_Jewelry
             {
                 SaveUpdate();
             }
+            else if(globalVal.FrmDataStatus == "add")
+            {
+                SaveAdd();
+            }
         }
         private void SaveInsert()
         {
@@ -39,6 +43,22 @@ namespace Vanpheng_Jewelry
             ClearTextBox();
             MessageBox.Show("Insert Success ...");
         }
+
+        private void SaveAdd()   // import new product
+        {
+            Database database = new Database();
+            database.InsertData(@"INSERT INTO Product VALUES('" + txtId.Text + "','" +
+                txtName.Text + "','" + txtPictureName.Text + "','" +
+                txtPrice.Text + "','" + comboBox1.SelectedValue + "','" +
+                weigBa.Value + "','" + weigSl.Value + "','" + weigHo.Value + "')");
+            string id = database.generateId("SELECT MAX(Prod_id) FROM Product").ToString();
+            database.InsertData(@"INSERT INTO Import VALUES('"+id+"','"+DateTime.Now.ToString()+"','"+txtImpPri.Text+"','"+txtId.Text+"')");
+            loadData();
+            ClearTextBox();
+            MessageBox.Show("import Product Success ...");
+        }
+
+
         private void SaveUpdate()
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -76,6 +96,10 @@ namespace Vanpheng_Jewelry
             {
                 LoadByUpdate();
             }
+            else if (globalVal.FrmDataStatus == "add")
+            {
+                LoadByImport();
+            }
 
         }
         private void LoadByAdd()
@@ -83,6 +107,11 @@ namespace Vanpheng_Jewelry
             btnSave.Visible = true;
             btnDel.Visible = true;
             lblW.Visible = false;
+            label7.Visible = false;
+            combProv.Visible = false;
+            label11.Visible = false;
+            txtImpPri.Visible = false;
+            lblHead.Text = "ເພີ່ມຂໍ້ມູນ :";
             btnSave.Text = "ເພີ່ມ";
         }
         private void LoadByUpdate()
@@ -90,8 +119,36 @@ namespace Vanpheng_Jewelry
             btnSave.Visible = false;
             btnDel.Visible = false;
             lblW.Visible = true;
+            label7.Visible = false;
+            combProv.Visible = false;
+            label11.Visible = false;
+            txtImpPri.Visible = false;
+            lblHead.Text = "ແກ້ໄຂຂໍ້ມູນ :";
             btnSave.Text = "ບັນທຶກການແກ້ໄຂ";
         }
+
+        private void LoadByImport()
+        {
+            btnSave.Visible = true;
+            btnDel.Visible = false;
+            lblW.Visible = false;
+            label7.Visible = true;
+            combProv.Visible = true;
+            label11.Visible = true;
+            txtImpPri.Visible = true;
+            lblHead.Text = "ນຳເຂົ້້າສິນຄ້າ";
+            btnSave.Text = "ເພີ່ມສິນຄ້າ";
+
+            Database database = new Database();
+            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Supplier");
+            DataTable dataTable = new DataTable();
+            dataTable.Load(dr);
+            combProv.DisplayMember = "Supp_name";
+            combProv.ValueMember = "Supp_id";
+            combProv.DataSource = dataTable;
+            dr.Close();
+        }
+
         private void ComboBoxLoad()
         {
             Database database = new Database();
