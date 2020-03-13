@@ -78,6 +78,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.panel1.Controls.Add(this.btnReport);
             this.panel1.Controls.Add(this.panelUpdateDataSubMenu);
@@ -636,14 +638,15 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.panel2.Controls.Add(this.lblTime);
             this.panel2.Controls.Add(this.lblDate);
             this.panel2.Controls.Add(this.lblUserName);
-            this.panel2.Location = new System.Drawing.Point(240, 660);
+            this.panel2.Location = new System.Drawing.Point(0, 660);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1098, 54);
+            this.panel2.Size = new System.Drawing.Size(1348, 54);
             this.panel2.TabIndex = 1;
             // 
             // lblTime
@@ -652,7 +655,7 @@
             this.lblTime.BackColor = System.Drawing.Color.Transparent;
             this.lblTime.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblTime.Location = new System.Drawing.Point(783, 15);
+            this.lblTime.Location = new System.Drawing.Point(1089, 15);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(86, 25);
             this.lblTime.TabIndex = 5;
@@ -664,7 +667,7 @@
             this.lblDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDate.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblDate.Location = new System.Drawing.Point(451, 15);
+            this.lblDate.Location = new System.Drawing.Point(820, 15);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(82, 25);
             this.lblDate.TabIndex = 6;
@@ -676,7 +679,7 @@
             this.lblUserName.BackColor = System.Drawing.Color.Transparent;
             this.lblUserName.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblUserName.Location = new System.Drawing.Point(230, 15);
+            this.lblUserName.Location = new System.Drawing.Point(542, 15);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(114, 25);
             this.lblUserName.TabIndex = 7;
@@ -693,7 +696,7 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(217, 660);
+            this.menuStrip1.Size = new System.Drawing.Size(217, 711);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -702,9 +705,9 @@
             this.menuStrip2.AutoSize = false;
             this.menuStrip2.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.menuStrip2.Location = new System.Drawing.Point(0, 660);
+            this.menuStrip2.Location = new System.Drawing.Point(217, 660);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1350, 51);
+            this.menuStrip2.Size = new System.Drawing.Size(1133, 51);
             this.menuStrip2.TabIndex = 6;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -713,10 +716,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 711);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.menuStrip2);
+            this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Home";
