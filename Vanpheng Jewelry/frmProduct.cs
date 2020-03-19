@@ -100,42 +100,79 @@ namespace Vanpheng_Jewelry
             {
                 LoadByImport();
             }
+            else if(globalVal.FrmDataStatus == "addOld")
+            {
+                LoadByImportOld();
+            }
 
         }
         private void LoadByAdd()
         {
+            label2.Visible = true;
+            txtPrice.Visible = true;
+            txtName.Visible = true;
             btnSave.Visible = true;
             btnDel.Visible = true;
             lblW.Visible = false;
+            cboOldProd.Visible = false;
             label7.Visible = false;
             combProv.Visible = false;
             label11.Visible = false;
             txtImpPri.Visible = false;
+            pictureBox1.Visible = true;
+            txtPictureName.Visible = true;
+            label3.Visible = true;
+            btnChoose.Visible = true;
+            label4.Visible = true;
+            comboBox1.Visible = true;
+
             lblHead.Text = "ເພີ່ມຂໍ້ມູນ :";
             btnSave.Text = "ເພີ່ມ";
         }
         private void LoadByUpdate()
         {
+            label2.Visible = true;
+            txtPrice.Visible = true;
+            txtName.Visible = true;
             btnSave.Visible = false;
-            btnDel.Visible = false;
+            btnDel.Visible = false; 
+            cboOldProd.Visible = false;
             lblW.Visible = true;
             label7.Visible = false;
             combProv.Visible = false;
             label11.Visible = false;
             txtImpPri.Visible = false;
+            pictureBox1.Visible = true;
+            txtPictureName.Visible = true;
+            label3.Visible = true;
+            btnChoose.Visible = true;
+            label4.Visible = true;
+            comboBox1.Visible = true;
+
             lblHead.Text = "ແກ້ໄຂຂໍ້ມູນ :";
             btnSave.Text = "ບັນທຶກການແກ້ໄຂ";
         }
 
         private void LoadByImport()
         {
+            label2.Visible = true;
+            txtPrice.Visible = true;
+            txtName.Visible = true;
             btnSave.Visible = true;
             btnDel.Visible = false;
             lblW.Visible = false;
+            cboOldProd.Visible = false;
             label7.Visible = true;
             combProv.Visible = true;
             label11.Visible = true;
             txtImpPri.Visible = true;
+            pictureBox1.Visible = true;
+            txtPictureName.Visible = true;
+            label3.Visible = true;
+            btnChoose.Visible = true;
+            label4.Visible = true;
+            comboBox1.Visible = true;
+
             lblHead.Text = "ນຳເຂົ້້າສິນຄ້າ";
             btnSave.Text = "ເພີ່ມສິນຄ້າ";
 
@@ -146,6 +183,45 @@ namespace Vanpheng_Jewelry
             combProv.DisplayMember = "Supp_name";
             combProv.ValueMember = "Supp_id";
             combProv.DataSource = dataTable;
+            dr.Close();
+        }
+        private void LoadByImportOld()
+        {
+            label2.Visible = false; 
+            txtPrice.Visible = false;
+            txtName.Visible = false;
+            btnSave.Visible = true;
+            btnDel.Visible = false;
+            lblW.Visible = false;
+            label7.Visible = true;
+            combProv.Visible = true;
+            label11.Visible = true;
+            txtImpPri.Visible = true;
+            cboOldProd.Visible = true;
+            pictureBox1.Visible = false;
+            txtPictureName.Visible = false;
+            label3.Visible = false;
+            btnChoose.Visible = false;
+            label4.Visible = false;
+            comboBox1.Visible = false;
+
+            lblHead.Text = "ນຳເຂົ້້າສິນຄ້າ";
+            btnSave.Text = "ເພີ່ມສິນຄ້າ";
+
+            Database database = new Database();
+            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Supplier");
+            DataTable dataTable = new DataTable();
+            dataTable.Load(dr);
+            combProv.DisplayMember = "Supp_name";
+            combProv.ValueMember = "Supp_id";
+            combProv.DataSource = dataTable;
+
+            SqlDataReader dr2 = database.LoadData(@"SELECT Prod_id,Prod_name from dbo.Product ORDER BY Prod_id DESC");
+            DataTable dataTable2 = new DataTable();
+            dataTable2.Load(dr2);
+            cboOldProd.DisplayMember = "Prod_name";
+            cboOldProd.ValueMember = "Prod_id";
+            cboOldProd.DataSource = dataTable2;
             dr.Close();
         }
 

@@ -63,6 +63,7 @@
             this.lblW = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.cboOldProd = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weigHo)).BeginInit();
@@ -85,6 +86,7 @@
             this.panel1.Controls.Add(this.weigSl);
             this.panel1.Controls.Add(this.numAmount);
             this.panel1.Controls.Add(this.weigBa);
+            this.panel1.Controls.Add(this.cboOldProd);
             this.panel1.Controls.Add(this.combProv);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.btnSave);
@@ -203,7 +205,7 @@
             this.label1.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(15, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 23);
+            this.label1.Size = new System.Drawing.Size(64, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "ຊື່ສິນຄ້າ :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -224,6 +226,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(382, 31);
             this.txtName.TabIndex = 8;
+            this.txtName.Visible = false;
             // 
             // label10
             // 
@@ -231,7 +234,7 @@
             this.label10.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(367, 278);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(30, 23);
+            this.label10.Size = new System.Drawing.Size(31, 23);
             this.label10.TabIndex = 7;
             this.label10.Text = "ຫຸນ";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,7 +245,7 @@
             this.label9.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(217, 278);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 23);
+            this.label9.Size = new System.Drawing.Size(43, 23);
             this.label9.TabIndex = 7;
             this.label9.Text = "ສະຫຼຶງ";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -253,7 +256,7 @@
             this.label8.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(79, 278);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 23);
+            this.label8.Size = new System.Drawing.Size(36, 23);
             this.label8.TabIndex = 7;
             this.label8.Text = "ບາດ";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,7 +267,7 @@
             this.label6.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(11, 253);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 23);
+            this.label6.Size = new System.Drawing.Size(60, 23);
             this.label6.TabIndex = 7;
             this.label6.Text = "ນ້ຳໜັກ :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -275,7 +278,7 @@
             this.label5.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(11, 193);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 23);
+            this.label5.Size = new System.Drawing.Size(65, 23);
             this.label5.TabIndex = 7;
             this.label5.Text = "ຈຳນວນ :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -286,7 +289,7 @@
             this.label2.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(11, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 23);
+            this.label2.Size = new System.Drawing.Size(82, 23);
             this.label2.TabIndex = 7;
             this.label2.Text = " ລາຄາລາຍ :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -322,7 +325,7 @@
             this.label3.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(15, 445);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 23);
+            this.label3.Size = new System.Drawing.Size(64, 23);
             this.label3.TabIndex = 10;
             this.label3.Text = "ຮູບພາບ :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -333,7 +336,7 @@
             this.label7.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(15, 314);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 23);
+            this.label7.Size = new System.Drawing.Size(111, 23);
             this.label7.TabIndex = 12;
             this.label7.Text = "ຜູ້ສະໜອງສິນຄ້າ :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -345,7 +348,7 @@
             this.label11.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(160, 191);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 23);
+            this.label11.Size = new System.Drawing.Size(88, 23);
             this.label11.TabIndex = 12;
             this.label11.Text = "ລາຄານຳເຂົ້າ :";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -372,7 +375,7 @@
             this.label4.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(15, 372);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 23);
+            this.label4.Size = new System.Drawing.Size(59, 23);
             this.label4.TabIndex = 12;
             this.label4.Text = "ປະເພດ :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -436,7 +439,7 @@
             this.lblW.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblW.Location = new System.Drawing.Point(498, 572);
             this.lblW.Name = "lblW";
-            this.lblW.Size = new System.Drawing.Size(291, 26);
+            this.lblW.Size = new System.Drawing.Size(271, 27);
             this.lblW.TabIndex = 16;
             this.lblW.Text = "ກະລຸນາເລືອກຂໍ້ມູນທີ່ຕ້ອງການແກ້ໄຂ";
             this.lblW.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -462,6 +465,16 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "ຄົ້ນຫາ";
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // cboOldProd
+            // 
+            this.cboOldProd.Font = new System.Drawing.Font("Phetsarath OT", 12F);
+            this.cboOldProd.FormattingEnabled = true;
+            this.cboOldProd.Location = new System.Drawing.Point(15, 78);
+            this.cboOldProd.Name = "cboOldProd";
+            this.cboOldProd.Size = new System.Drawing.Size(382, 31);
+            this.cboOldProd.TabIndex = 13;
+            this.cboOldProd.Visible = false;
             // 
             // frmProduct
             // 
@@ -530,5 +543,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtImpPri;
         private System.Windows.Forms.Label lblHead;
+        private System.Windows.Forms.ComboBox cboOldProd;
     }
 }

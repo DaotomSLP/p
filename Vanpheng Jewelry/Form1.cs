@@ -183,5 +183,13 @@ namespace Vanpheng_Jewelry
             frmProduct frmProduct = new frmProduct();
             showForm(frmProduct);
         }
+
+        private void btnImpOld_Click(object sender, EventArgs e)
+        {
+            globalVal.FrmDataStatus = "addOld";
+            hideForm();
+            frmProduct frmProduct = new frmProduct();
+            showForm(frmProduct);
+        }
     }
 }

@@ -50,7 +50,7 @@
             this.btnData = new System.Windows.Forms.Button();
             this.panOder = new System.Windows.Forms.Panel();
             this.btnImpNew = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnImpOld = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.panBuy = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -444,7 +444,7 @@
             // 
             this.panOder.BackColor = System.Drawing.Color.Goldenrod;
             this.panOder.Controls.Add(this.btnImpNew);
-            this.panOder.Controls.Add(this.button2);
+            this.panOder.Controls.Add(this.btnImpOld);
             this.panOder.Dock = System.Windows.Forms.DockStyle.Top;
             this.panOder.Location = new System.Drawing.Point(0, 326);
             this.panOder.Name = "panOder";
@@ -472,24 +472,25 @@
             this.btnImpNew.UseVisualStyleBackColor = false;
             this.btnImpNew.Click += new System.EventHandler(this.btnImpNew_Click);
             // 
-            // button2
+            // btnImpOld
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(217, 40);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "ສິນຄ້າເກົ່າ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnImpOld.BackColor = System.Drawing.Color.Transparent;
+            this.btnImpOld.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnImpOld.FlatAppearance.BorderSize = 0;
+            this.btnImpOld.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImpOld.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImpOld.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnImpOld.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImpOld.Location = new System.Drawing.Point(0, 0);
+            this.btnImpOld.Name = "btnImpOld";
+            this.btnImpOld.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnImpOld.Size = new System.Drawing.Size(217, 40);
+            this.btnImpOld.TabIndex = 15;
+            this.btnImpOld.Text = "ສິນຄ້າເກົ່າ";
+            this.btnImpOld.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImpOld.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnImpOld.UseVisualStyleBackColor = false;
+            this.btnImpOld.Click += new System.EventHandler(this.btnImpOld_Click);
             // 
             // btnOrder
             // 
@@ -779,7 +780,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panOder;
         private System.Windows.Forms.Button btnImpNew;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnImpOld;
     }
 }
 
