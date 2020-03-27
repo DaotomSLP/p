@@ -35,6 +35,7 @@
             this.weigSl = new System.Windows.Forms.NumericUpDown();
             this.numAmount = new System.Windows.Forms.NumericUpDown();
             this.weigBa = new System.Windows.Forms.NumericUpDown();
+            this.cboOldProd = new System.Windows.Forms.ComboBox();
             this.combProv = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -63,7 +64,6 @@
             this.lblW = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.cboOldProd = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weigHo)).BeginInit();
@@ -126,7 +126,7 @@
             // weigHo
             // 
             this.weigHo.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weigHo.Location = new System.Drawing.Point(302, 274);
+            this.weigHo.Location = new System.Drawing.Point(301, 211);
             this.weigHo.Name = "weigHo";
             this.weigHo.Size = new System.Drawing.Size(63, 31);
             this.weigHo.TabIndex = 14;
@@ -134,7 +134,7 @@
             // weigSl
             // 
             this.weigSl.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weigSl.Location = new System.Drawing.Point(151, 274);
+            this.weigSl.Location = new System.Drawing.Point(150, 211);
             this.weigSl.Name = "weigSl";
             this.weigSl.Size = new System.Drawing.Size(63, 31);
             this.weigSl.TabIndex = 14;
@@ -142,7 +142,7 @@
             // numAmount
             // 
             this.numAmount.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numAmount.Location = new System.Drawing.Point(15, 219);
+            this.numAmount.Location = new System.Drawing.Point(15, 278);
             this.numAmount.Name = "numAmount";
             this.numAmount.Size = new System.Drawing.Size(130, 31);
             this.numAmount.TabIndex = 14;
@@ -150,10 +150,20 @@
             // weigBa
             // 
             this.weigBa.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weigBa.Location = new System.Drawing.Point(15, 274);
+            this.weigBa.Location = new System.Drawing.Point(14, 211);
             this.weigBa.Name = "weigBa";
             this.weigBa.Size = new System.Drawing.Size(63, 31);
             this.weigBa.TabIndex = 14;
+            // 
+            // cboOldProd
+            // 
+            this.cboOldProd.Font = new System.Drawing.Font("Phetsarath OT", 12F);
+            this.cboOldProd.FormattingEnabled = true;
+            this.cboOldProd.Location = new System.Drawing.Point(15, 78);
+            this.cboOldProd.Name = "cboOldProd";
+            this.cboOldProd.Size = new System.Drawing.Size(382, 31);
+            this.cboOldProd.TabIndex = 13;
+            this.cboOldProd.Visible = false;
             // 
             // combProv
             // 
@@ -232,7 +242,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(367, 278);
+            this.label10.Location = new System.Drawing.Point(370, 215);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(31, 23);
             this.label10.TabIndex = 7;
@@ -243,7 +253,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(217, 278);
+            this.label9.Location = new System.Drawing.Point(216, 215);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 23);
             this.label9.TabIndex = 7;
@@ -254,7 +264,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(79, 278);
+            this.label8.Location = new System.Drawing.Point(78, 215);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(36, 23);
             this.label8.TabIndex = 7;
@@ -265,7 +275,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 253);
+            this.label6.Location = new System.Drawing.Point(10, 190);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 23);
             this.label6.TabIndex = 7;
@@ -276,7 +286,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 193);
+            this.label5.Location = new System.Drawing.Point(11, 252);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 23);
             this.label5.TabIndex = 7;
@@ -297,7 +307,7 @@
             // txtImpPri
             // 
             this.txtImpPri.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtImpPri.Location = new System.Drawing.Point(164, 219);
+            this.txtImpPri.Location = new System.Drawing.Point(164, 278);
             this.txtImpPri.Name = "txtImpPri";
             this.txtImpPri.Size = new System.Drawing.Size(233, 31);
             this.txtImpPri.TabIndex = 9;
@@ -346,7 +356,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(160, 191);
+            this.label11.Location = new System.Drawing.Point(160, 250);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 23);
             this.label11.TabIndex = 12;
@@ -410,6 +420,8 @@
             // 
             // dgvProduct
             // 
+            this.dgvProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProduct.BackgroundColor = System.Drawing.Color.Moccasin;
             this.dgvProduct.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -466,16 +478,6 @@
             this.button1.Text = "ຄົ້ນຫາ";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // cboOldProd
-            // 
-            this.cboOldProd.Font = new System.Drawing.Font("Phetsarath OT", 12F);
-            this.cboOldProd.FormattingEnabled = true;
-            this.cboOldProd.Location = new System.Drawing.Point(15, 78);
-            this.cboOldProd.Name = "cboOldProd";
-            this.cboOldProd.Size = new System.Drawing.Size(382, 31);
-            this.cboOldProd.TabIndex = 13;
-            this.cboOldProd.Visible = false;
-            // 
             // frmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,6 +491,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "frmProduct";
             this.Text = "frmProduct";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

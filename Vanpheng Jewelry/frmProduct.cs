@@ -31,6 +31,10 @@ namespace Vanpheng_Jewelry
             {
                 SaveAdd();
             }
+            else if (globalVal.FrmDataStatus == "addOld")
+            {
+                SaveImpOld();
+            }
         }
         private void SaveInsert()
         {
@@ -38,7 +42,7 @@ namespace Vanpheng_Jewelry
             database.InsertData(@"INSERT INTO Product VALUES('" + txtId.Text + "','" +
                 txtName.Text + "','" + txtPictureName.Text + "','" +
                 txtPrice.Text + "','" + comboBox1.SelectedValue + "','" +
-                weigBa.Value + "','" + weigSl.Value + "','" + weigHo.Value + "')");
+                weigBa.Value + "','" + weigSl.Value + "','" + weigHo.Value + "','"+numAmount.Value+"')");
             loadData();
             ClearTextBox();
             MessageBox.Show("Insert Success ...");
@@ -50,8 +54,9 @@ namespace Vanpheng_Jewelry
             database.InsertData(@"INSERT INTO Product VALUES('" + txtId.Text + "','" +
                 txtName.Text + "','" + txtPictureName.Text + "','" +
                 txtPrice.Text + "','" + comboBox1.SelectedValue + "','" +
-                weigBa.Value + "','" + weigSl.Value + "','" + weigHo.Value + "')");
-            string id = database.generateId("SELECT MAX(Prod_id) FROM Product").ToString();
+                weigBa.Value + "','" + weigSl.Value + "','" + weigHo.Value + "','" +
+                numAmount.Value + "')");
+            string id = database.generateId("SELECT MAX(Prod_id) FROM Import").ToString();
             database.InsertData(@"INSERT INTO Import VALUES('"+id+"','"+DateTime.Now.ToString()+"','"+txtImpPri.Text+"','"+txtId.Text+"')");
             loadData();
             ClearTextBox();
@@ -71,7 +76,7 @@ namespace Vanpheng_Jewelry
                     txtPrice.Text + "',ProdType_id='" + comboBox1.SelectedValue + 
                     "',Prod_weight1='" +weigBa.Value + "',Prod_weight2='" + 
                     weigSl.Value + "',Prod_weight3='" + weigHo.Value +
-                    "' WHERE Prod_id='"+txtId.Text+"'");
+                    "',Prod_instock='" + numAmount.Value + "' WHERE Prod_id='" + txtId.Text+"'");
                 loadData();
                 ClearTextBox();
                 MessageBox.Show("Update Success ...");
@@ -80,6 +85,28 @@ namespace Vanpheng_Jewelry
             {
                 
             }
+        }
+
+        private void SaveImpOld()
+        {
+            Database database = new Database();
+            string id = database.generateId("SELECT MAX(Prod_id) FROM Import").ToString();
+            database.InsertData(@"INSERT INTO Import VALUES('" + id + "','" + DateTime.Now.ToString() + "','" + txtImpPri.Text + "','" + cboOldProd.SelectedValue + "')");
+
+           SqlDataReader dr =  database.LoadData(@"SELECT Prod_instock from Product WHERE Prod_id = '" + cboOldProd.SelectedValue + "'");
+            int instock = 0;
+            while (dr.Read())
+            {
+              instock =  Convert.ToInt32(dr["Prod_instock"].ToString());
+            }
+
+            int total = instock + Convert.ToInt32(numAmount.Value);
+
+            database.InsertData(@"UPDATE Product SET Prod_instock='" + total +
+                "' WHERE Prod_id='" + cboOldProd.SelectedValue + "'");
+            loadData();
+            ClearTextBox();
+            MessageBox.Show("import Product Success ...");
         }
 
         private void frmProduct_Load(object sender, EventArgs e)
@@ -108,6 +135,13 @@ namespace Vanpheng_Jewelry
         }
         private void LoadByAdd()
         {
+            weigBa.Visible = true;
+            weigHo.Visible = true;
+            weigSl.Visible = true;
+            label6.Visible = true;
+            label8.Visible = true;
+            label9.Visible = true;
+            label10.Visible = true;
             label2.Visible = true;
             txtPrice.Visible = true;
             txtName.Visible = true;
@@ -131,6 +165,13 @@ namespace Vanpheng_Jewelry
         }
         private void LoadByUpdate()
         {
+            weigBa.Visible = true;
+            weigHo.Visible = true;
+            weigSl.Visible = true;
+            label6.Visible = true;
+            label8.Visible = true;
+            label9.Visible = true;
+            label10.Visible = true;
             label2.Visible = true;
             txtPrice.Visible = true;
             txtName.Visible = true;
@@ -155,6 +196,13 @@ namespace Vanpheng_Jewelry
 
         private void LoadByImport()
         {
+            weigBa.Visible = true;
+            weigHo.Visible = true;
+            weigSl.Visible = true;
+            label6.Visible = true;
+            label8.Visible = true;
+            label9.Visible = true;
+            label10.Visible = true;
             label2.Visible = true;
             txtPrice.Visible = true;
             txtName.Visible = true;
@@ -187,6 +235,13 @@ namespace Vanpheng_Jewelry
         }
         private void LoadByImportOld()
         {
+            weigBa.Visible = false;
+            weigHo.Visible = false;
+            weigSl.Visible = false;
+            label6.Visible = false;
+            label8.Visible = false;
+            label9.Visible = false;
+            label10.Visible = false;
             label2.Visible = false; 
             txtPrice.Visible = false;
             txtName.Visible = false;
@@ -247,6 +302,7 @@ namespace Vanpheng_Jewelry
             dataTable.Columns.Add("ນ້ຳໜັກ(ບາດ)");
             dataTable.Columns.Add("ນ້ຳໜັກ(ສະຫຼຶງ)");
             dataTable.Columns.Add("ນ້ຳໜັກ(ຫຸນ)");
+            dataTable.Columns.Add("ຈຳນວນ");
             dataTable.Columns.Add("ຮູບ");
             while (dr.Read())
             {
@@ -258,6 +314,7 @@ namespace Vanpheng_Jewelry
                 row["ນ້ຳໜັກ(ສະຫຼຶງ)"] = dr["Prod_weight2"];
                 row["ນ້ຳໜັກ(ຫຸນ)"] = dr["Prod_weight3"];
                 row["ຮູບ"] = dr["Prod_img"];
+                row["ຈຳນວນ"] = dr["Prod_instock"];
                 dataTable.Rows.Add(row);
             }
             dgvProduct.DataSource = dataTable;
@@ -304,8 +361,9 @@ namespace Vanpheng_Jewelry
                 weigBa.Value = Convert.ToInt32(dgvProduct.Rows[e.RowIndex].Cells[3].Value);
                 weigSl.Value = Convert.ToInt32(dgvProduct.Rows[e.RowIndex].Cells[4].Value);
                 weigHo.Value = Convert.ToInt32(dgvProduct.Rows[e.RowIndex].Cells[5].Value);
-                txtPictureName.Text = dgvProduct.Rows[e.RowIndex].Cells[6].Value.ToString();
-                pictureBox1.Image = Image.FromFile(dgvProduct.Rows[e.RowIndex].Cells[6].Value.ToString());
+                txtPictureName.Text = dgvProduct.Rows[e.RowIndex].Cells[7].Value.ToString();
+                pictureBox1.Image = Image.FromFile(dgvProduct.Rows[e.RowIndex].Cells[7].Value.ToString());
+                numAmount.Value = Convert.ToInt32(dgvProduct.Rows[e.RowIndex].Cells[6].Value.ToString());
             }
 
         }
