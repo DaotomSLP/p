@@ -53,8 +53,8 @@
             this.btnImpOld = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.panBuy = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnBuyNew = new System.Windows.Forms.Button();
+            this.btnBuyMy = new System.Windows.Forms.Button();
             this.btnBuy = new System.Windows.Forms.Button();
             this.btnMenuSale = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -516,8 +516,8 @@
             // panBuy
             // 
             this.panBuy.BackColor = System.Drawing.Color.Goldenrod;
-            this.panBuy.Controls.Add(this.button5);
-            this.panBuy.Controls.Add(this.button6);
+            this.panBuy.Controls.Add(this.btnBuyNew);
+            this.panBuy.Controls.Add(this.btnBuyMy);
             this.panBuy.Dock = System.Windows.Forms.DockStyle.Top;
             this.panBuy.Location = new System.Drawing.Point(0, 204);
             this.panBuy.Name = "panBuy";
@@ -525,43 +525,45 @@
             this.panBuy.TabIndex = 25;
             this.panBuy.Visible = false;
             // 
-            // button5
+            // btnBuyNew
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 40);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(217, 40);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "ສິນຄ້າຈາກຮ້ານອື່ນ";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnBuyNew.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuyNew.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBuyNew.FlatAppearance.BorderSize = 0;
+            this.btnBuyNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuyNew.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuyNew.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBuyNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuyNew.Location = new System.Drawing.Point(0, 40);
+            this.btnBuyNew.Name = "btnBuyNew";
+            this.btnBuyNew.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnBuyNew.Size = new System.Drawing.Size(217, 40);
+            this.btnBuyNew.TabIndex = 16;
+            this.btnBuyNew.Text = "ສິນຄ້າຈາກຮ້ານອື່ນ";
+            this.btnBuyNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuyNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuyNew.UseVisualStyleBackColor = false;
+            this.btnBuyNew.Click += new System.EventHandler(this.btnBuyNew_Click);
             // 
-            // button6
+            // btnBuyMy
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(217, 40);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "ສິນຄ້າຂອງຮ້ານ";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnBuyMy.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuyMy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBuyMy.FlatAppearance.BorderSize = 0;
+            this.btnBuyMy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuyMy.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuyMy.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBuyMy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuyMy.Location = new System.Drawing.Point(0, 0);
+            this.btnBuyMy.Name = "btnBuyMy";
+            this.btnBuyMy.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnBuyMy.Size = new System.Drawing.Size(217, 40);
+            this.btnBuyMy.TabIndex = 15;
+            this.btnBuyMy.Text = "ສິນຄ້າຂອງຮ້ານ";
+            this.btnBuyMy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuyMy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBuyMy.UseVisualStyleBackColor = false;
+            this.btnBuyMy.Click += new System.EventHandler(this.btnBuyMy_Click);
             // 
             // btnBuy
             // 
@@ -726,7 +728,6 @@
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
             this.panelUpdateDataSubMenu.ResumeLayout(false);
@@ -776,8 +777,8 @@
         private System.Windows.Forms.Button btnBuy;
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Panel panBuy;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnBuyNew;
+        private System.Windows.Forms.Button btnBuyMy;
         private System.Windows.Forms.Panel panOder;
         private System.Windows.Forms.Button btnImpNew;
         private System.Windows.Forms.Button btnImpOld;

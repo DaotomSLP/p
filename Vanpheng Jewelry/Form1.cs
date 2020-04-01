@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 
 namespace Vanpheng_Jewelry
@@ -20,6 +21,7 @@ namespace Vanpheng_Jewelry
 
         private void Home_Load(object sender, EventArgs e)
         {
+            //MessageBox.Show(Directory.GetCurrentDirectory());
             lblDate.Text = DateTime.Now.ToLongDateString();
             timer1.Start();
         }
@@ -190,6 +192,22 @@ namespace Vanpheng_Jewelry
             hideForm();
             frmProduct frmProduct = new frmProduct();
             showForm(frmProduct);
+        }
+
+        private void btnBuyNew_Click(object sender, EventArgs e)
+        {
+            globalVal.FrmBuyStatus = "new";
+            hideForm();
+            frmBuyProduct frmBuyProduct = new frmBuyProduct();
+            showForm(frmBuyProduct);
+        }
+
+        private void btnBuyMy_Click(object sender, EventArgs e)
+        {
+            globalVal.FrmBuyStatus = "my";
+            hideForm();
+            frmBuyProduct frmBuyProduct = new frmBuyProduct();
+            showForm(frmBuyProduct);
         }
     }
 }

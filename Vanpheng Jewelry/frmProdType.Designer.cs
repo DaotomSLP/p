@@ -40,6 +40,7 @@
             this.dgvProductType = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.lblW = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductType)).BeginInit();
@@ -81,7 +82,7 @@
             this.label1.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(15, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 23);
+            this.label1.Size = new System.Drawing.Size(132, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "ລະຫັດປະເພດສິນຄ້າ :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -92,7 +93,7 @@
             this.txtProdTId.Location = new System.Drawing.Point(15, 61);
             this.txtProdTId.Name = "txtProdTId";
             this.txtProdTId.ReadOnly = true;
-            this.txtProdTId.Size = new System.Drawing.Size(131, 31);
+            this.txtProdTId.Size = new System.Drawing.Size(131, 33);
             this.txtProdTId.TabIndex = 8;
             // 
             // openFileDialog1
@@ -105,7 +106,7 @@
             this.label2.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(11, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 23);
+            this.label2.Size = new System.Drawing.Size(104, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "ຊື່ປະເພດສິນຄ້າ :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -115,13 +116,14 @@
             this.txtProdTName.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProdTName.Location = new System.Drawing.Point(15, 136);
             this.txtProdTName.Name = "txtProdTName";
-            this.txtProdTName.Size = new System.Drawing.Size(456, 31);
+            this.txtProdTName.Size = new System.Drawing.Size(456, 33);
             this.txtProdTName.TabIndex = 9;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Moccasin;
             this.panel1.Controls.Add(this.btnSave);
+            this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtProdTId);
             this.panel1.Controls.Add(this.label2);
@@ -175,10 +177,21 @@
             this.lblW.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblW.Location = new System.Drawing.Point(571, 564);
             this.lblW.Name = "lblW";
-            this.lblW.Size = new System.Drawing.Size(291, 26);
+            this.lblW.Size = new System.Drawing.Size(275, 29);
             this.lblW.TabIndex = 17;
             this.lblW.Text = "ກະລຸນາເລືອກຂໍ້ມູນທີ່ຕ້ອງການແກ້ໄຂ";
             this.lblW.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(15, 7);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(162, 29);
+            this.lblName.TabIndex = 6;
+            this.lblName.Text = "ຂໍ້ມູນປະເພດສິນຄ້າ :";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmProdType
             // 
@@ -218,5 +231,6 @@
         private System.Windows.Forms.DataGridView dgvProductType;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblW;
+        private System.Windows.Forms.Label lblName;
     }
 }

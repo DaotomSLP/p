@@ -160,7 +160,7 @@ namespace Vanpheng_Jewelry
             label4.Visible = true;
             comboBox1.Visible = true;
 
-            lblHead.Text = "ເພີ່ມຂໍ້ມູນ :";
+            lblHead.Text = "ເພີ່ມຂໍ້ມູນສິນຄ້າ :";
             btnSave.Text = "ເພີ່ມ";
         }
         private void LoadByUpdate()
@@ -190,7 +190,7 @@ namespace Vanpheng_Jewelry
             label4.Visible = true;
             comboBox1.Visible = true;
 
-            lblHead.Text = "ແກ້ໄຂຂໍ້ມູນ :";
+            lblHead.Text = "ແກ້ໄຂຂໍ້ມູນສິນຄ້າ :";
             btnSave.Text = "ບັນທຶກການແກ້ໄຂ";
         }
 
