@@ -15,7 +15,7 @@ namespace Vanpheng_Jewelry
         SqlDataReader dr;
         SqlCommand comm;
         DataTable dataTable;
-        public string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\t\Window_base\p\Vanpheng Jewelry\Database1.mdf;Integrated Security=True";
+        public string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\work\windowbase\p\Vanpheng Jewelry\Database1.mdf;Integrated Security=True";
 
         public SqlDataReader LoadData(String Q)
         {

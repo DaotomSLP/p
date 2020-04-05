@@ -34,11 +34,11 @@ namespace Vanpheng_Jewelry
         private void btnMenuSale_Click(object sender, EventArgs e)
         {
             hideForm();
-
-            Sale sale = new Sale();
-            sale.MdiParent = this;
-            sale.Location = new Point(0, 0);
-            sale.Show();
+            globalVal.FrmSaleOrderStatus = "sale";
+            Sale_Order sale_order = new Sale_Order();
+            sale_order.MdiParent = this;
+            sale_order.Location = new Point(0, 0);
+            sale_order.Show();
         }
         private void hideForm()
         {
@@ -168,12 +168,12 @@ namespace Vanpheng_Jewelry
             showForm(frmEmployee);
         }
 
-        private void btnOrder_Click(object sender, EventArgs e)
+        private void btnImp_Click(object sender, EventArgs e)
         {
             hideAndShowSubMenu(panOder);
         }
 
-        private void btnBuy_Click(object sender, EventArgs e)
+        private void btnOrder_Click(object sender, EventArgs e)
         {
             hideAndShowSubMenu(panBuy);
         }
@@ -194,7 +194,7 @@ namespace Vanpheng_Jewelry
             showForm(frmProduct);
         }
 
-        private void btnBuyNew_Click(object sender, EventArgs e)
+        private void btnOrdNew_Click(object sender, EventArgs e)
         {
             globalVal.FrmBuyStatus = "new";
             hideForm();
@@ -202,7 +202,7 @@ namespace Vanpheng_Jewelry
             showForm(frmBuyProduct);
         }
 
-        private void btnBuyMy_Click(object sender, EventArgs e)
+        private void btnOrdMy_Click(object sender, EventArgs e)
         {
             globalVal.FrmBuyStatus = "my";
             hideForm();

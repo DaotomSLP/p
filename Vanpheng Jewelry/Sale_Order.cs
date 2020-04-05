@@ -11,22 +11,38 @@ using System.Data.SqlClient;
 using System.IO;
 namespace Vanpheng_Jewelry
 {
-    public partial class Sale : Form
+    public partial class Sale_Order : Form
     {
-        public Sale()
+        public Sale_Order()
         {
             InitializeComponent();
         }
         int dgvSelRow = 0;
          int total = 0;
-        private void Sale_Load(object sender, EventArgs e)
+        private void Sale_Order_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Sale_load()
         {
             DgvLoad();
-        loadProduct("Order by Prod_id DESC");
+            loadProduct("Order by Prod_id DESC");
             ComboBoxLoad();
             Database database = new Database();
             txtId.Text = database.generateId("SELECT MAX(Sale_id) FROM Sale").ToString();
         }
+
+        private void Order_load()
+        {
+            DgvLoad();
+            loadProduct("Order by Prod_id DESC");
+            ComboBoxLoad();
+            Database database = new Database();
+            txtId.Text = database.generateId("SELECT MAX(Order_id) FROM Order").ToString();
+        }
+
+
 
         private void DgvLoad()
         {

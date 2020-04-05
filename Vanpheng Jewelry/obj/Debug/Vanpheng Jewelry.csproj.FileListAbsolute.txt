@@ -73,3 +73,22 @@ C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.csproj.CoreCompil
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.exe
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.pdb
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmBuyProduct.resources
+D:\work\windowbase\p\Vanpheng Jewelry\bin\Debug\Database1.mdf
+D:\work\windowbase\p\Vanpheng Jewelry\bin\Debug\Database1_log.ldf
+D:\work\windowbase\p\Vanpheng Jewelry\bin\Debug\Vanpheng Jewelry.exe.config
+D:\work\windowbase\p\Vanpheng Jewelry\bin\Debug\Vanpheng Jewelry.exe
+D:\work\windowbase\p\Vanpheng Jewelry\bin\Debug\Vanpheng Jewelry.pdb
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.csprojAssemblyReference.cache
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Home.resources
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmBuyProduct.resources
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmCustomer.resources
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmDailyPrice.resources
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmEmployee.resources
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmProdType.resources
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmProduct.resources
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmSupplier.resources
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Properties.Resources.resources
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.csproj.GenerateResource.cache
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.exe
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.pdb
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Sale_Order.resources

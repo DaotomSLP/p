@@ -17,5 +17,10 @@ namespace Vanpheng_Jewelry
             get;
             set;
         }
+        public static string FrmSaleOrderStatus
+        {
+            get;
+            set;
+        }
     }
 }

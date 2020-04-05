@@ -1,6 +1,6 @@
 ﻿namespace Vanpheng_Jewelry
 {
-    partial class Sale
+    partial class Sale_Order
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblTatal = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.lblHead = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
@@ -51,16 +52,16 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.Moccasin;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(19, 48);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(19, 86);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(20);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(683, 576);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(683, 538);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // txtSearch1
             // 
             this.txtSearch1.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch1.Location = new System.Drawing.Point(19, 18);
+            this.txtSearch1.Location = new System.Drawing.Point(19, 48);
             this.txtSearch1.Name = "txtSearch1";
             this.txtSearch1.Size = new System.Drawing.Size(227, 31);
             this.txtSearch1.TabIndex = 10;
@@ -72,7 +73,7 @@
             this.btnSearchbyCate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchbyCate.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchbyCate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSearchbyCate.Location = new System.Drawing.Point(604, 18);
+            this.btnSearchbyCate.Location = new System.Drawing.Point(604, 48);
             this.btnSearchbyCate.Name = "btnSearchbyCate";
             this.btnSearchbyCate.Size = new System.Drawing.Size(98, 31);
             this.btnSearchbyCate.TabIndex = 12;
@@ -114,7 +115,7 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Phetsarath OT", 12F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(362, 18);
+            this.comboBox1.Location = new System.Drawing.Point(362, 48);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(240, 31);
             this.comboBox1.TabIndex = 15;
@@ -126,7 +127,7 @@
             this.btnSearchbyNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearchbyNo.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchbyNo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSearchbyNo.Location = new System.Drawing.Point(248, 18);
+            this.btnSearchbyNo.Location = new System.Drawing.Point(248, 48);
             this.btnSearchbyNo.Name = "btnSearchbyNo";
             this.btnSearchbyNo.Size = new System.Drawing.Size(98, 31);
             this.btnSearchbyNo.TabIndex = 12;
@@ -142,9 +143,9 @@
             this.panel2.Controls.Add(this.dgv);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(727, 48);
+            this.panel2.Location = new System.Drawing.Point(727, 89);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(392, 461);
+            this.panel2.Size = new System.Drawing.Size(392, 431);
             this.panel2.TabIndex = 22;
             // 
             // dgv
@@ -152,9 +153,9 @@
             this.dgv.BackgroundColor = System.Drawing.Color.Moccasin;
             this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(0, 4);
+            this.dgv.Location = new System.Drawing.Point(3, 0);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(392, 452);
+            this.dgv.Size = new System.Drawing.Size(392, 428);
             this.dgv.TabIndex = 15;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
@@ -178,7 +179,7 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(722, 523);
+            this.label1.Location = new System.Drawing.Point(727, 532);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 29);
             this.label1.TabIndex = 23;
@@ -188,7 +189,7 @@
             // 
             this.lblTatal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblTatal.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTatal.Location = new System.Drawing.Point(795, 523);
+            this.lblTatal.Location = new System.Drawing.Point(800, 532);
             this.lblTatal.Name = "lblTatal";
             this.lblTatal.Size = new System.Drawing.Size(266, 29);
             this.lblTatal.TabIndex = 23;
@@ -197,18 +198,29 @@
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(727, 15);
+            this.txtId.Location = new System.Drawing.Point(727, 48);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(227, 31);
             this.txtId.TabIndex = 10;
             this.txtId.Visible = false;
             // 
-            // Sale
+            // lblHead
+            // 
+            this.lblHead.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHead.Location = new System.Drawing.Point(14, 15);
+            this.lblHead.Name = "lblHead";
+            this.lblHead.Size = new System.Drawing.Size(142, 23);
+            this.lblHead.TabIndex = 24;
+            this.lblHead.Text = "ການຂາຍ";
+            this.lblHead.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Sale_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1145, 650);
+            this.Controls.Add(this.lblHead);
             this.Controls.Add(this.lblTatal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
@@ -221,10 +233,10 @@
             this.Controls.Add(this.txtSearch1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Sale";
+            this.Name = "Sale_Order";
             this.Text = "Sale";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Sale_Load);
+            this.Load += new System.EventHandler(this.Sale_Order_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
@@ -247,5 +259,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTatal;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label lblHead;
     }
 }

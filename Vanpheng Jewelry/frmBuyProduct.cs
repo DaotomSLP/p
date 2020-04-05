@@ -19,7 +19,7 @@ namespace Vanpheng_Jewelry
 
         private void frmBuyProduct_Load(object sender, EventArgs e)
         {
-            if(globalVal.FrmBuyStatus == "my")
+           if(globalVal.FrmBuyStatus == "my")
             {
                 loadImport_myProduct();
             }
@@ -30,11 +30,17 @@ namespace Vanpheng_Jewelry
         }
         private  void loadImport_myProduct()
         {
-
+            lbl_status.Visible = true;
+            rad_full.Visible = true;
+            rad_nfull.Visible = true;
+            lblName.Text = "ສິນຄ້າຂອງຮ້ານ";
         }
         private void loadImport_newProduct()
         {
-
+            lbl_status.Visible = false;
+            rad_full.Visible = false;
+            rad_nfull.Visible = false;
+            lblName.Text = "ສິນຄ້າໃໝ່";
         }
     }
 }
