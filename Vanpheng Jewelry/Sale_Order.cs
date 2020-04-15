@@ -21,49 +21,81 @@ namespace Vanpheng_Jewelry
          int total = 0;
         private void Sale_Order_Load(object sender, EventArgs e)
         {
-
+            if(globalVal.FrmSaleOrderStatus == "sale")
+            {
+                Sale_load();
+            }
+            else if(globalVal.FrmSaleOrderStatus == "order")
+            {
+                Order_load();
+            }
         }
 
         private void Sale_load()
         {
+            lblTatal.Visible = true;
+            cboSupp.Visible = false;
+            lblHead.Text = "ການຂາຍ";
+            label1.Text = "Total";
             DgvLoad();
             loadProduct("Order by Prod_id DESC");
-            ComboBoxLoad();
+            ComboBoxLoadProd_type();
             Database database = new Database();
             txtId.Text = database.generateId("SELECT MAX(Sale_id) FROM Sale").ToString();
         }
 
         private void Order_load()
         {
+            lblTatal.Visible = false;
+            cboSupp.Visible = true;
+            label1.Text = "ຜູ້ສະໜອງສິນຄ້າ";
+            lblHead.Text = "ການສັ່ງຊື້";
             DgvLoad();
             loadProduct("Order by Prod_id DESC");
-            ComboBoxLoad();
+            ComboBoxLoadProd_type();
             Database database = new Database();
-            txtId.Text = database.generateId("SELECT MAX(Order_id) FROM Order").ToString();
+            txtId.Text = database.generateId("SELECT MAX(Order_id) FROM Orders").ToString();
+            ComboBoxLoadSupplier();
         }
 
 
 
         private void DgvLoad()
         {
-            dgv.ColumnCount = 6;
-            dgv.Columns[0].Name = "ລະຫັດ";
-            dgv.Columns[1].Name = "ຊື່ສິນຄ້າ";
-            dgv.Columns[2].Name = "ລາຄາລາຍ";
-            dgv.Columns[3].Name = "ນ້ຳໜັກ";
-            dgv.Columns[4].Name = "ຈຳນວນ";
-            dgv.Columns[5].Name = "ລາຄາ";
+            if (globalVal.FrmSaleOrderStatus == "sale")
+            {
+                dgv.ColumnCount = 6;
+                dgv.Columns[0].Name = "ລະຫັດ";
+                dgv.Columns[1].Name = "ຊື່ສິນຄ້າ";
+                dgv.Columns[2].Name = "ລາຄາລາຍ";
+                dgv.Columns[3].Name = "ນ້ຳໜັກ";
+                dgv.Columns[4].Name = "ຈຳນວນ";
+                dgv.Columns[5].Name = "ລາຄາ";
 
-            dgv.RowHeadersWidth = 20;
-            dgv.Columns[0].Width = 50;
-            dgv.Columns[1].Width = 80;
-            dgv.Columns[2].Width = 110;
-            dgv.Columns[3].Width = 60;
-            dgv.Columns[4].Width = 60;
-            dgv.Columns[5].Width = 110;
-            dgv.Columns[0].Visible = false;
+                dgv.RowHeadersWidth = 20;
+                dgv.Columns[0].Width = 50;
+                dgv.Columns[1].Width = 80;
+                dgv.Columns[2].Width = 110;
+                dgv.Columns[3].Width = 60;
+                dgv.Columns[4].Width = 60;
+                dgv.Columns[5].Width = 110;
+                dgv.Columns[0].Visible = false;
+            }
+            else if(globalVal.FrmSaleOrderStatus == "order")
+            {
+                dgv.ColumnCount = 3;
+                dgv.Columns[0].Name = "ລະຫັດ";
+                dgv.Columns[1].Name = "ຊື່ສິນຄ້າ";
+                dgv.Columns[2].Name = "ຈຳນວນ";
+
+                dgv.RowHeadersWidth = 20;
+                dgv.Columns[0].Width = 50;
+                dgv.Columns[1].Width = 200;
+                dgv.Columns[2].Width = 200;
+                dgv.Columns[0].Visible = false;
+            }
         }
-        private void ComboBoxLoad()
+        private void ComboBoxLoadProd_type()
         {
             Database database = new Database();
             SqlDataReader dr = database.LoadData(@"SELECT TOP 30 * FROM dbo.Product_Type");
@@ -72,6 +104,17 @@ namespace Vanpheng_Jewelry
             comboBox1.DisplayMember = "ProdType_name";
             comboBox1.ValueMember = "ProdType_id";
             comboBox1.DataSource = dataTable;
+            dr.Close();
+        }
+        private void ComboBoxLoadSupplier()
+        {
+            Database database = new Database();
+            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Supplier");
+            DataTable dataTable = new DataTable();
+            dataTable.Load(dr);
+            cboSupp.DisplayMember = "Supp_name";
+            cboSupp.ValueMember = "Supp_id";
+            cboSupp.DataSource = dataTable;
             dr.Close();
         }
         public void loadProduct(string queryCon)
@@ -136,7 +179,7 @@ namespace Vanpheng_Jewelry
                     {
                         price =Convert.ToInt32( product[3]) + (Convert.ToInt32(dr[1])* Convert.ToInt32(product[i]));
                     }
-                    label2.Text = "ລາຄາ  (ກີບ) :";
+                    label2.Text = "ລາຄາ : " + price.ToString() + "  (ກີບ) :";
                     textBox.Text = price.ToString();
                 }
                 else if (Convert.ToInt32(product[i]) > 0 && i == 6)
@@ -146,7 +189,7 @@ namespace Vanpheng_Jewelry
                     {
                         price = Convert.ToInt32(product[3]) + (Convert.ToInt32(dr[2]) * Convert.ToInt32(product[i]));
                     }
-                    label2.Text = "ລາຄາ  (ກີບ) :";
+                    label2.Text = "ລາຄາ : "+ price.ToString() + "  (ກີບ) :";
                     textBox.Text = price.ToString();
                 }
                 else if (Convert.ToInt32(product[i]) > 0 && i == 7)
@@ -156,17 +199,19 @@ namespace Vanpheng_Jewelry
                     {
                         price = Convert.ToInt32(product[3]) + (Convert.ToInt32(dr[3]) * Convert.ToInt32(product[i]));
                     }
-                    label2.Text = "ລາຄາ  (ກີບ) :";
+                    label2.Text = "ລາຄາ : " + price.ToString() + "  (ກີບ) :";
                         textBox.Text= price.ToString();
                 }
+
+                textBox.Visible = false;
             }
             labelDesignPri.Text = "ລາຄາລາຍ : "+product[3];
-            labelDesignPri.ForeColor = Color.Crimson;
-            labelDesignPri.Font = new Font("Phetsarath OT", 12, FontStyle.Bold);
+            labelDesignPri.ForeColor = Color.Black;
+            labelDesignPri.Font = new Font("Phetsarath OT", 12, FontStyle.Regular);
             labelDesignPri.Dock = DockStyle.Bottom;
 
-            label.ForeColor = Color.Crimson;
-            label.Font = new Font("Phetsarath OT", 12, FontStyle.Bold);
+            label.ForeColor = Color.Black;
+            label.Font = new Font("Phetsarath OT", 12, FontStyle.Regular);
             label.Dock = DockStyle.Bottom;
 
             textBox.ForeColor = Color.Crimson;
@@ -190,14 +235,36 @@ namespace Vanpheng_Jewelry
             group.Controls.Add(button);
             flowLayoutPanel1.Controls.Add(group);
 
+            if(globalVal.FrmSaleOrderStatus == "order")
+            {
+                labelDesignPri.Visible = false;
+                label2.Visible = false;
+                label.Visible = false;
+                group.Height = 200;
+            }
+
             button.Click += new EventHandler(button_Click);
+
+                    
         }
         protected void button_Click(object sender, EventArgs e)
+        {
+            if(globalVal.FrmSaleOrderStatus == "sale")
+            {
+                onSelectItems_bySale(sender);
+            }
+            else if(globalVal.FrmSaleOrderStatus == "order")
+            {
+                onSelectItems_byOrder(sender);
+            }
+        }
+
+        private void onSelectItems_bySale(object sender)
         {
             string count = "";
             string name = "";
             string weight = "";
-            int price = 0 ;
+            int price = 0;
             string DsPrice = "";
             string id = "";
             Button button = sender as Button;
@@ -223,14 +290,14 @@ namespace Vanpheng_Jewelry
                         {
                             if (text is TextBox)
                             {
-                                price = Convert.ToInt32( text.Text);
+                                price = Convert.ToInt32(text.Text);
                             }
                         }
                     }
                     foreach (DataGridViewRow rows in dgv.Rows)
                     {
                         //MessageBox.Show(row.Cells[0].Value);
-                        if  (Convert.ToString( rows.Cells[0].Value) == button.Name)
+                        if (Convert.ToString(rows.Cells[0].Value) == button.Name)
                         {
                             total -= Convert.ToInt32(rows.Cells[5].Value.ToString());
                             dgv.Rows.Remove(rows);
@@ -238,44 +305,98 @@ namespace Vanpheng_Jewelry
                     }
 
                     Database database = new Database();
-                        SqlDataReader dr = database.LoadData(@"SELECT Design_price,Prod_weight1,Prod_weight2,Prod_weight3 FROM dbo.Product WHERE Prod_id = '" + groupBox.Name+"'");
-                        while (dr.Read())
-                        {
+                    SqlDataReader dr = database.LoadData(@"SELECT Design_price,Prod_weight1,Prod_weight2,Prod_weight3 FROM dbo.Product WHERE Prod_id = '" + groupBox.Name + "'");
+                    while (dr.Read())
+                    {
                         DsPrice = dr["Design_price"].ToString();
-                           if( dr["Prod_weight1"].ToString() != "0")
-                            {
-                                weight = dr["Prod_weight1"].ToString() + " ບາດ";
-                            }
-                            else if(dr["Prod_weight2"].ToString() != "0")
-                            {
-                                weight = dr["Prod_weight2"].ToString()+" ສະຫຼຶງ";
-                            }
-                            else if(dr["Prod_weight3"].ToString() != "0")
-                            {
-                                weight = dr["Prod_weight3"].ToString() + " ຫຸນ";
-                            }
+                        if (dr["Prod_weight1"].ToString() != "0")
+                        {
+                            weight = dr["Prod_weight1"].ToString() + " ບາດ";
                         }
-                        dr.Close();
+                        else if (dr["Prod_weight2"].ToString() != "0")
+                        {
+                            weight = dr["Prod_weight2"].ToString() + " ສະຫຼຶງ";
+                        }
+                        else if (dr["Prod_weight3"].ToString() != "0")
+                        {
+                            weight = dr["Prod_weight3"].ToString() + " ຫຸນ";
+                        }
+                    }
+                    dr.Close();
 
-                    price *= Convert.ToInt32( count);
+                    price *= Convert.ToInt32(count);
 
-                    string[] row = new string[] {id, name, DsPrice, weight, count, price.ToString() };
-                        dgv.Rows.Add(row);
+                    string[] row = new string[] { id, name, DsPrice, weight, count, price.ToString() };
+                    dgv.Rows.Add(row);
                     total += Convert.ToInt32(price);
                     lblTatal.Text = total.ToString();
-                
+
+                }
+
             }
+        }
+        private void onSelectItems_byOrder(object sender)
+        {
+            string count = "";
+            string name = "";
+            string id = "";
+            Button button = sender as Button;
+            foreach (GroupBox groupBox in flowLayoutPanel1.Controls)
+            {
+                if (groupBox.Name == button.Name)
+                {
+                    try
+                    {
+                        id = groupBox.Name;
+                        name = groupBox.Text;
+                        foreach (NumericUpDown numeric in groupBox.Controls)
+                        {
+                            if (numeric is NumericUpDown)
+                            {
+                                count = Convert.ToString(numeric.Value);
+                            }
+                        }
+                    }
+                    catch
+                    {
+                    }
+                    foreach (DataGridViewRow rows in dgv.Rows)
+                    {
+                        //MessageBox.Show(row.Cells[0].Value);
+                        if (Convert.ToString(rows.Cells[0].Value) == button.Name)
+                        {
+                            dgv.Rows.Remove(rows);
+                        }
+                    }
+
+                    string[] row = new string[] { id, name, count };
+                    dgv.Rows.Add(row);
+
+                }
 
             }
         }
 
         private void btnDelLi_Click(object sender, EventArgs e)
         {
-            string price = "";
-            price =  dgv.Rows[dgvSelRow].Cells[5].Value.ToString();
-            dgv.Rows.RemoveAt(dgvSelRow);
-            total -= Convert.ToInt32(price);
-            lblTatal.Text = total.ToString();
+            try
+            {
+                dgv.Rows.RemoveAt(dgvSelRow);
+                if (globalVal.FrmSaleOrderStatus == "sale")
+                {
+                    string price = "";
+                    price = dgv.Rows[dgvSelRow].Cells[5].Value.ToString();
+
+                    total -= Convert.ToInt32(price);
+                    lblTatal.Text = total.ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("list is empty");
+            }
+
+
         }
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -295,33 +416,87 @@ namespace Vanpheng_Jewelry
             loadProduct("WHERE ProdType_id = '" + comboBox1.SelectedValue + "' Order by Prod_id DESC");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnPrint_Click(object sender, EventArgs e)
         {
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show("ພິມໃບບິນ ? :", "", buttons);
-            if (result == DialogResult.Yes)
+            if(globalVal.FrmSaleOrderStatus == "sale")
             {
-
-                Database database = new Database();
-                int Bill_no = 0;
-                Bill_no = Convert.ToInt32( database.generateBillNo("SELECT MAX(Bill_no) from Sale")); 
-                database.InsertData(@"INSERT INTO Sale VALUES('"+txtId.Text+ "','" + DateTime.Now.ToString() + "','" + lblTatal.Text + "','" + Bill_no.ToString() + "')");
-               foreach(DataGridViewRow row in dgv.Rows)
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show("ພິມໃບບິນ ? :", "", buttons);
+                if (result == DialogResult.Yes)
                 {
-                    try
-                    {
-                        database.InsertData(@"INSERT INTO Sale_Detail VALUES('" + txtId.Text + "','" + Convert.ToInt32(row.Cells[0].Value) + "','" + row.Cells[4].Value + "','" + Convert.ToDecimal(row.Cells[5].Value) + "')");
-                    }
-                    catch
-                    {
 
+                    Database database = new Database();
+                    int Bill_no = 0;
+                    Bill_no = Convert.ToInt32(database.generateBillNo("SELECT MAX(Bill_no) from Sale"));
+                    database.InsertData(@"INSERT INTO Sale VALUES('" + txtId.Text + "','" + DateTime.Now.ToString() + "','" + lblTatal.Text + "','" + Bill_no.ToString() + "')");
+                    foreach (DataGridViewRow row in dgv.Rows)
+                    {
+                        try
+                        {
+                            database.InsertData(@"INSERT INTO Sale_Detail VALUES('" + txtId.Text + "','" + Convert.ToInt32(row.Cells[0].Value) + "','" + row.Cells[4].Value + "','" + Convert.ToDecimal(row.Cells[5].Value) + "')");
+                        }
+                        catch
+                        {
+
+                        }
                     }
-                    }
+                    rerunForm();
+                    MessageBox.Show("Success...");
+                }
+                else
+                {
+
+                }
             }
-            else
+            else if(globalVal.FrmSaleOrderStatus == "order")
             {
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show("ພິມໃບສັ່ງຊື້ ? :", "", buttons);
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show(txtId.Text);
+                    Database database = new Database();
+                    int Bill_no = 0;
+                    Bill_no = Convert.ToInt32(database.generateBillNo("SELECT MAX(Bill_no) from Sale"));
+                    database.InsertData(@"INSERT INTO Orders VALUES('" + txtId.Text + "','" + DateTime.Now.ToString() + "','" + cboSupp.SelectedValue + "','1')");
+                    foreach (DataGridViewRow row in dgv.Rows)
+                    {
+                        try
+                        {
+                            database.InsertData(@"INSERT INTO Order_Detail VALUES('" + Convert.ToInt32(row.Cells[0].Value) + "','" + txtId.Text + "','" + row.Cells[2].Value + "','1')");
+                        }
+                        catch
+                        {
 
+                        }
+                    }     
+                    rerunForm();
+                    MessageBox.Show("Success...");
+                }
+                else
+                {
+
+                }
             }
+
+        }
+
+        private void rerunForm()
+        {
+            dgv.Rows.Clear();
+
+
+            if(globalVal.FrmSaleOrderStatus == "sale")
+            {
+                Database database = new Database();
+                txtId.Text = database.generateId("SELECT MAX(Sale_id) FROM Sale").ToString();
+            }
+            else if(globalVal.FrmSaleOrderStatus == "order")
+            {
+                Database database = new Database();
+                txtId.Text = database.generateId("SELECT MAX(Order_id) FROM Orders").ToString();
+            }
+
         }
     }
 }

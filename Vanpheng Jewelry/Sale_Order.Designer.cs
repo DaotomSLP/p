@@ -31,7 +31,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.txtSearch1 = new System.Windows.Forms.TextBox();
             this.btnSearchbyCate = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.btnDelLi = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnSearchbyNo = new System.Windows.Forms.Button();
@@ -42,6 +42,7 @@
             this.lblTatal = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lblHead = new System.Windows.Forms.Label();
+            this.cboSupp = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +56,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(19, 86);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(20);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(683, 538);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(683, 552);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // txtSearch1
@@ -81,20 +82,20 @@
             this.btnSearchbyCate.UseVisualStyleBackColor = false;
             this.btnSearchbyCate.Click += new System.EventHandler(this.btnSearchbyCate_Click);
             // 
-            // button2
+            // btnPrint
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(960, 578);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 46);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "ພິມໃບບິນ";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnPrint.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPrint.Location = new System.Drawing.Point(960, 578);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(159, 46);
+            this.btnPrint.TabIndex = 13;
+            this.btnPrint.Text = "ພິມໃບບິນ";
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnDelLi
             // 
@@ -214,18 +215,28 @@
             this.lblHead.Text = "ການຂາຍ";
             this.lblHead.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // cboSupp
+            // 
+            this.cboSupp.Font = new System.Drawing.Font("Phetsarath OT", 12F);
+            this.cboSupp.FormattingEnabled = true;
+            this.cboSupp.Location = new System.Drawing.Point(863, 530);
+            this.cboSupp.Name = "cboSupp";
+            this.cboSupp.Size = new System.Drawing.Size(256, 31);
+            this.cboSupp.TabIndex = 25;
+            // 
             // Sale_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1145, 650);
+            this.Controls.Add(this.cboSupp);
             this.Controls.Add(this.lblHead);
             this.Controls.Add(this.lblTatal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.btnDelLi);
             this.Controls.Add(this.btnSearchbyNo);
             this.Controls.Add(this.btnSearchbyCate);
@@ -249,7 +260,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.TextBox txtSearch1;
         private System.Windows.Forms.Button btnSearchbyCate;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnDelLi;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btnSearchbyNo;
@@ -260,5 +271,6 @@
         private System.Windows.Forms.Label lblTatal;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblHead;
+        private System.Windows.Forms.ComboBox cboSupp;
     }
 }

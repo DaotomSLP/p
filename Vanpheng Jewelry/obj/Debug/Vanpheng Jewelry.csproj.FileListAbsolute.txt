@@ -92,3 +92,4 @@ D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.csproj.Generate
 D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.exe
 D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.pdb
 D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Sale_Order.resources
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.csproj.CoreCompileInputs.cache

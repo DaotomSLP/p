@@ -40,14 +40,14 @@ namespace Vanpheng_Jewelry
             sale_order.Location = new Point(0, 0);
             sale_order.Show();
         }
-        private void hideForm()
+        public void hideForm()
         {
             foreach (Form form in this.MdiChildren)
             {
                 form.Close();
             }
         }
-        private void showForm(Form form)
+        public void showForm(Form form)
         {
             form.MdiParent = this;
             form.Location = new Point(0, 0);
@@ -204,10 +204,10 @@ namespace Vanpheng_Jewelry
 
         private void btnOrdMy_Click(object sender, EventArgs e)
         {
-            globalVal.FrmBuyStatus = "my";
+            globalVal.FrmSaleOrderStatus = "order";
             hideForm();
-            frmBuyProduct frmBuyProduct = new frmBuyProduct();
-            showForm(frmBuyProduct);
+            Sale_Order sale_Order = new Sale_Order();
+            showForm(sale_Order);
         }
     }
 }
