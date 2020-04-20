@@ -153,8 +153,8 @@ namespace Vanpheng_Jewelry
                     "','" + txtTotal.Text + "','" + txtOrder_id.Text + "')");
                 foreach (DataGridViewRow row in dgvOrder_details.Rows)
                 {
-  
-                        if (row.Cells[4].Value.ToString() == "True")
+                    int instock = 0;
+                    if (row.Cells[4].Value.ToString() == "True")
                         {
                             database.InsertData(@"INSERT INTO Import_detail VALUES('" + row.Cells[0].Value.ToString() +
                             "','" + id + "','" + row.Cells[2].Value.ToString() +
@@ -162,6 +162,18 @@ namespace Vanpheng_Jewelry
 
                             database.InsertData(@"UPDATE Order_detail SET Order_is_success = 0 WHERE Prod_id ='" +
                                 Convert.ToInt32(row.Cells[0].Value.ToString()) + "' AND Order_id ='"+txtOrder_id.Text+"' ");
+
+
+                            SqlDataReader dr = database.LoadData(@"SELECT Prod_instock FROM Product WHERE Prod_id = '" +
+                               Convert.ToInt32(row.Cells[0].Value.ToString()) + "'");
+                        while (dr.Read())
+                            {
+                            instock = Convert.ToInt32(dr["Prod_instock"].ToString()) + Convert.ToInt32(row.Cells[2].Value);
+                                database.InsertData(@"UPDATE Product SET Prod_instock = '"+ instock + "' WHERE Prod_id ='" +
+                                    Convert.ToInt32(row.Cells[0].Value.ToString()) + "'");
+                            }
+                            dr.Close();
+
                         }
                         else if(row.Cells[4].Value.ToString() == "False")
                         {
