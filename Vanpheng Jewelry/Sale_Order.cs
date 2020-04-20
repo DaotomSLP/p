@@ -454,11 +454,10 @@ namespace Vanpheng_Jewelry
                 DialogResult result = MessageBox.Show("ພິມໃບສັ່ງຊື້ ? :", "", buttons);
                 if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show(txtId.Text);
                     Database database = new Database();
-                    int Bill_no = 0;
-                    Bill_no = Convert.ToInt32(database.generateBillNo("SELECT MAX(Bill_no) from Sale"));
-                    database.InsertData(@"INSERT INTO Orders VALUES('" + txtId.Text + "','" + DateTime.Now.ToString() + "','" + cboSupp.SelectedValue + "','1')");
+                    int Order_no = 0;
+                    Order_no = Convert.ToInt32(database.generateBillNo("SELECT MAX(Order_no) from Orders"));
+                    database.InsertData(@"INSERT INTO Orders VALUES('" + txtId.Text + "','" + DateTime.Now.ToString() + "','" + Order_no.ToString() + "','" + cboSupp.SelectedValue + "','1')");
                     foreach (DataGridViewRow row in dgv.Rows)
                     {
                         try

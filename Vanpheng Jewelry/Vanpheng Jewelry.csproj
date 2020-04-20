@@ -93,6 +93,18 @@
     <Compile Include="frmEmployee.Designer.cs">
       <DependentUpon>frmEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGetImportPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGetImportPrice.Designer.cs">
+      <DependentUpon>frmGetImportPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImport.Designer.cs">
+      <DependentUpon>frmImport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProdType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmployee.resx">
       <DependentUpon>frmEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGetImportPrice.resx">
+      <DependentUpon>frmGetImportPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImport.resx">
+      <DependentUpon>frmImport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProdType.resx">
       <DependentUpon>frmProdType.cs</DependentUpon>

@@ -48,13 +48,7 @@
             this.btnAddProd = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnData = new System.Windows.Forms.Button();
-            this.panOder = new System.Windows.Forms.Panel();
-            this.btnImpNew = new System.Windows.Forms.Button();
-            this.btnImpOld = new System.Windows.Forms.Button();
             this.btnImp = new System.Windows.Forms.Button();
-            this.panBuy = new System.Windows.Forms.Panel();
-            this.btnOrdNew = new System.Windows.Forms.Button();
-            this.btnOrdMy = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnMenuSale = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -70,8 +64,6 @@
             this.panel1.SuspendLayout();
             this.panelUpdateDataSubMenu.SuspendLayout();
             this.panelDataSubMenu.SuspendLayout();
-            this.panOder.SuspendLayout();
-            this.panBuy.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -87,9 +79,7 @@
             this.panel1.Controls.Add(this.panelDataSubMenu);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnData);
-            this.panel1.Controls.Add(this.panOder);
             this.panel1.Controls.Add(this.btnImp);
-            this.panel1.Controls.Add(this.panBuy);
             this.panel1.Controls.Add(this.btnOrder);
             this.panel1.Controls.Add(this.btnMenuSale);
             this.panel1.Controls.Add(this.panel3);
@@ -106,7 +96,7 @@
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnReport.Location = new System.Drawing.Point(0, 1002);
+            this.btnReport.Location = new System.Drawing.Point(0, 838);
             this.btnReport.Name = "btnReport";
             this.btnReport.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnReport.Size = new System.Drawing.Size(217, 40);
@@ -114,6 +104,7 @@
             this.btnReport.Text = "ລາຍງານ";
             this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // panelUpdateDataSubMenu
             // 
@@ -125,7 +116,7 @@
             this.panelUpdateDataSubMenu.Controls.Add(this.btnEditProdT);
             this.panelUpdateDataSubMenu.Controls.Add(this.btnEditProd);
             this.panelUpdateDataSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelUpdateDataSubMenu.Location = new System.Drawing.Point(0, 745);
+            this.panelUpdateDataSubMenu.Location = new System.Drawing.Point(0, 581);
             this.panelUpdateDataSubMenu.Name = "panelUpdateDataSubMenu";
             this.panelUpdateDataSubMenu.Size = new System.Drawing.Size(217, 257);
             this.panelUpdateDataSubMenu.TabIndex = 21;
@@ -259,7 +250,7 @@
             this.btnUpdateData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateData.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateData.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUpdateData.Location = new System.Drawing.Point(0, 705);
+            this.btnUpdateData.Location = new System.Drawing.Point(0, 541);
             this.btnUpdateData.Name = "btnUpdateData";
             this.btnUpdateData.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnUpdateData.Size = new System.Drawing.Size(217, 40);
@@ -279,7 +270,7 @@
             this.panelDataSubMenu.Controls.Add(this.btnAddProdType);
             this.panelDataSubMenu.Controls.Add(this.btnAddProd);
             this.panelDataSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelDataSubMenu.Location = new System.Drawing.Point(0, 448);
+            this.panelDataSubMenu.Location = new System.Drawing.Point(0, 284);
             this.panelDataSubMenu.Name = "panelDataSubMenu";
             this.panelDataSubMenu.Size = new System.Drawing.Size(217, 257);
             this.panelDataSubMenu.TabIndex = 16;
@@ -429,7 +420,7 @@
             this.btnData.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnData.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnData.Location = new System.Drawing.Point(0, 408);
+            this.btnData.Location = new System.Drawing.Point(0, 244);
             this.btnData.Name = "btnData";
             this.btnData.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnData.Size = new System.Drawing.Size(217, 40);
@@ -440,58 +431,6 @@
             this.btnData.UseVisualStyleBackColor = false;
             this.btnData.Click += new System.EventHandler(this.btnData_Click);
             // 
-            // panOder
-            // 
-            this.panOder.BackColor = System.Drawing.Color.Goldenrod;
-            this.panOder.Controls.Add(this.btnImpNew);
-            this.panOder.Controls.Add(this.btnImpOld);
-            this.panOder.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panOder.Location = new System.Drawing.Point(0, 326);
-            this.panOder.Name = "panOder";
-            this.panOder.Size = new System.Drawing.Size(217, 82);
-            this.panOder.TabIndex = 26;
-            this.panOder.Visible = false;
-            // 
-            // btnImpNew
-            // 
-            this.btnImpNew.BackColor = System.Drawing.Color.Transparent;
-            this.btnImpNew.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnImpNew.FlatAppearance.BorderSize = 0;
-            this.btnImpNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImpNew.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImpNew.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnImpNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImpNew.Location = new System.Drawing.Point(0, 40);
-            this.btnImpNew.Name = "btnImpNew";
-            this.btnImpNew.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnImpNew.Size = new System.Drawing.Size(217, 40);
-            this.btnImpNew.TabIndex = 16;
-            this.btnImpNew.Text = "ສິນຄ້າໃໝ່";
-            this.btnImpNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImpNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnImpNew.UseVisualStyleBackColor = false;
-            this.btnImpNew.Click += new System.EventHandler(this.btnImpNew_Click);
-            // 
-            // btnImpOld
-            // 
-            this.btnImpOld.BackColor = System.Drawing.Color.Transparent;
-            this.btnImpOld.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnImpOld.FlatAppearance.BorderSize = 0;
-            this.btnImpOld.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImpOld.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImpOld.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnImpOld.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImpOld.Location = new System.Drawing.Point(0, 0);
-            this.btnImpOld.Name = "btnImpOld";
-            this.btnImpOld.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnImpOld.Size = new System.Drawing.Size(217, 40);
-            this.btnImpOld.TabIndex = 15;
-            this.btnImpOld.Text = "ສິນຄ້າເກົ່າ";
-            this.btnImpOld.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImpOld.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnImpOld.UseVisualStyleBackColor = false;
-            this.btnImpOld.Click += new System.EventHandler(this.btnImpOld_Click);
-            // 
             // btnImp
             // 
             this.btnImp.BackColor = System.Drawing.Color.Transparent;
@@ -501,69 +440,17 @@
             this.btnImp.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnImp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImp.Location = new System.Drawing.Point(0, 286);
+            this.btnImp.Location = new System.Drawing.Point(0, 204);
             this.btnImp.Name = "btnImp";
             this.btnImp.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnImp.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnImp.Size = new System.Drawing.Size(217, 40);
             this.btnImp.TabIndex = 24;
-            this.btnImp.Text = "ນຳເຂົ້າ";
+            this.btnImp.Text = "ການນຳເຂົ້າ";
             this.btnImp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnImp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnImp.UseVisualStyleBackColor = false;
             this.btnImp.Click += new System.EventHandler(this.btnImp_Click);
-            // 
-            // panBuy
-            // 
-            this.panBuy.BackColor = System.Drawing.Color.Goldenrod;
-            this.panBuy.Controls.Add(this.btnOrdNew);
-            this.panBuy.Controls.Add(this.btnOrdMy);
-            this.panBuy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panBuy.Location = new System.Drawing.Point(0, 204);
-            this.panBuy.Name = "panBuy";
-            this.panBuy.Size = new System.Drawing.Size(217, 82);
-            this.panBuy.TabIndex = 25;
-            this.panBuy.Visible = false;
-            // 
-            // btnOrdNew
-            // 
-            this.btnOrdNew.BackColor = System.Drawing.Color.Transparent;
-            this.btnOrdNew.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOrdNew.FlatAppearance.BorderSize = 0;
-            this.btnOrdNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrdNew.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdNew.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnOrdNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrdNew.Location = new System.Drawing.Point(0, 40);
-            this.btnOrdNew.Name = "btnOrdNew";
-            this.btnOrdNew.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnOrdNew.Size = new System.Drawing.Size(217, 40);
-            this.btnOrdNew.TabIndex = 16;
-            this.btnOrdNew.Text = "ສິນຄ້າໃໝ່";
-            this.btnOrdNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrdNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOrdNew.UseVisualStyleBackColor = false;
-            this.btnOrdNew.Click += new System.EventHandler(this.btnOrdNew_Click);
-            // 
-            // btnOrdMy
-            // 
-            this.btnOrdMy.BackColor = System.Drawing.Color.Transparent;
-            this.btnOrdMy.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOrdMy.FlatAppearance.BorderSize = 0;
-            this.btnOrdMy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrdMy.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrdMy.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnOrdMy.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrdMy.Location = new System.Drawing.Point(0, 0);
-            this.btnOrdMy.Name = "btnOrdMy";
-            this.btnOrdMy.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.btnOrdMy.Size = new System.Drawing.Size(217, 40);
-            this.btnOrdMy.TabIndex = 15;
-            this.btnOrdMy.Text = "ສິນຄ້າເກົ່າ";
-            this.btnOrdMy.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrdMy.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnOrdMy.UseVisualStyleBackColor = false;
-            this.btnOrdMy.Click += new System.EventHandler(this.btnOrdMy_Click);
             // 
             // btnOrder
             // 
@@ -732,8 +619,6 @@
             this.panel1.ResumeLayout(false);
             this.panelUpdateDataSubMenu.ResumeLayout(false);
             this.panelDataSubMenu.ResumeLayout(false);
-            this.panOder.ResumeLayout(false);
-            this.panBuy.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -776,12 +661,6 @@
         private System.Windows.Forms.Button btnEditProd;
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Button btnImp;
-        private System.Windows.Forms.Panel panBuy;
-        private System.Windows.Forms.Button btnOrdNew;
-        private System.Windows.Forms.Button btnOrdMy;
-        private System.Windows.Forms.Panel panOder;
-        private System.Windows.Forms.Button btnImpNew;
-        private System.Windows.Forms.Button btnImpOld;
     }
 }
 

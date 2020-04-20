@@ -71,6 +71,7 @@ namespace Vanpheng_Jewelry
             }
             dgv.DataSource = dataTable;
             dr.Close();
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
