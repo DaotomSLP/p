@@ -120,7 +120,7 @@ namespace Vanpheng_Jewelry
         public void loadProduct(string queryCon)
         {
             Database database = new Database();
-            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Product "+queryCon);
+            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Product WHERE Prod_instock > 0 "+queryCon);
             while (dr.Read())
             {
                 showProduct((IDataRecord)dr);
@@ -152,7 +152,12 @@ namespace Vanpheng_Jewelry
             numeric.Width = 40;
             numeric.Name = button.Name = product[0].ToString();
             numeric.Value = 1;
+            numeric.Minimum = 1;
             numeric.Dock = DockStyle.Right;
+            if(globalVal.FrmSaleOrderStatus == "sale")
+            {
+                numeric.Maximum = Convert.ToInt32(product[8].ToString());
+            }
 
             PictureBox picture = new PictureBox();
             picture.Height = 100;
@@ -418,7 +423,7 @@ namespace Vanpheng_Jewelry
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            if(globalVal.FrmSaleOrderStatus == "sale")
+            if (globalVal.FrmSaleOrderStatus == "sale")
             {
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result = MessageBox.Show("ພິມໃບບິນ ? :", "", buttons);
@@ -428,17 +433,25 @@ namespace Vanpheng_Jewelry
                     Database database = new Database();
                     int Bill_no = 0;
                     Bill_no = Convert.ToInt32(database.generateBillNo("SELECT MAX(Bill_no) from Sale"));
-                    database.InsertData(@"INSERT INTO Sale VALUES('" + txtId.Text + "','" + DateTime.Now.ToString() + "','" + lblTatal.Text + "','" + Bill_no.ToString() + "')");
+                    database.InsertData(@"INSERT INTO Sale VALUES('" + txtId.Text + "','" + DateTime.Now.ToString() +
+                        "','" + lblTatal.Text + "','" + Bill_no.ToString() + "')");
+
                     foreach (DataGridViewRow row in dgv.Rows)
                     {
-                        try
-                        {
-                            database.InsertData(@"INSERT INTO Sale_Detail VALUES('" + txtId.Text + "','" + Convert.ToInt32(row.Cells[0].Value) + "','" + row.Cells[4].Value + "','" + Convert.ToDecimal(row.Cells[5].Value) + "')");
-                        }
-                        catch
-                        {
+                        database.InsertData(@"INSERT INTO Sale_Detail VALUES('" +
+                                txtId.Text + "','" + Convert.ToInt32(row.Cells[0].Value) +
+                                "','" + row.Cells[4].Value + "','" + Convert.ToDecimal(row.Cells[5].Value) + "')");
 
-                        }
+                            SqlDataReader dr = database.LoadData(@"SELECT Prod_instock FROM Product WHERE Prod_id = '" +
+                           Convert.ToInt32(row.Cells[0].Value.ToString()) + "'");
+                            while (dr.Read())
+                            {
+                               int instock = Convert.ToInt32(dr["Prod_instock"].ToString()) - Convert.ToInt32(row.Cells[4].Value);
+                        
+                                database.InsertData(@"UPDATE Product SET Prod_instock = '" + instock + "' WHERE Prod_id ='" +
+                                    Convert.ToInt32(row.Cells[0].Value.ToString()) + "'");
+                            }
+                            dr.Close();
                     }
                     rerunForm();
                     MessageBox.Show("Success...");
