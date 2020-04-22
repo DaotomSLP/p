@@ -38,7 +38,7 @@ namespace Vanpheng_Jewelry
             lblHead.Text = "ການຂາຍ";
             label1.Text = "Total";
             DgvLoad();
-            loadProduct("Order by Prod_id DESC");
+            loadProduct("WHERE Prod_instock > 0 Order by Prod_id DESC");
             ComboBoxLoadProd_type();
             Database database = new Database();
             txtId.Text = database.generateId("SELECT MAX(Sale_id) FROM Sale").ToString();
@@ -120,7 +120,7 @@ namespace Vanpheng_Jewelry
         public void loadProduct(string queryCon)
         {
             Database database = new Database();
-            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Product WHERE Prod_instock > 0 "+queryCon);
+            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Product "+queryCon);
             while (dr.Read())
             {
                 showProduct((IDataRecord)dr);
@@ -502,6 +502,7 @@ namespace Vanpheng_Jewelry
             {
                 Database database = new Database();
                 txtId.Text = database.generateId("SELECT MAX(Sale_id) FROM Sale").ToString();
+                Sale_load();
             }
             else if(globalVal.FrmSaleOrderStatus == "order")
             {

@@ -58,15 +58,14 @@ namespace Vanpheng_Jewelry
         }
         private void hideAndShowSubMenu(Panel panel)
         {
-            if(panel.Visible == true)
+            panelDataSubMenu.Visible = false;
+            panelUpdateDataSubMenu.Visible = false;
+            panelReportSubmenu.Visible = false;
+            if (panel.Visible == true)
             {
-                panelDataSubMenu.Visible = false;
-                panelUpdateDataSubMenu.Visible = false;
                 panel.Visible = false;
             }else
             {
-                panelDataSubMenu.Visible = false;
-                panelUpdateDataSubMenu.Visible = false;
                 panel.Visible = true;
             }
         }
@@ -267,6 +266,7 @@ namespace Vanpheng_Jewelry
         private void btnReport_Click(object sender, EventArgs e)
         {
             changeMenuColor();
+            hideAndShowSubMenu(panelReportSubmenu);
         }
     }
 }
