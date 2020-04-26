@@ -30,6 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelReportSubmenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnReportImportSum = new System.Windows.Forms.Button();
+            this.btnReportSaleSum = new System.Windows.Forms.Button();
+            this.btnReportEmp = new System.Windows.Forms.Button();
+            this.btnReportCus = new System.Windows.Forms.Button();
+            this.btnReportSupp = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btnReportProdType = new System.Windows.Forms.Button();
+            this.btnReportProd = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
             this.panelUpdateDataSubMenu = new System.Windows.Forms.Panel();
             this.btnEditEmp = new System.Windows.Forms.Button();
@@ -61,21 +71,12 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.panelReportSubmenu = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panelReportSubmenu.SuspendLayout();
             this.panelUpdateDataSubMenu.SuspendLayout();
             this.panelDataSubMenu.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panelReportSubmenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,6 +101,202 @@
             this.panel1.Size = new System.Drawing.Size(217, 715);
             this.panel1.TabIndex = 0;
             // 
+            // panelReportSubmenu
+            // 
+            this.panelReportSubmenu.BackColor = System.Drawing.Color.Goldenrod;
+            this.panelReportSubmenu.Controls.Add(this.button1);
+            this.panelReportSubmenu.Controls.Add(this.btnReportImportSum);
+            this.panelReportSubmenu.Controls.Add(this.btnReportSaleSum);
+            this.panelReportSubmenu.Controls.Add(this.btnReportEmp);
+            this.panelReportSubmenu.Controls.Add(this.btnReportCus);
+            this.panelReportSubmenu.Controls.Add(this.btnReportSupp);
+            this.panelReportSubmenu.Controls.Add(this.button4);
+            this.panelReportSubmenu.Controls.Add(this.btnReportProdType);
+            this.panelReportSubmenu.Controls.Add(this.btnReportProd);
+            this.panelReportSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelReportSubmenu.Location = new System.Drawing.Point(0, 866);
+            this.panelReportSubmenu.Name = "panelReportSubmenu";
+            this.panelReportSubmenu.Size = new System.Drawing.Size(200, 390);
+            this.panelReportSubmenu.TabIndex = 25;
+            this.panelReportSubmenu.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 345);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(200, 40);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "ລາຍງານປະຫວັດການສັ່ງຊື້";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnReportImportSum
+            // 
+            this.btnReportImportSum.BackColor = System.Drawing.Color.Transparent;
+            this.btnReportImportSum.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportImportSum.FlatAppearance.BorderSize = 0;
+            this.btnReportImportSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportImportSum.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportImportSum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReportImportSum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportImportSum.Location = new System.Drawing.Point(0, 280);
+            this.btnReportImportSum.Name = "btnReportImportSum";
+            this.btnReportImportSum.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReportImportSum.Size = new System.Drawing.Size(200, 65);
+            this.btnReportImportSum.TabIndex = 22;
+            this.btnReportImportSum.Text = "ລາຍງານຍອດລວມລາຍຈ່າຍ\r\n  ຈາກການນຳເຂົ້າ";
+            this.btnReportImportSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportImportSum.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportImportSum.UseVisualStyleBackColor = false;
+            this.btnReportImportSum.Click += new System.EventHandler(this.btnReportImportSum_Click);
+            // 
+            // btnReportSaleSum
+            // 
+            this.btnReportSaleSum.BackColor = System.Drawing.Color.Transparent;
+            this.btnReportSaleSum.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportSaleSum.FlatAppearance.BorderSize = 0;
+            this.btnReportSaleSum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportSaleSum.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportSaleSum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReportSaleSum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportSaleSum.Location = new System.Drawing.Point(0, 240);
+            this.btnReportSaleSum.Name = "btnReportSaleSum";
+            this.btnReportSaleSum.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReportSaleSum.Size = new System.Drawing.Size(200, 40);
+            this.btnReportSaleSum.TabIndex = 21;
+            this.btnReportSaleSum.Text = "ລາຍງານຍອດລວມການຂາຍ";
+            this.btnReportSaleSum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportSaleSum.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportSaleSum.UseVisualStyleBackColor = false;
+            this.btnReportSaleSum.Click += new System.EventHandler(this.btnReportSaleSum_Click);
+            // 
+            // btnReportEmp
+            // 
+            this.btnReportEmp.BackColor = System.Drawing.Color.Transparent;
+            this.btnReportEmp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportEmp.FlatAppearance.BorderSize = 0;
+            this.btnReportEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportEmp.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportEmp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReportEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportEmp.Location = new System.Drawing.Point(0, 200);
+            this.btnReportEmp.Name = "btnReportEmp";
+            this.btnReportEmp.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReportEmp.Size = new System.Drawing.Size(200, 40);
+            this.btnReportEmp.TabIndex = 20;
+            this.btnReportEmp.Text = "ລາຍງານຂໍ້ມູນພະນັກງານ";
+            this.btnReportEmp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportEmp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportEmp.UseVisualStyleBackColor = false;
+            this.btnReportEmp.Click += new System.EventHandler(this.btnReportEmp_Click);
+            // 
+            // btnReportCus
+            // 
+            this.btnReportCus.BackColor = System.Drawing.Color.Transparent;
+            this.btnReportCus.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportCus.FlatAppearance.BorderSize = 0;
+            this.btnReportCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportCus.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportCus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReportCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportCus.Location = new System.Drawing.Point(0, 160);
+            this.btnReportCus.Name = "btnReportCus";
+            this.btnReportCus.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReportCus.Size = new System.Drawing.Size(200, 40);
+            this.btnReportCus.TabIndex = 19;
+            this.btnReportCus.Text = "ລາຍງານຂໍ້ມູນລູກຄ້າ";
+            this.btnReportCus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportCus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportCus.UseVisualStyleBackColor = false;
+            // 
+            // btnReportSupp
+            // 
+            this.btnReportSupp.BackColor = System.Drawing.Color.Transparent;
+            this.btnReportSupp.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportSupp.FlatAppearance.BorderSize = 0;
+            this.btnReportSupp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportSupp.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportSupp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReportSupp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportSupp.Location = new System.Drawing.Point(0, 120);
+            this.btnReportSupp.Name = "btnReportSupp";
+            this.btnReportSupp.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReportSupp.Size = new System.Drawing.Size(200, 40);
+            this.btnReportSupp.TabIndex = 18;
+            this.btnReportSupp.Text = "ລາຍງານຂໍ້ມູນຜູ້ສະໜອງ";
+            this.btnReportSupp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportSupp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportSupp.UseVisualStyleBackColor = false;
+            this.btnReportSupp.Click += new System.EventHandler(this.btnReportSupp_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(0, 80);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(200, 40);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "ລາຍງານລາຄາປະຈຳວັນ";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // btnReportProdType
+            // 
+            this.btnReportProdType.BackColor = System.Drawing.Color.Transparent;
+            this.btnReportProdType.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportProdType.FlatAppearance.BorderSize = 0;
+            this.btnReportProdType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportProdType.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportProdType.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReportProdType.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportProdType.Location = new System.Drawing.Point(0, 40);
+            this.btnReportProdType.Name = "btnReportProdType";
+            this.btnReportProdType.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReportProdType.Size = new System.Drawing.Size(200, 40);
+            this.btnReportProdType.TabIndex = 16;
+            this.btnReportProdType.Text = "ລາຍງານປະເພດສິນຄ້າ";
+            this.btnReportProdType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportProdType.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportProdType.UseVisualStyleBackColor = false;
+            this.btnReportProdType.Click += new System.EventHandler(this.btnReportProdType_Click);
+            // 
+            // btnReportProd
+            // 
+            this.btnReportProd.BackColor = System.Drawing.Color.Transparent;
+            this.btnReportProd.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReportProd.FlatAppearance.BorderSize = 0;
+            this.btnReportProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReportProd.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportProd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReportProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportProd.Location = new System.Drawing.Point(0, 0);
+            this.btnReportProd.Name = "btnReportProd";
+            this.btnReportProd.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnReportProd.Size = new System.Drawing.Size(200, 40);
+            this.btnReportProd.TabIndex = 15;
+            this.btnReportProd.Text = "ລາຍງານສິນຄ້າ";
+            this.btnReportProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReportProd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReportProd.UseVisualStyleBackColor = false;
+            this.btnReportProd.Click += new System.EventHandler(this.btnReportProd_Click);
+            // 
             // btnReport
             // 
             this.btnReport.BackColor = System.Drawing.Color.Transparent;
@@ -108,7 +305,7 @@
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnReport.Location = new System.Drawing.Point(0, 838);
+            this.btnReport.Location = new System.Drawing.Point(0, 826);
             this.btnReport.Name = "btnReport";
             this.btnReport.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnReport.Size = new System.Drawing.Size(200, 40);
@@ -130,7 +327,7 @@
             this.panelUpdateDataSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUpdateDataSubMenu.Location = new System.Drawing.Point(0, 581);
             this.panelUpdateDataSubMenu.Name = "panelUpdateDataSubMenu";
-            this.panelUpdateDataSubMenu.Size = new System.Drawing.Size(200, 257);
+            this.panelUpdateDataSubMenu.Size = new System.Drawing.Size(200, 245);
             this.panelUpdateDataSubMenu.TabIndex = 21;
             this.panelUpdateDataSubMenu.Visible = false;
             // 
@@ -416,7 +613,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogout.Location = new System.Drawing.Point(0, 1255);
+            this.btnLogout.Location = new System.Drawing.Point(0, 1256);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(200, 109);
             this.btnLogout.TabIndex = 13;
@@ -613,176 +810,6 @@
             this.menuStrip2.TabIndex = 6;
             this.menuStrip2.Text = "menuStrip2";
             // 
-            // panelReportSubmenu
-            // 
-            this.panelReportSubmenu.BackColor = System.Drawing.Color.Goldenrod;
-            this.panelReportSubmenu.Controls.Add(this.button8);
-            this.panelReportSubmenu.Controls.Add(this.button7);
-            this.panelReportSubmenu.Controls.Add(this.button1);
-            this.panelReportSubmenu.Controls.Add(this.button2);
-            this.panelReportSubmenu.Controls.Add(this.button3);
-            this.panelReportSubmenu.Controls.Add(this.button4);
-            this.panelReportSubmenu.Controls.Add(this.button5);
-            this.panelReportSubmenu.Controls.Add(this.button6);
-            this.panelReportSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReportSubmenu.Location = new System.Drawing.Point(0, 878);
-            this.panelReportSubmenu.Name = "panelReportSubmenu";
-            this.panelReportSubmenu.Size = new System.Drawing.Size(200, 377);
-            this.panelReportSubmenu.TabIndex = 25;
-            this.panelReportSubmenu.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 200);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(200, 40);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "ລາຍງານຂໍ້ມູນພະນັກງານ";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 160);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(200, 40);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "ລາຍງານຂໍ້ມູນລູກຄ້າ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 120);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(200, 40);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "ລາຍງານຂໍ້ມູນຜູ້ສະໜອງ";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 80);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(200, 40);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "ລາຍງານລາຄາປະຈຳວັນ";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 40);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(200, 40);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "ລາຍງານປະເພດສິນຄ້າ";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(200, 40);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "ລາຍງານສິນຄ້າ";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 240);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button7.Size = new System.Drawing.Size(200, 40);
-            this.button7.TabIndex = 21;
-            this.button7.Text = "ລາຍງານລາຍຮັບປະຈຳວັນ";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 280);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button8.Size = new System.Drawing.Size(200, 40);
-            this.button8.TabIndex = 22;
-            this.button8.Text = "ລາຍງານລາຍຈ່າຍປະຈຳວັນ";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -799,13 +826,13 @@
             this.Text = "Home";
             this.Load += new System.EventHandler(this.Home_Load);
             this.panel1.ResumeLayout(false);
+            this.panelReportSubmenu.ResumeLayout(false);
             this.panelUpdateDataSubMenu.ResumeLayout(false);
             this.panelDataSubMenu.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panelReportSubmenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -845,14 +872,15 @@
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Button btnImp;
         private System.Windows.Forms.Panel panelReportSubmenu;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnReportSaleSum;
+        private System.Windows.Forms.Button btnReportEmp;
+        private System.Windows.Forms.Button btnReportCus;
+        private System.Windows.Forms.Button btnReportSupp;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnReportProdType;
+        private System.Windows.Forms.Button btnReportProd;
+        private System.Windows.Forms.Button btnReportImportSum;
+        private System.Windows.Forms.Button button1;
     }
 }
 

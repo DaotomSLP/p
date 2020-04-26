@@ -106,6 +106,19 @@ namespace Vanpheng_Jewelry
             btnEditCus.ForeColor = SystemColors.ControlLightLight;
             btnEditSupp.ForeColor = SystemColors.ControlLightLight;
 
+            btnReportProd.ForeColor = SystemColors.ControlLightLight;
+            btnReportSupp.ForeColor = SystemColors.ControlLightLight;
+            btnReportProdType.ForeColor = SystemColors.ControlLightLight;
+            btnReportEmp.ForeColor = SystemColors.ControlLightLight;
+            btnReportImportSum.ForeColor = SystemColors.ControlLightLight;
+            btnReportSaleSum.ForeColor = SystemColors.ControlLightLight;
+            btnReportSaleSum.BackColor = Color.Transparent;
+            btnReportImportSum.BackColor = Color.Transparent;
+            btnReportProd.BackColor = Color.Transparent;
+            btnReportEmp.BackColor = Color.Transparent;
+            btnReportProdType.BackColor = Color.Transparent;
+            btnReportSupp.BackColor = Color.Transparent;
+
         }
         private void btnData_Click(object sender, EventArgs e)
         {
@@ -267,6 +280,72 @@ namespace Vanpheng_Jewelry
         {
             changeMenuColor();
             hideAndShowSubMenu(panelReportSubmenu);
+        }
+
+        private void btnReportProd_Click(object sender, EventArgs e)
+        {
+            changeMenuColor();
+            btnReportProd.BackColor = Color.White;
+            btnReportProd.ForeColor = Color.DarkGoldenrod;
+            hideForm();
+            frmReportData frmReportData = new frmReportData();
+            globalVal.reportStatus = "product";
+            showForm(frmReportData);
+        }
+
+        private void btnReportProdType_Click(object sender, EventArgs e)
+        {
+            changeMenuColor();
+            btnReportProd.BackColor = Color.White;
+            btnReportProd.ForeColor = Color.DarkGoldenrod;
+            hideForm();
+            frmReportData frmReportData = new frmReportData();
+            globalVal.reportStatus = "product_type";
+            showForm(frmReportData);
+        }
+
+        private void btnReportEmp_Click(object sender, EventArgs e)
+        {
+            changeMenuColor();
+            btnReportEmp.BackColor = Color.White;
+            btnReportEmp.ForeColor = Color.DarkGoldenrod;
+            hideForm();
+            frmReportData frmReportData = new frmReportData();
+            globalVal.reportStatus = "employee";
+            showForm(frmReportData);
+        }
+
+        private void btnReportSupp_Click(object sender, EventArgs e)
+        {
+            changeMenuColor();
+            btnReportSupp.BackColor = Color.White;
+            btnReportSupp.ForeColor = Color.DarkGoldenrod;
+            hideForm();
+            frmReportData frmReportData = new frmReportData();
+            globalVal.reportStatus = "supplier";
+            showForm(frmReportData);
+        }
+
+        private void btnReportSaleSum_Click(object sender, EventArgs e)
+        {
+            changeMenuColor();
+            btnReportSaleSum.BackColor = Color.White;
+            btnReportSaleSum.ForeColor = Color.DarkGoldenrod;
+            hideForm();
+            frmReportSaleOrder frmReportSaleOrder = new frmReportSaleOrder();
+            globalVal.reportStatus = "sale";
+            showForm(frmReportSaleOrder);
+        }
+
+        private void btnReportImportSum_Click(object sender, EventArgs e)
+        {
+            changeMenuColor();
+            btnReportImportSum.BackColor = Color.White;
+            btnReportImportSum.ForeColor = Color.DarkGoldenrod;
+            hideForm();
+            frmReportSaleOrder frmReportSaleOrder = new frmReportSaleOrder();
+            globalVal.reportStatus = "import";
+            showForm(frmReportSaleOrder);
         }
     }
 }

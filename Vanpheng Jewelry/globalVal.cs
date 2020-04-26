@@ -22,5 +22,10 @@ namespace Vanpheng_Jewelry
             get;
             set;
         }
+        public static string reportStatus
+        {
+            get;
+            set;
+        }
     }
 }

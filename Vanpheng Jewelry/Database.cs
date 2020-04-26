@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using Microsoft.Reporting.WinForms;
 
 namespace Vanpheng_Jewelry
 {
@@ -95,6 +96,18 @@ namespace Vanpheng_Jewelry
                  Plus = 1;
             }
             return Plus.ToString();
+        }
+
+        public DataTable loadReport(string sql)
+        {
+            SqlConnection sqlConn = new SqlConnection(connstr);
+            sqlConn.Open();
+            comm = new SqlCommand(sql, sqlConn);
+            dr = comm.ExecuteReader();
+            dataTable = new DataTable();
+            dataTable.Load(dr);
+            return dataTable;
+            
         }
     }
 }
