@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using Microsoft.Reporting.WinForms;
+
 namespace Vanpheng_Jewelry
 {
     public partial class Sale_Order : Form
@@ -453,8 +455,14 @@ namespace Vanpheng_Jewelry
                             }
                             dr.Close();
                     }
+                    //print bill :
+                    Bill bill = new Bill();
+                    globalVal.Sale_id = txtId.Text;
+                    globalVal.reportStatus = "SaleBill";
+                    bill.Show();
                     rerunForm();
                     MessageBox.Show("Success...");
+
                 }
                 else
                 {
@@ -481,7 +489,13 @@ namespace Vanpheng_Jewelry
                         {
 
                         }
-                    }     
+                    }
+                    //print bill :
+                    Bill bill = new Bill();
+                    globalVal.Order_id = txtId.Text;
+                    globalVal.reportStatus = "OrderBill";
+                    bill.Show();
+
                     rerunForm();
                     MessageBox.Show("Success...");
                 }

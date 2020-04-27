@@ -226,7 +226,8 @@
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="ImportSumary.rdlc" />
-    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="OrderBill.rdlc" />
+    <EmbeddedResource Include="Sale_Bill.rdlc" />
     <EmbeddedResource Include="SaleSumary.rdlc" />
     <EmbeddedResource Include="Sale_Order.resx">
       <DependentUpon>Sale_Order.cs</DependentUpon>

@@ -725,6 +725,57 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Sale_ViewTableAdapter" GeneratorDataComponentClassName="Sale_ViewTableAdapter" Name="Sale_View" UserDataComponentName="Sale_ViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.Sale_View" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Sale_View.*
+FROM            Sale_View</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Bill_no" DataSetColumn="Bill_no" />
+              <Mapping SourceColumn="Sale_date" DataSetColumn="Sale_date" />
+              <Mapping SourceColumn="Total_amount" DataSetColumn="Total_amount" />
+              <Mapping SourceColumn="amount" DataSetColumn="amount" />
+              <Mapping SourceColumn="qty" DataSetColumn="qty" />
+              <Mapping SourceColumn="Design_price" DataSetColumn="Design_price" />
+              <Mapping SourceColumn="Prod_name" DataSetColumn="Prod_name" />
+              <Mapping SourceColumn="Prod_weight1" DataSetColumn="Prod_weight1" />
+              <Mapping SourceColumn="Prod_weight2" DataSetColumn="Prod_weight2" />
+              <Mapping SourceColumn="Prod_weight3" DataSetColumn="Prod_weight3" />
+              <Mapping SourceColumn="Sale_id" DataSetColumn="Sale_id" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Order_ViewTableAdapter" GeneratorDataComponentClassName="Order_ViewTableAdapter" Name="Order_View" UserDataComponentName="Order_ViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.Order_View" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Order_View.*
+FROM            Order_View</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Prod_name" DataSetColumn="Prod_name" />
+              <Mapping SourceColumn="Prod_weight1" DataSetColumn="Prod_weight1" />
+              <Mapping SourceColumn="Prod_weight2" DataSetColumn="Prod_weight2" />
+              <Mapping SourceColumn="Prod_weight3" DataSetColumn="Prod_weight3" />
+              <Mapping SourceColumn="Order_id" DataSetColumn="Order_id" />
+              <Mapping SourceColumn="Order_date" DataSetColumn="Order_date" />
+              <Mapping SourceColumn="Order_no" DataSetColumn="Order_no" />
+              <Mapping SourceColumn="Order_qty" DataSetColumn="Order_qty" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -733,7 +784,7 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
   <xs:element name="Database1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Database1DataSet" msprop:Generator_UserDSName="Database1DataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Customer" msprop:Generator_TableClassName="CustomerDataTable" msprop:Generator_TableVarName="tableCustomer" msprop:Generator_TablePropName="Customer" msprop:Generator_RowDeletingName="CustomerRowDeleting" msprop:Generator_RowChangingName="CustomerRowChanging" msprop:Generator_RowEvHandlerName="CustomerRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerRowDeleted" msprop:Generator_UserTableName="Customer" msprop:Generator_RowChangedName="CustomerRowChanged" msprop:Generator_RowEvArgName="CustomerRowChangeEvent" msprop:Generator_RowClassName="CustomerRow">
+        <xs:element name="Customer" msprop:Generator_TableClassName="CustomerDataTable" msprop:Generator_TableVarName="tableCustomer" msprop:Generator_RowChangedName="CustomerRowChanged" msprop:Generator_TablePropName="Customer" msprop:Generator_RowDeletingName="CustomerRowDeleting" msprop:Generator_RowChangingName="CustomerRowChanging" msprop:Generator_RowEvHandlerName="CustomerRowChangeEventHandler" msprop:Generator_RowDeletedName="CustomerRowDeleted" msprop:Generator_RowClassName="CustomerRow" msprop:Generator_UserTableName="Customer" msprop:Generator_RowEvArgName="CustomerRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Cus_id" msprop:Generator_ColumnVarNameInTable="columnCus_id" msprop:Generator_ColumnPropNameInRow="Cus_id" msprop:Generator_ColumnPropNameInTable="Cus_idColumn" msprop:Generator_UserColumnName="Cus_id" type="xs:int" />
@@ -761,7 +812,7 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Daily_Price" msprop:Generator_TableClassName="Daily_PriceDataTable" msprop:Generator_TableVarName="tableDaily_Price" msprop:Generator_TablePropName="Daily_Price" msprop:Generator_RowDeletingName="Daily_PriceRowDeleting" msprop:Generator_RowChangingName="Daily_PriceRowChanging" msprop:Generator_RowEvHandlerName="Daily_PriceRowChangeEventHandler" msprop:Generator_RowDeletedName="Daily_PriceRowDeleted" msprop:Generator_UserTableName="Daily_Price" msprop:Generator_RowChangedName="Daily_PriceRowChanged" msprop:Generator_RowEvArgName="Daily_PriceRowChangeEvent" msprop:Generator_RowClassName="Daily_PriceRow">
+        <xs:element name="Daily_Price" msprop:Generator_TableClassName="Daily_PriceDataTable" msprop:Generator_TableVarName="tableDaily_Price" msprop:Generator_RowChangedName="Daily_PriceRowChanged" msprop:Generator_TablePropName="Daily_Price" msprop:Generator_RowDeletingName="Daily_PriceRowDeleting" msprop:Generator_RowChangingName="Daily_PriceRowChanging" msprop:Generator_RowEvHandlerName="Daily_PriceRowChangeEventHandler" msprop:Generator_RowDeletedName="Daily_PriceRowDeleted" msprop:Generator_RowClassName="Daily_PriceRow" msprop:Generator_UserTableName="Daily_Price" msprop:Generator_RowEvArgName="Daily_PriceRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DailyPrice_id" msprop:Generator_ColumnVarNameInTable="columnDailyPrice_id" msprop:Generator_ColumnPropNameInRow="DailyPrice_id" msprop:Generator_ColumnPropNameInTable="DailyPrice_idColumn" msprop:Generator_UserColumnName="DailyPrice_id" type="xs:int" />
@@ -772,7 +823,7 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Employee" msprop:Generator_TableClassName="EmployeeDataTable" msprop:Generator_TableVarName="tableEmployee" msprop:Generator_TablePropName="Employee" msprop:Generator_RowDeletingName="EmployeeRowDeleting" msprop:Generator_RowChangingName="EmployeeRowChanging" msprop:Generator_RowEvHandlerName="EmployeeRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeeRowDeleted" msprop:Generator_UserTableName="Employee" msprop:Generator_RowChangedName="EmployeeRowChanged" msprop:Generator_RowEvArgName="EmployeeRowChangeEvent" msprop:Generator_RowClassName="EmployeeRow">
+        <xs:element name="Employee" msprop:Generator_TableClassName="EmployeeDataTable" msprop:Generator_TableVarName="tableEmployee" msprop:Generator_RowChangedName="EmployeeRowChanged" msprop:Generator_TablePropName="Employee" msprop:Generator_RowDeletingName="EmployeeRowDeleting" msprop:Generator_RowChangingName="EmployeeRowChanging" msprop:Generator_RowEvHandlerName="EmployeeRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeeRowDeleted" msprop:Generator_RowClassName="EmployeeRow" msprop:Generator_UserTableName="Employee" msprop:Generator_RowEvArgName="EmployeeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Emp_id" msprop:Generator_ColumnVarNameInTable="columnEmp_id" msprop:Generator_ColumnPropNameInRow="Emp_id" msprop:Generator_ColumnPropNameInTable="Emp_idColumn" msprop:Generator_UserColumnName="Emp_id" type="xs:int" />
@@ -815,7 +866,7 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Import" msprop:Generator_TableClassName="ImportDataTable" msprop:Generator_TableVarName="tableImport" msprop:Generator_TablePropName="Import" msprop:Generator_RowDeletingName="ImportRowDeleting" msprop:Generator_RowChangingName="ImportRowChanging" msprop:Generator_RowEvHandlerName="ImportRowChangeEventHandler" msprop:Generator_RowDeletedName="ImportRowDeleted" msprop:Generator_UserTableName="Import" msprop:Generator_RowChangedName="ImportRowChanged" msprop:Generator_RowEvArgName="ImportRowChangeEvent" msprop:Generator_RowClassName="ImportRow">
+        <xs:element name="Import" msprop:Generator_TableClassName="ImportDataTable" msprop:Generator_TableVarName="tableImport" msprop:Generator_RowChangedName="ImportRowChanged" msprop:Generator_TablePropName="Import" msprop:Generator_RowDeletingName="ImportRowDeleting" msprop:Generator_RowChangingName="ImportRowChanging" msprop:Generator_RowEvHandlerName="ImportRowChangeEventHandler" msprop:Generator_RowDeletedName="ImportRowDeleted" msprop:Generator_RowClassName="ImportRow" msprop:Generator_UserTableName="Import" msprop:Generator_RowEvArgName="ImportRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Imp_id" msprop:Generator_ColumnVarNameInTable="columnImp_id" msprop:Generator_ColumnPropNameInRow="Imp_id" msprop:Generator_ColumnPropNameInTable="Imp_idColumn" msprop:Generator_UserColumnName="Imp_id" type="xs:int" />
@@ -825,7 +876,7 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Import_detail" msprop:Generator_TableClassName="Import_detailDataTable" msprop:Generator_TableVarName="tableImport_detail" msprop:Generator_TablePropName="Import_detail" msprop:Generator_RowDeletingName="Import_detailRowDeleting" msprop:Generator_RowChangingName="Import_detailRowChanging" msprop:Generator_RowEvHandlerName="Import_detailRowChangeEventHandler" msprop:Generator_RowDeletedName="Import_detailRowDeleted" msprop:Generator_UserTableName="Import_detail" msprop:Generator_RowChangedName="Import_detailRowChanged" msprop:Generator_RowEvArgName="Import_detailRowChangeEvent" msprop:Generator_RowClassName="Import_detailRow">
+        <xs:element name="Import_detail" msprop:Generator_TableClassName="Import_detailDataTable" msprop:Generator_TableVarName="tableImport_detail" msprop:Generator_RowChangedName="Import_detailRowChanged" msprop:Generator_TablePropName="Import_detail" msprop:Generator_RowDeletingName="Import_detailRowDeleting" msprop:Generator_RowChangingName="Import_detailRowChanging" msprop:Generator_RowEvHandlerName="Import_detailRowChangeEventHandler" msprop:Generator_RowDeletedName="Import_detailRowDeleted" msprop:Generator_RowClassName="Import_detailRow" msprop:Generator_UserTableName="Import_detail" msprop:Generator_RowEvArgName="Import_detailRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Prod_id" msprop:Generator_ColumnVarNameInTable="columnProd_id" msprop:Generator_ColumnPropNameInRow="Prod_id" msprop:Generator_ColumnPropNameInTable="Prod_idColumn" msprop:Generator_UserColumnName="Prod_id" type="xs:int" />
@@ -835,7 +886,7 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Order_detail" msprop:Generator_TableClassName="Order_detailDataTable" msprop:Generator_TableVarName="tableOrder_detail" msprop:Generator_TablePropName="Order_detail" msprop:Generator_RowDeletingName="Order_detailRowDeleting" msprop:Generator_RowChangingName="Order_detailRowChanging" msprop:Generator_RowEvHandlerName="Order_detailRowChangeEventHandler" msprop:Generator_RowDeletedName="Order_detailRowDeleted" msprop:Generator_UserTableName="Order_detail" msprop:Generator_RowChangedName="Order_detailRowChanged" msprop:Generator_RowEvArgName="Order_detailRowChangeEvent" msprop:Generator_RowClassName="Order_detailRow">
+        <xs:element name="Order_detail" msprop:Generator_TableClassName="Order_detailDataTable" msprop:Generator_TableVarName="tableOrder_detail" msprop:Generator_RowChangedName="Order_detailRowChanged" msprop:Generator_TablePropName="Order_detail" msprop:Generator_RowDeletingName="Order_detailRowDeleting" msprop:Generator_RowChangingName="Order_detailRowChanging" msprop:Generator_RowEvHandlerName="Order_detailRowChangeEventHandler" msprop:Generator_RowDeletedName="Order_detailRowDeleted" msprop:Generator_RowClassName="Order_detailRow" msprop:Generator_UserTableName="Order_detail" msprop:Generator_RowEvArgName="Order_detailRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Prod_id" msprop:Generator_ColumnVarNameInTable="columnProd_id" msprop:Generator_ColumnPropNameInRow="Prod_id" msprop:Generator_ColumnPropNameInTable="Prod_idColumn" msprop:Generator_UserColumnName="Prod_id" type="xs:int" />
@@ -845,7 +896,7 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Orders" msprop:Generator_TableClassName="OrdersDataTable" msprop:Generator_TableVarName="tableOrders" msprop:Generator_TablePropName="Orders" msprop:Generator_RowDeletingName="OrdersRowDeleting" msprop:Generator_RowChangingName="OrdersRowChanging" msprop:Generator_RowEvHandlerName="OrdersRowChangeEventHandler" msprop:Generator_RowDeletedName="OrdersRowDeleted" msprop:Generator_UserTableName="Orders" msprop:Generator_RowChangedName="OrdersRowChanged" msprop:Generator_RowEvArgName="OrdersRowChangeEvent" msprop:Generator_RowClassName="OrdersRow">
+        <xs:element name="Orders" msprop:Generator_TableClassName="OrdersDataTable" msprop:Generator_TableVarName="tableOrders" msprop:Generator_RowChangedName="OrdersRowChanged" msprop:Generator_TablePropName="Orders" msprop:Generator_RowDeletingName="OrdersRowDeleting" msprop:Generator_RowChangingName="OrdersRowChanging" msprop:Generator_RowEvHandlerName="OrdersRowChangeEventHandler" msprop:Generator_RowDeletedName="OrdersRowDeleted" msprop:Generator_RowClassName="OrdersRow" msprop:Generator_UserTableName="Orders" msprop:Generator_RowEvArgName="OrdersRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Order_id" msprop:Generator_ColumnVarNameInTable="columnOrder_id" msprop:Generator_ColumnPropNameInRow="Order_id" msprop:Generator_ColumnPropNameInTable="Order_idColumn" msprop:Generator_UserColumnName="Order_id" type="xs:int" />
@@ -862,7 +913,7 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Product" msprop:Generator_TableClassName="ProductDataTable" msprop:Generator_TableVarName="tableProduct" msprop:Generator_TablePropName="Product" msprop:Generator_RowDeletingName="ProductRowDeleting" msprop:Generator_RowChangingName="ProductRowChanging" msprop:Generator_RowEvHandlerName="ProductRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductRowDeleted" msprop:Generator_UserTableName="Product" msprop:Generator_RowChangedName="ProductRowChanged" msprop:Generator_RowEvArgName="ProductRowChangeEvent" msprop:Generator_RowClassName="ProductRow">
+        <xs:element name="Product" msprop:Generator_TableClassName="ProductDataTable" msprop:Generator_TableVarName="tableProduct" msprop:Generator_RowChangedName="ProductRowChanged" msprop:Generator_TablePropName="Product" msprop:Generator_RowDeletingName="ProductRowDeleting" msprop:Generator_RowChangingName="ProductRowChanging" msprop:Generator_RowEvHandlerName="ProductRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductRowDeleted" msprop:Generator_RowClassName="ProductRow" msprop:Generator_UserTableName="Product" msprop:Generator_RowEvArgName="ProductRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Prod_id" msprop:Generator_ColumnVarNameInTable="columnProd_id" msprop:Generator_ColumnPropNameInRow="Prod_id" msprop:Generator_ColumnPropNameInTable="Prod_idColumn" msprop:Generator_UserColumnName="Prod_id" type="xs:int" />
@@ -889,7 +940,7 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Product_Type" msprop:Generator_TableClassName="Product_TypeDataTable" msprop:Generator_TableVarName="tableProduct_Type" msprop:Generator_TablePropName="Product_Type" msprop:Generator_RowDeletingName="Product_TypeRowDeleting" msprop:Generator_RowChangingName="Product_TypeRowChanging" msprop:Generator_RowEvHandlerName="Product_TypeRowChangeEventHandler" msprop:Generator_RowDeletedName="Product_TypeRowDeleted" msprop:Generator_UserTableName="Product_Type" msprop:Generator_RowChangedName="Product_TypeRowChanged" msprop:Generator_RowEvArgName="Product_TypeRowChangeEvent" msprop:Generator_RowClassName="Product_TypeRow">
+        <xs:element name="Product_Type" msprop:Generator_TableClassName="Product_TypeDataTable" msprop:Generator_TableVarName="tableProduct_Type" msprop:Generator_RowChangedName="Product_TypeRowChanged" msprop:Generator_TablePropName="Product_Type" msprop:Generator_RowDeletingName="Product_TypeRowDeleting" msprop:Generator_RowChangingName="Product_TypeRowChanging" msprop:Generator_RowEvHandlerName="Product_TypeRowChangeEventHandler" msprop:Generator_RowDeletedName="Product_TypeRowDeleted" msprop:Generator_RowClassName="Product_TypeRow" msprop:Generator_UserTableName="Product_Type" msprop:Generator_RowEvArgName="Product_TypeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ProdType_id" msprop:Generator_ColumnVarNameInTable="columnProdType_id" msprop:Generator_ColumnPropNameInRow="ProdType_id" msprop:Generator_ColumnPropNameInTable="ProdType_idColumn" msprop:Generator_UserColumnName="ProdType_id" type="xs:int" />
@@ -903,7 +954,7 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Sale" msprop:Generator_TableClassName="SaleDataTable" msprop:Generator_TableVarName="tableSale" msprop:Generator_TablePropName="Sale" msprop:Generator_RowDeletingName="SaleRowDeleting" msprop:Generator_RowChangingName="SaleRowChanging" msprop:Generator_RowEvHandlerName="SaleRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleRowDeleted" msprop:Generator_UserTableName="Sale" msprop:Generator_RowChangedName="SaleRowChanged" msprop:Generator_RowEvArgName="SaleRowChangeEvent" msprop:Generator_RowClassName="SaleRow">
+        <xs:element name="Sale" msprop:Generator_TableClassName="SaleDataTable" msprop:Generator_TableVarName="tableSale" msprop:Generator_RowChangedName="SaleRowChanged" msprop:Generator_TablePropName="Sale" msprop:Generator_RowDeletingName="SaleRowDeleting" msprop:Generator_RowChangingName="SaleRowChanging" msprop:Generator_RowEvHandlerName="SaleRowChangeEventHandler" msprop:Generator_RowDeletedName="SaleRowDeleted" msprop:Generator_RowClassName="SaleRow" msprop:Generator_UserTableName="Sale" msprop:Generator_RowEvArgName="SaleRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Sale_id" msprop:Generator_ColumnVarNameInTable="columnSale_id" msprop:Generator_ColumnPropNameInRow="Sale_id" msprop:Generator_ColumnPropNameInTable="Sale_idColumn" msprop:Generator_UserColumnName="Sale_id" type="xs:int" />
@@ -919,7 +970,7 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Sale_Detail" msprop:Generator_TableClassName="Sale_DetailDataTable" msprop:Generator_TableVarName="tableSale_Detail" msprop:Generator_TablePropName="Sale_Detail" msprop:Generator_RowDeletingName="Sale_DetailRowDeleting" msprop:Generator_RowChangingName="Sale_DetailRowChanging" msprop:Generator_RowEvHandlerName="Sale_DetailRowChangeEventHandler" msprop:Generator_RowDeletedName="Sale_DetailRowDeleted" msprop:Generator_UserTableName="Sale_Detail" msprop:Generator_RowChangedName="Sale_DetailRowChanged" msprop:Generator_RowEvArgName="Sale_DetailRowChangeEvent" msprop:Generator_RowClassName="Sale_DetailRow">
+        <xs:element name="Sale_Detail" msprop:Generator_TableClassName="Sale_DetailDataTable" msprop:Generator_TableVarName="tableSale_Detail" msprop:Generator_RowChangedName="Sale_DetailRowChanged" msprop:Generator_TablePropName="Sale_Detail" msprop:Generator_RowDeletingName="Sale_DetailRowDeleting" msprop:Generator_RowChangingName="Sale_DetailRowChanging" msprop:Generator_RowEvHandlerName="Sale_DetailRowChangeEventHandler" msprop:Generator_RowDeletedName="Sale_DetailRowDeleted" msprop:Generator_RowClassName="Sale_DetailRow" msprop:Generator_UserTableName="Sale_Detail" msprop:Generator_RowEvArgName="Sale_DetailRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Sale_id" msprop:Generator_ColumnVarNameInTable="columnSale_id" msprop:Generator_ColumnPropNameInRow="Sale_id" msprop:Generator_ColumnPropNameInTable="Sale_idColumn" msprop:Generator_UserColumnName="Sale_id" type="xs:int" minOccurs="0" />
@@ -929,7 +980,7 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Supplier" msprop:Generator_TableClassName="SupplierDataTable" msprop:Generator_TableVarName="tableSupplier" msprop:Generator_TablePropName="Supplier" msprop:Generator_RowDeletingName="SupplierRowDeleting" msprop:Generator_RowChangingName="SupplierRowChanging" msprop:Generator_RowEvHandlerName="SupplierRowChangeEventHandler" msprop:Generator_RowDeletedName="SupplierRowDeleted" msprop:Generator_UserTableName="Supplier" msprop:Generator_RowChangedName="SupplierRowChanged" msprop:Generator_RowEvArgName="SupplierRowChangeEvent" msprop:Generator_RowClassName="SupplierRow">
+        <xs:element name="Supplier" msprop:Generator_TableClassName="SupplierDataTable" msprop:Generator_TableVarName="tableSupplier" msprop:Generator_RowChangedName="SupplierRowChanged" msprop:Generator_TablePropName="Supplier" msprop:Generator_RowDeletingName="SupplierRowDeleting" msprop:Generator_RowChangingName="SupplierRowChanging" msprop:Generator_RowEvHandlerName="SupplierRowChangeEventHandler" msprop:Generator_RowDeletedName="SupplierRowDeleted" msprop:Generator_RowClassName="SupplierRow" msprop:Generator_UserTableName="Supplier" msprop:Generator_RowEvArgName="SupplierRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Supp_id" msprop:Generator_ColumnVarNameInTable="columnSupp_id" msprop:Generator_ColumnPropNameInRow="Supp_id" msprop:Generator_ColumnPropNameInTable="Supp_idColumn" msprop:Generator_UserColumnName="Supp_id" type="xs:int" />
@@ -954,6 +1005,61 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Sale_View" msprop:Generator_TableClassName="Sale_ViewDataTable" msprop:Generator_TableVarName="tableSale_View" msprop:Generator_TablePropName="Sale_View" msprop:Generator_RowDeletingName="Sale_ViewRowDeleting" msprop:Generator_RowChangingName="Sale_ViewRowChanging" msprop:Generator_RowEvHandlerName="Sale_ViewRowChangeEventHandler" msprop:Generator_RowDeletedName="Sale_ViewRowDeleted" msprop:Generator_UserTableName="Sale_View" msprop:Generator_RowChangedName="Sale_ViewRowChanged" msprop:Generator_RowEvArgName="Sale_ViewRowChangeEvent" msprop:Generator_RowClassName="Sale_ViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Bill_no" msprop:Generator_ColumnVarNameInTable="columnBill_no" msprop:Generator_ColumnPropNameInRow="Bill_no" msprop:Generator_ColumnPropNameInTable="Bill_noColumn" msprop:Generator_UserColumnName="Bill_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sale_date" msprop:Generator_ColumnVarNameInTable="columnSale_date" msprop:Generator_ColumnPropNameInRow="Sale_date" msprop:Generator_ColumnPropNameInTable="Sale_dateColumn" msprop:Generator_UserColumnName="Sale_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Total_amount" msprop:Generator_ColumnVarNameInTable="columnTotal_amount" msprop:Generator_ColumnPropNameInRow="Total_amount" msprop:Generator_ColumnPropNameInTable="Total_amountColumn" msprop:Generator_UserColumnName="Total_amount" type="xs:int" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="qty" msprop:Generator_ColumnVarNameInTable="columnqty" msprop:Generator_ColumnPropNameInRow="qty" msprop:Generator_ColumnPropNameInTable="qtyColumn" msprop:Generator_UserColumnName="qty" type="xs:int" minOccurs="0" />
+              <xs:element name="Design_price" msprop:Generator_ColumnVarNameInTable="columnDesign_price" msprop:Generator_ColumnPropNameInRow="Design_price" msprop:Generator_ColumnPropNameInTable="Design_priceColumn" msprop:Generator_UserColumnName="Design_price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Prod_name" msprop:Generator_ColumnVarNameInTable="columnProd_name" msprop:Generator_ColumnPropNameInRow="Prod_name" msprop:Generator_ColumnPropNameInTable="Prod_nameColumn" msprop:Generator_UserColumnName="Prod_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Prod_weight1" msprop:Generator_ColumnVarNameInTable="columnProd_weight1" msprop:Generator_ColumnPropNameInRow="Prod_weight1" msprop:Generator_ColumnPropNameInTable="Prod_weight1Column" msprop:Generator_UserColumnName="Prod_weight1" type="xs:int" minOccurs="0" />
+              <xs:element name="Prod_weight2" msprop:Generator_ColumnVarNameInTable="columnProd_weight2" msprop:Generator_ColumnPropNameInRow="Prod_weight2" msprop:Generator_ColumnPropNameInTable="Prod_weight2Column" msprop:Generator_UserColumnName="Prod_weight2" type="xs:int" minOccurs="0" />
+              <xs:element name="Prod_weight3" msprop:Generator_ColumnVarNameInTable="columnProd_weight3" msprop:Generator_ColumnPropNameInRow="Prod_weight3" msprop:Generator_ColumnPropNameInTable="Prod_weight3Column" msprop:Generator_UserColumnName="Prod_weight3" type="xs:int" minOccurs="0" />
+              <xs:element name="Sale_id" msprop:Generator_ColumnVarNameInTable="columnSale_id" msprop:Generator_ColumnPropNameInRow="Sale_id" msprop:Generator_ColumnPropNameInTable="Sale_idColumn" msprop:Generator_UserColumnName="Sale_id" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Order_View" msprop:Generator_TableClassName="Order_ViewDataTable" msprop:Generator_TableVarName="tableOrder_View" msprop:Generator_TablePropName="Order_View" msprop:Generator_RowDeletingName="Order_ViewRowDeleting" msprop:Generator_RowChangingName="Order_ViewRowChanging" msprop:Generator_RowEvHandlerName="Order_ViewRowChangeEventHandler" msprop:Generator_RowDeletedName="Order_ViewRowDeleted" msprop:Generator_UserTableName="Order_View" msprop:Generator_RowChangedName="Order_ViewRowChanged" msprop:Generator_RowEvArgName="Order_ViewRowChangeEvent" msprop:Generator_RowClassName="Order_ViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Prod_name" msprop:Generator_ColumnVarNameInTable="columnProd_name" msprop:Generator_ColumnPropNameInRow="Prod_name" msprop:Generator_ColumnPropNameInTable="Prod_nameColumn" msprop:Generator_UserColumnName="Prod_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Prod_weight1" msprop:Generator_ColumnVarNameInTable="columnProd_weight1" msprop:Generator_ColumnPropNameInRow="Prod_weight1" msprop:Generator_ColumnPropNameInTable="Prod_weight1Column" msprop:Generator_UserColumnName="Prod_weight1" type="xs:int" minOccurs="0" />
+              <xs:element name="Prod_weight2" msprop:Generator_ColumnVarNameInTable="columnProd_weight2" msprop:Generator_ColumnPropNameInRow="Prod_weight2" msprop:Generator_ColumnPropNameInTable="Prod_weight2Column" msprop:Generator_UserColumnName="Prod_weight2" type="xs:int" minOccurs="0" />
+              <xs:element name="Prod_weight3" msprop:Generator_ColumnVarNameInTable="columnProd_weight3" msprop:Generator_ColumnPropNameInRow="Prod_weight3" msprop:Generator_ColumnPropNameInTable="Prod_weight3Column" msprop:Generator_UserColumnName="Prod_weight3" type="xs:int" minOccurs="0" />
+              <xs:element name="Order_id" msprop:Generator_ColumnVarNameInTable="columnOrder_id" msprop:Generator_ColumnPropNameInRow="Order_id" msprop:Generator_ColumnPropNameInTable="Order_idColumn" msprop:Generator_UserColumnName="Order_id" type="xs:int" />
+              <xs:element name="Order_date" msprop:Generator_ColumnVarNameInTable="columnOrder_date" msprop:Generator_ColumnPropNameInRow="Order_date" msprop:Generator_ColumnPropNameInTable="Order_dateColumn" msprop:Generator_UserColumnName="Order_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Order_no" msprop:Generator_ColumnVarNameInTable="columnOrder_no" msprop:Generator_ColumnPropNameInRow="Order_no" msprop:Generator_ColumnPropNameInTable="Order_noColumn" msprop:Generator_UserColumnName="Order_no" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Order_qty" msprop:Generator_ColumnVarNameInTable="columnOrder_qty" msprop:Generator_ColumnPropNameInRow="Order_qty" msprop:Generator_ColumnPropNameInTable="Order_qtyColumn" msprop:Generator_UserColumnName="Order_qty" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -995,17 +1101,25 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr FROM Supplier WHERE (Supp_id = @S
       <xs:selector xpath=".//mstns:Supplier" />
       <xs:field xpath="mstns:Supp_id" />
     </xs:unique>
+    <xs:unique name="Sale_View_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Sale_View" />
+      <xs:field xpath="mstns:Sale_id" />
+    </xs:unique>
+    <xs:unique name="Order_View_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Order_View" />
+      <xs:field xpath="mstns:Order_id" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Import_detail_Order" msdata:parent="Import" msdata:child="Import_detail" msdata:parentkey="Imp_id" msdata:childkey="Imp_id" msprop:Generator_UserChildTable="Import_detail" msprop:Generator_ChildPropName="GetImport_detailRows" msprop:Generator_UserRelationName="FK_Import_detail_Order" msprop:Generator_ParentPropName="ImportRow" msprop:Generator_RelationVarName="relationFK_Import_detail_Order" msprop:Generator_UserParentTable="Import" />
-      <msdata:Relationship name="FK_Import_detail_Product" msdata:parent="Product" msdata:child="Import_detail" msdata:parentkey="Prod_id" msdata:childkey="Prod_id" msprop:Generator_UserChildTable="Import_detail" msprop:Generator_ChildPropName="GetImport_detailRows" msprop:Generator_UserRelationName="FK_Import_detail_Product" msprop:Generator_RelationVarName="relationFK_Import_detail_Product" msprop:Generator_UserParentTable="Product" msprop:Generator_ParentPropName="ProductRow" />
-      <msdata:Relationship name="FK_Order_detail_Orders" msdata:parent="Orders" msdata:child="Order_detail" msdata:parentkey="Order_id" msdata:childkey="Order_id" msprop:Generator_UserChildTable="Order_detail" msprop:Generator_ChildPropName="GetOrder_detailRows" msprop:Generator_UserRelationName="FK_Order_detail_Orders" msprop:Generator_RelationVarName="relationFK_Order_detail_Orders" msprop:Generator_UserParentTable="Orders" msprop:Generator_ParentPropName="OrdersRow" />
-      <msdata:Relationship name="FK_Order_detail_Product" msdata:parent="Product" msdata:child="Order_detail" msdata:parentkey="Prod_id" msdata:childkey="Prod_id" msprop:Generator_UserChildTable="Order_detail" msprop:Generator_ChildPropName="GetOrder_detailRows" msprop:Generator_UserRelationName="FK_Order_detail_Product" msprop:Generator_RelationVarName="relationFK_Order_detail_Product" msprop:Generator_UserParentTable="Product" msprop:Generator_ParentPropName="ProductRow" />
-      <msdata:Relationship name="FK_Orders_Supplier" msdata:parent="Supplier" msdata:child="Orders" msdata:parentkey="Supp_id" msdata:childkey="Supp_id" msprop:Generator_UserChildTable="Orders" msprop:Generator_ChildPropName="GetOrdersRows" msprop:Generator_UserRelationName="FK_Orders_Supplier" msprop:Generator_RelationVarName="relationFK_Orders_Supplier" msprop:Generator_UserParentTable="Supplier" msprop:Generator_ParentPropName="SupplierRow" />
-      <msdata:Relationship name="FK__Product__ProdTyp__0697FACD" msdata:parent="Product_Type" msdata:child="Product" msdata:parentkey="ProdType_id" msdata:childkey="ProdType_id" msprop:Generator_UserChildTable="Product" msprop:Generator_ChildPropName="GetProductRows" msprop:Generator_UserRelationName="FK__Product__ProdTyp__0697FACD" msprop:Generator_RelationVarName="relationFK__Product__ProdTyp__0697FACD" msprop:Generator_UserParentTable="Product_Type" msprop:Generator_ParentPropName="Product_TypeRow" />
-      <msdata:Relationship name="FK__Sale_Deta__Prod___04E4BC85" msdata:parent="Product" msdata:child="Sale_Detail" msdata:parentkey="Prod_id" msdata:childkey="Prod_id" msprop:Generator_UserChildTable="Sale_Detail" msprop:Generator_ChildPropName="GetSale_DetailRows" msprop:Generator_UserRelationName="FK__Sale_Deta__Prod___04E4BC85" msprop:Generator_ParentPropName="ProductRow" msprop:Generator_RelationVarName="relationFK__Sale_Deta__Prod___04E4BC85" msprop:Generator_UserParentTable="Product" />
-      <msdata:Relationship name="FK__Sale_Deta__Sale___14270015" msdata:parent="Sale" msdata:child="Sale_Detail" msdata:parentkey="Sale_id" msdata:childkey="Sale_id" msprop:Generator_UserChildTable="Sale_Detail" msprop:Generator_ChildPropName="GetSale_DetailRows" msprop:Generator_UserRelationName="FK__Sale_Deta__Sale___14270015" msprop:Generator_ParentPropName="SaleRow" msprop:Generator_RelationVarName="relationFK__Sale_Deta__Sale___14270015" msprop:Generator_UserParentTable="Sale" />
+      <msdata:Relationship name="FK_Import_detail_Order" msdata:parent="Import" msdata:child="Import_detail" msdata:parentkey="Imp_id" msdata:childkey="Imp_id" msprop:Generator_UserChildTable="Import_detail" msprop:Generator_ChildPropName="GetImport_detailRows" msprop:Generator_UserRelationName="FK_Import_detail_Order" msprop:Generator_RelationVarName="relationFK_Import_detail_Order" msprop:Generator_UserParentTable="Import" msprop:Generator_ParentPropName="ImportRow" />
+      <msdata:Relationship name="FK_Import_detail_Product" msdata:parent="Product" msdata:child="Import_detail" msdata:parentkey="Prod_id" msdata:childkey="Prod_id" msprop:Generator_UserChildTable="Import_detail" msprop:Generator_ChildPropName="GetImport_detailRows" msprop:Generator_UserRelationName="FK_Import_detail_Product" msprop:Generator_ParentPropName="ProductRow" msprop:Generator_RelationVarName="relationFK_Import_detail_Product" msprop:Generator_UserParentTable="Product" />
+      <msdata:Relationship name="FK_Order_detail_Orders" msdata:parent="Orders" msdata:child="Order_detail" msdata:parentkey="Order_id" msdata:childkey="Order_id" msprop:Generator_UserChildTable="Order_detail" msprop:Generator_ChildPropName="GetOrder_detailRows" msprop:Generator_UserRelationName="FK_Order_detail_Orders" msprop:Generator_ParentPropName="OrdersRow" msprop:Generator_RelationVarName="relationFK_Order_detail_Orders" msprop:Generator_UserParentTable="Orders" />
+      <msdata:Relationship name="FK_Order_detail_Product" msdata:parent="Product" msdata:child="Order_detail" msdata:parentkey="Prod_id" msdata:childkey="Prod_id" msprop:Generator_UserChildTable="Order_detail" msprop:Generator_ChildPropName="GetOrder_detailRows" msprop:Generator_UserRelationName="FK_Order_detail_Product" msprop:Generator_ParentPropName="ProductRow" msprop:Generator_RelationVarName="relationFK_Order_detail_Product" msprop:Generator_UserParentTable="Product" />
+      <msdata:Relationship name="FK_Orders_Supplier" msdata:parent="Supplier" msdata:child="Orders" msdata:parentkey="Supp_id" msdata:childkey="Supp_id" msprop:Generator_UserChildTable="Orders" msprop:Generator_ChildPropName="GetOrdersRows" msprop:Generator_UserRelationName="FK_Orders_Supplier" msprop:Generator_ParentPropName="SupplierRow" msprop:Generator_RelationVarName="relationFK_Orders_Supplier" msprop:Generator_UserParentTable="Supplier" />
+      <msdata:Relationship name="FK__Product__ProdTyp__0697FACD" msdata:parent="Product_Type" msdata:child="Product" msdata:parentkey="ProdType_id" msdata:childkey="ProdType_id" msprop:Generator_UserChildTable="Product" msprop:Generator_ChildPropName="GetProductRows" msprop:Generator_UserRelationName="FK__Product__ProdTyp__0697FACD" msprop:Generator_ParentPropName="Product_TypeRow" msprop:Generator_RelationVarName="relationFK__Product__ProdTyp__0697FACD" msprop:Generator_UserParentTable="Product_Type" />
+      <msdata:Relationship name="FK__Sale_Deta__Prod___04E4BC85" msdata:parent="Product" msdata:child="Sale_Detail" msdata:parentkey="Prod_id" msdata:childkey="Prod_id" msprop:Generator_UserChildTable="Sale_Detail" msprop:Generator_ChildPropName="GetSale_DetailRows" msprop:Generator_UserRelationName="FK__Sale_Deta__Prod___04E4BC85" msprop:Generator_RelationVarName="relationFK__Sale_Deta__Prod___04E4BC85" msprop:Generator_UserParentTable="Product" msprop:Generator_ParentPropName="ProductRow" />
+      <msdata:Relationship name="FK__Sale_Deta__Sale___14270015" msdata:parent="Sale" msdata:child="Sale_Detail" msdata:parentkey="Sale_id" msdata:childkey="Sale_id" msprop:Generator_UserChildTable="Sale_Detail" msprop:Generator_ChildPropName="GetSale_DetailRows" msprop:Generator_UserRelationName="FK__Sale_Deta__Sale___14270015" msprop:Generator_RelationVarName="relationFK__Sale_Deta__Sale___14270015" msprop:Generator_UserParentTable="Sale" msprop:Generator_ParentPropName="SaleRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
