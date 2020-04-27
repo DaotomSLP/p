@@ -35,7 +35,7 @@ namespace Vanpheng_Jewelry
         private void LoadByAdd()
         {
             btnSave.Visible = true;
-            btnDel.Visible = true;
+            btnDel.Visible = false;
             lblW.Visible = false;
             btnSave.Text = "ເພີ່ມ";
             lblName.Text = "ເພີ່ມຂໍ້ມູນພະນັກງານ";
@@ -83,6 +83,7 @@ namespace Vanpheng_Jewelry
             txtTel.Clear();
             txtAddr.Clear();
             txtImg.Clear();
+            pictureBox1.Image = pictureBox1.ErrorImage;
             txtPosition.Clear();
             txtSalary.Clear();
 
@@ -103,9 +104,9 @@ namespace Vanpheng_Jewelry
         {
             Database database = new Database();
             database.InsertData(@"INSERT INTO dbo.Employee VALUES('" +
-                txtId.Text + "','" + txtName.Text + "','" + txtTel.Text +
-                "','" + txtAddr.Text + "','" + txtPosition.Text + "','" + txtSalary.Text +
-                "','" + txtImg.Text + "')");
+                txtId.Text + "',N'" + txtName.Text + "',N'" + txtTel.Text +
+                "',N'" + txtAddr.Text + "',N'" + txtPosition.Text + "','" + txtSalary.Text +
+                "',N'" + txtImg.Text + "')");
             loadData();
             ClearTextBox();
         }
@@ -116,12 +117,13 @@ namespace Vanpheng_Jewelry
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();
-                database.InsertData(@"UPDATE dbo.Employee SET Emp_name = '" + txtName.Text +
-                    "',Emp_tel = '" + txtTel.Text + "', Emp_addr = '" + txtAddr.Text +
-                    "',Emp_position = '" + txtPosition.Text + "', Emp_salary = '" + txtSalary.Text +
-                     "',Emp_img = '" + txtImg.Text + "' WHERE Emp_id = '" + txtId.Text + "'");
+                database.InsertData(@"UPDATE dbo.Employee SET Emp_name = N'" + txtName.Text +
+                    "',Emp_tel = N'" + txtTel.Text + "', Emp_addr = N'" + txtAddr.Text +
+                    "',Emp_position = N'" + txtPosition.Text + "', Emp_salary = '" + txtSalary.Text +
+                     "',Emp_img = N'" + txtImg.Text + "' WHERE Emp_id = '" + txtId.Text + "'");
                 loadData();
                 ClearTextBox();
+                btnDel.Visible = false;
             }
             else
             {
@@ -141,7 +143,8 @@ namespace Vanpheng_Jewelry
                 txtAddr.Text = dgv.Rows[e.RowIndex].Cells[3].Value.ToString();
                 txtPosition.Text = dgv.Rows[e.RowIndex].Cells[4].Value.ToString();
                 txtSalary.Text = dgv.Rows[e.RowIndex].Cells[5].Value.ToString();
-                txtId.Text = dgv.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtImg.Text = dgv.Rows[e.RowIndex].Cells[6].Value.ToString();
+                pictureBox1.Image = Image.FromFile(dgv.Rows[e.RowIndex].Cells[6].Value.ToString());
             }
         }
 
@@ -155,6 +158,7 @@ namespace Vanpheng_Jewelry
                 database.InsertData(@"DELETE FROM dbo.Employee WHERE Emp_id = '" + txtId.Text + "'");
                 loadData();
                 ClearTextBox();
+                btnDel.Visible = false;
             }
             else
             {

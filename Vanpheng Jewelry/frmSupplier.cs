@@ -35,7 +35,7 @@ namespace Vanpheng_Jewelry
         private void LoadByAdd()
         {
             btnSave.Visible = true;
-            btnDel.Visible = true;
+            btnDel.Visible = false;
             lblW.Visible = false;
             btnSave.Text = "ເພີ່ມ";
             lblName.Text = "ເພີ່ມຂໍ້ມູນຜູ້ສະໜອງ";
@@ -51,7 +51,7 @@ namespace Vanpheng_Jewelry
         private void loadData()
         {
             Database database = new Database();
-            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Supplier");
+            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Supplier WHERE enable = '0'");
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("ລະຫັດ");
             dataTable.Columns.Add("ຊື່");
@@ -85,8 +85,8 @@ namespace Vanpheng_Jewelry
         {
             Database database = new Database();
             database.InsertData(@"INSERT INTO dbo.Supplier VALUES('" +
-                txtId.Text + "','" + txtName.Text + "','" + txtTel.Text +
-                "','" + txtAddr.Text + "')");
+                txtId.Text + "',N'" + txtName.Text + "',N'" + txtTel.Text +
+                "',N'" + txtAddr.Text + "','0')");
             loadData();
             ClearTextBox();
         }
@@ -97,11 +97,12 @@ namespace Vanpheng_Jewelry
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();
-                database.InsertData(@"UPDATE dbo.Supplier SET Supp_name = '" + txtName.Text +
-                    "',Supp_tel = '"+txtTel.Text+"', Supp_addr = '"+txtAddr.Text+
+                database.InsertData(@"UPDATE dbo.Supplier SET Supp_name = N'" + txtName.Text +
+                    "',Supp_tel = N'"+txtTel.Text+"', Supp_addr = N'"+txtAddr.Text+
                     "' WHERE Supp_id = '" + txtId.Text + "'");
                 loadData();
                 ClearTextBox();
+                btnDel.Visible = false;
             }
             else
             {
@@ -137,9 +138,10 @@ namespace Vanpheng_Jewelry
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();
-                database.InsertData(@"DELETE FROM dbo.Supplier WHERE Supp_id = '" + txtId.Text + "'");
+                database.InsertData(@"UPDATE dbo.Supplier SET enable = '1' WHERE Supp_id = '" + txtId.Text + "'");
                 loadData();
                 ClearTextBox();
+                btnDel.Visible = false;
             }
             else
             {

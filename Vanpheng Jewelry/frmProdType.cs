@@ -55,7 +55,7 @@ namespace Vanpheng_Jewelry
         private void loadData()
         {
             Database database = new Database();
-            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Product_Type");
+            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Product_Type WHERE enable = '0'");
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("ລະຫັດ");
             dataTable.Columns.Add("ຊື່ປະເພດສິນຄ້າ");
@@ -92,7 +92,7 @@ namespace Vanpheng_Jewelry
         {
             Database database = new Database();
             database.InsertData(@"INSERT INTO dbo.Product_Type VALUES('" +
-                txtProdTId.Text + "','" + txtProdTName.Text + "')");
+                txtProdTId.Text + "',N'" + txtProdTName.Text + "')");
             loadData();
             ClearTextBox();
         }
@@ -103,10 +103,11 @@ namespace Vanpheng_Jewelry
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();
-                database.InsertData(@"UPDATE dbo.Product_Type SET ProdType_name = '" + txtProdTName.Text +
+                database.InsertData(@"UPDATE dbo.Product_Type SET ProdType_name = N'" + txtProdTName.Text +
                     "' WHERE ProdType_id = '" + txtProdTId.Text + "'");
                 loadData();
                 ClearTextBox();
+                btnDel.Visible = false;
             }
             else
             {
@@ -138,9 +139,10 @@ namespace Vanpheng_Jewelry
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();
-                database.InsertData(@"DELETE FROM dbo.Product_Type WHERE ProdType_id = '" + txtProdTId.Text + "'");
+                database.InsertData(@"UPDATE dbo.Product_Type SET enable = '1' WHERE ProdType_id = '" + txtProdTId.Text + "'");
                 loadData();
                 ClearTextBox();
+                btnDel.Visible = false;
             }
             else
             {

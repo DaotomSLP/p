@@ -38,7 +38,7 @@ namespace Vanpheng_Jewelry
         private void LoadByAdd()
         {
             btnSave.Visible = true;
-            btnDel.Visible = true;
+            btnDel.Visible = false;
             lblW.Visible = false;
             btnSave.Text = "ເພີ່ມ";
             lblName.Text = "ເພີ່ມຂໍ້ມູນລາຄາປະຈຳວັນ";

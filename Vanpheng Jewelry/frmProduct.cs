@@ -31,8 +31,8 @@ namespace Vanpheng_Jewelry
         private void SaveInsert()
         {
             Database database = new Database();
-            database.InsertData(@"INSERT INTO Product VALUES('" + txtId.Text + "','" +
-                txtName.Text + "','" + txtPictureName.Text + "','" +
+            database.InsertData(@"INSERT INTO Product VALUES('" + txtId.Text + "',N'" +
+                txtName.Text + "',N'" + txtPictureName.Text + "','" +
                 txtPrice.Text + "','" + comboBox1.SelectedValue + "','" +
                 weigBa.Value + "','" + weigSl.Value + "','" + weigHo.Value + "','0')");
             loadData();
@@ -48,8 +48,8 @@ namespace Vanpheng_Jewelry
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();
-                database.InsertData(@"UPDATE Product SET Prod_name = '" + txtName.Text + 
-                    "',Prod_img ='" + txtPictureName.Text + "',Design_price='" + 
+                database.InsertData(@"UPDATE Product SET Prod_name = N'" + txtName.Text + 
+                    "',Prod_img =N'" + txtPictureName.Text + "',Design_price='" + 
                     txtPrice.Text + "',ProdType_id='" + comboBox1.SelectedValue + 
                     "',Prod_weight1='" +weigBa.Value + "',Prod_weight2='" + 
                     weigSl.Value + "',Prod_weight3='" + weigHo.Value +
@@ -57,6 +57,7 @@ namespace Vanpheng_Jewelry
                 loadData();
                 ClearTextBox();
                 MessageBox.Show("Update Success ...");
+                btnDel.Visible = false;
             }
             else
             {
@@ -93,8 +94,8 @@ namespace Vanpheng_Jewelry
             txtPrice.Visible = true;
             txtName.Visible = true;
             btnSave.Visible = true;
-            btnDel.Visible = true;
             lblW.Visible = false;
+            btnDel.Visible = false;
             pictureBox1.Visible = true;
             txtPictureName.Visible = true;
             label3.Visible = true;
@@ -148,7 +149,7 @@ namespace Vanpheng_Jewelry
         private void loadData()
         {
             Database database = new Database();
-            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Product ORDER BY Prod_id DESC");
+            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Product WHERE enable = '0' ORDER BY Prod_id DESC");
             DataTable dataTable = new DataTable();
             dataTable.Columns.Add("ລະຫັດ");
             dataTable.Columns.Add("ຊື່ສິນຄ້າ");
@@ -180,6 +181,7 @@ namespace Vanpheng_Jewelry
             txtName.Clear();
             txtPictureName.Clear();
             txtPrice.Clear();
+            pictureBox1.Image = pictureBox1.ErrorImage;
             Database database = new Database();
             txtId.Text = database.generateId("SELECT MAX(Prod_id) FROM Product").ToString();
         }
@@ -228,10 +230,11 @@ namespace Vanpheng_Jewelry
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();
-                database.InsertData(@"DELETE FROM Product  WHERE Prod_id='" + txtId.Text + "'");
+                database.InsertData(@"UPDATE dbo.Product SET enable = '1'  WHERE Prod_id='" + txtId.Text + "'");
                 loadData();
                 ClearTextBox();
                 MessageBox.Show("Delete Success ...");
+                btnDel.Visible = false;
             }
             else
             {
