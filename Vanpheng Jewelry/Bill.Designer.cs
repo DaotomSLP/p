@@ -33,10 +33,10 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.Sale_ViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Database1DataSet = new Vanpheng_Jewelry.Database1DataSet();
+            this.Order_ViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewerSaleBill = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Sale_ViewTableAdapter = new Vanpheng_Jewelry.Database1DataSetTableAdapters.Sale_ViewTableAdapter();
             this.reportViewerOrderBill = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.Order_ViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Order_ViewTableAdapter = new Vanpheng_Jewelry.Database1DataSetTableAdapters.Order_ViewTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.Sale_ViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).BeginInit();
@@ -53,6 +53,11 @@
             this.Database1DataSet.DataSetName = "Database1DataSet";
             this.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // Order_ViewBindingSource
+            // 
+            this.Order_ViewBindingSource.DataMember = "Order_View";
+            this.Order_ViewBindingSource.DataSource = this.Database1DataSet;
+            // 
             // reportViewerSaleBill
             // 
             this.reportViewerSaleBill.AutoSize = true;
@@ -65,6 +70,7 @@
             this.reportViewerSaleBill.ServerReport.BearerToken = null;
             this.reportViewerSaleBill.Size = new System.Drawing.Size(741, 559);
             this.reportViewerSaleBill.TabIndex = 20;
+            this.reportViewerSaleBill.Visible = false;
             // 
             // Sale_ViewTableAdapter
             // 
@@ -82,11 +88,7 @@
             this.reportViewerOrderBill.ServerReport.BearerToken = null;
             this.reportViewerOrderBill.Size = new System.Drawing.Size(741, 559);
             this.reportViewerOrderBill.TabIndex = 21;
-            // 
-            // Order_ViewBindingSource
-            // 
-            this.Order_ViewBindingSource.DataMember = "Order_View";
-            this.Order_ViewBindingSource.DataSource = this.Database1DataSet;
+            this.reportViewerOrderBill.Visible = false;
             // 
             // Order_ViewTableAdapter
             // 

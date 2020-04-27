@@ -459,7 +459,7 @@ namespace Vanpheng_Jewelry
                     Bill bill = new Bill();
                     globalVal.Sale_id = txtId.Text;
                     globalVal.reportStatus = "SaleBill";
-                    bill.Show();
+                    bill.ShowDialog();
                     rerunForm();
                     MessageBox.Show("Success...");
 
@@ -494,7 +494,7 @@ namespace Vanpheng_Jewelry
                     Bill bill = new Bill();
                     globalVal.Order_id = txtId.Text;
                     globalVal.reportStatus = "OrderBill";
-                    bill.Show();
+                    bill.ShowDialog();
 
                     rerunForm();
                     MessageBox.Show("Success...");
@@ -509,19 +509,21 @@ namespace Vanpheng_Jewelry
 
         private void rerunForm()
         {
+
             dgv.Rows.Clear();
-
-
-            if(globalVal.FrmSaleOrderStatus == "sale")
+            if (globalVal.FrmSaleOrderStatus == "sale")
             {
                 Database database = new Database();
                 txtId.Text = database.generateId("SELECT MAX(Sale_id) FROM Sale").ToString();
+                flowLayoutPanel1.Controls.Clear();
                 Sale_load();
             }
-            else if(globalVal.FrmSaleOrderStatus == "order")
+            else if (globalVal.FrmSaleOrderStatus == "order")
             {
                 Database database = new Database();
                 txtId.Text = database.generateId("SELECT MAX(Order_id) FROM Orders").ToString();
+                flowLayoutPanel1.Controls.Clear();
+                Order_load();
             }
 
         }

@@ -22,8 +22,10 @@ namespace Vanpheng_Jewelry
         {
             if(globalVal.reportStatus == "SaleBill")
             {
-            // TODO: This line of code loads data into the 'Database1DataSet.Sale_View' table. You can move, or remove it, as needed.
-            //this.Sale_ViewTableAdapter.Fill(this.Database1DataSet.Sale_View);
+                // TODO: This line of code loads data into the 'Database1DataSet.Sale_View' table. You can move, or remove it, as needed.
+                //this.Sale_ViewTableAdapter.Fill(this.Database1DataSet.Sale_View);
+                this.reportViewerOrderBill.Visible = false;
+                this.reportViewerSaleBill.Visible = true;
                 Database database = new Database();
                 DataTable dataTable = new DataTable();
                 dataTable = database.loadReport("SELECT * FROM Sale_View WHERE Sale_id = '"+globalVal.Sale_id+"'");
@@ -36,6 +38,8 @@ namespace Vanpheng_Jewelry
             {
                 // TODO: This line of code loads data into the 'Database1DataSet.Sale_View' table. You can move, or remove it, as needed.
                 //this.Sale_ViewTableAdapter.Fill(this.Database1DataSet.Sale_View);
+                this.reportViewerOrderBill.Visible = true;
+                this.reportViewerSaleBill.Visible = false;
                 Database database = new Database();
                 DataTable dataTable = new DataTable();
                 dataTable = database.loadReport("SELECT * FROM Order_View WHERE Order_id = '" + globalVal.Order_id + "'");
