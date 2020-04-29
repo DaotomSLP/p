@@ -41,10 +41,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>3.22097in</Width>
+              <Width>1.06555in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.21611in</Width>
+              <Width>2.63625in</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.39278in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -74,6 +77,41 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox6</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox8">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>ຜູ້ສະໜອງ</Value>
+                              <Style>
+                                <FontFamily>phetsarath</FontFamily>
+                                <FontSize>12pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox8</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -162,6 +200,40 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Supp_name">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Supp_name.Value</Value>
+                              <Style>
+                                <FontFamily>phetsarath</FontFamily>
+                                <FontSize>12pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Supp_name</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="Imp_total_price">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -202,6 +274,7 @@
           <TablixMembers>
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -218,7 +291,7 @@
         <Top>1.27084in</Top>
         <Left>0.02056in</Left>
         <Height>0.625in</Height>
-        <Width>6.43708in</Width>
+        <Width>6.09458in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -406,10 +479,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>2.5625in</Height>
+    <Height>6.29709cm</Height>
     <Style />
   </Body>
-  <Width>6.63542in</Width>
+  <Width>16.77462cm</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
@@ -434,30 +507,38 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Imp_id">
-          <DataField>Imp_id</DataField>
+        <Field Name="Supp_name">
+          <DataField>Supp_name</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Supp_id">
+          <DataField>Supp_id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Order_id">
+          <DataField>Order_id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
         <Field Name="Imp_date">
           <DataField>Imp_date</DataField>
           <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
+        <Field Name="Imp_id">
+          <DataField>Imp_id</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
         <Field Name="Imp_total_price">
           <DataField>Imp_total_price</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
-        </Field>
-        <Field Name="Order_id">
-          <DataField>Order_id</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Database1DataSet</rd:DataSetName>
         <rd:SchemaPath>D:\work\windowbase\p\Vanpheng Jewelry\Database1DataSet.xsd</rd:SchemaPath>
-        <rd:TableName>Import</rd:TableName>
+        <rd:TableName>ImportSummaryView</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>ImportTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>ImportSummaryViewTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>

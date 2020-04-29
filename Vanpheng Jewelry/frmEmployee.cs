@@ -42,6 +42,21 @@ namespace Vanpheng_Jewelry
         }
         private void LoadByUpdate()
         {
+            if(globalVal.User == "Admin")
+            {
+                label7.Visible = true;
+                label8.Visible = true;
+                txtUser.Visible = true;
+                txtPassword.Visible = true;
+                txtPassword.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                label7.Visible = false;
+                label8.Visible = false;
+                txtUser.Visible = false;
+                txtPassword.Visible = false;
+            }
             btnSave.Visible = false;
             btnDel.Visible = false;
             lblW.Visible = true;
@@ -60,6 +75,11 @@ namespace Vanpheng_Jewelry
             dataTable.Columns.Add("ຕຳແໜ່ງ");
             dataTable.Columns.Add("ເງິນເດືອນ");
             dataTable.Columns.Add("ຮູບ");
+            if(globalVal.User == "Admin")
+            {
+                dataTable.Columns.Add("ຊື່ຜູ້ໃຊ້");
+                dataTable.Columns.Add("ລະຫັດຜ່ານ");
+            }
             while (dr.Read())
             {
                 DataRow row = dataTable.NewRow();
@@ -70,6 +90,11 @@ namespace Vanpheng_Jewelry
                 row["ຕຳແໜ່ງ"] = dr["Emp_position"];
                 row["ເງິນເດືອນ"] = dr["Emp_salary"];
                 row["ຮູບ"] = dr["Emp_img"];
+                if (globalVal.User == "Admin")
+                {
+                    row["ຊື່ຜູ້ໃຊ້"] = dr["UserName"];
+                    row["ລະຫັດຜ່ານ"] = dr["Password"];
+                }
                 dataTable.Rows.Add(row);
             }
             dgv.DataSource = dataTable;
@@ -106,7 +131,7 @@ namespace Vanpheng_Jewelry
             database.InsertData(@"INSERT INTO dbo.Employee VALUES('" +
                 txtId.Text + "',N'" + txtName.Text + "',N'" + txtTel.Text +
                 "',N'" + txtAddr.Text + "',N'" + txtPosition.Text + "','" + txtSalary.Text +
-                "',N'" + txtImg.Text + "')");
+                "',N'" + txtImg.Text + "',N'"+txtUser.Text+"',N'"+txtPassword.Text+"')");
             loadData();
             ClearTextBox();
         }
@@ -117,10 +142,22 @@ namespace Vanpheng_Jewelry
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();
-                database.InsertData(@"UPDATE dbo.Employee SET Emp_name = N'" + txtName.Text +
+                if (globalVal.User == "Admin")
+                {
+                    database.InsertData(@"UPDATE dbo.Employee SET Emp_name = N'" + txtName.Text +
+                    "',Emp_tel = N'" + txtTel.Text + "', Emp_addr = N'" + txtAddr.Text +
+                    "',Emp_position = N'" + txtPosition.Text + "', Emp_salary = '" + txtSalary.Text +
+                     "',Emp_img = N'" + txtImg.Text + "',UserName = N'"+txtUser.Text+"', Password = N'"+
+                     txtPassword.Text+"' WHERE Emp_id = '" + txtId.Text + "'");
+                }
+                else
+                {
+                    database.InsertData(@"UPDATE dbo.Employee SET Emp_name = N'" + txtName.Text +
                     "',Emp_tel = N'" + txtTel.Text + "', Emp_addr = N'" + txtAddr.Text +
                     "',Emp_position = N'" + txtPosition.Text + "', Emp_salary = '" + txtSalary.Text +
                      "',Emp_img = N'" + txtImg.Text + "' WHERE Emp_id = '" + txtId.Text + "'");
+                }
+
                 loadData();
                 ClearTextBox();
                 btnDel.Visible = false;
@@ -145,6 +182,11 @@ namespace Vanpheng_Jewelry
                 txtSalary.Text = dgv.Rows[e.RowIndex].Cells[5].Value.ToString();
                 txtImg.Text = dgv.Rows[e.RowIndex].Cells[6].Value.ToString();
                 pictureBox1.Image = Image.FromFile(dgv.Rows[e.RowIndex].Cells[6].Value.ToString());
+                if (globalVal.User == "Admin")
+                {
+                    txtUser.Text = dgv.Rows[e.RowIndex].Cells[7].Value.ToString();
+                    txtPassword.Text = dgv.Rows[e.RowIndex].Cells[8].Value.ToString();
+                }
             }
         }
 

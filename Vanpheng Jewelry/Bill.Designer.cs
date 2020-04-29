@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.Sale_ViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Database1DataSet = new Vanpheng_Jewelry.Database1DataSet();
             this.Order_ViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -38,9 +39,13 @@
             this.Sale_ViewTableAdapter = new Vanpheng_Jewelry.Database1DataSetTableAdapters.Sale_ViewTableAdapter();
             this.reportViewerOrderBill = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Order_ViewTableAdapter = new Vanpheng_Jewelry.Database1DataSetTableAdapters.Order_ViewTableAdapter();
+            this.reportViewerBuy = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.BuyViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BuyViewTableAdapter = new Vanpheng_Jewelry.Database1DataSetTableAdapters.BuyViewTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.Sale_ViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Order_ViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuyViewBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Sale_ViewBindingSource
@@ -94,11 +99,35 @@
             // 
             this.Order_ViewTableAdapter.ClearBeforeFill = true;
             // 
+            // reportViewerBuy
+            // 
+            this.reportViewerBuy.AutoSize = true;
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.BuyViewBindingSource;
+            this.reportViewerBuy.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewerBuy.LocalReport.ReportEmbeddedResource = "Vanpheng_Jewelry.BuyBill.rdlc";
+            this.reportViewerBuy.Location = new System.Drawing.Point(8, 7);
+            this.reportViewerBuy.Name = "reportViewerBuy";
+            this.reportViewerBuy.ServerReport.BearerToken = null;
+            this.reportViewerBuy.Size = new System.Drawing.Size(741, 559);
+            this.reportViewerBuy.TabIndex = 22;
+            this.reportViewerBuy.Visible = false;
+            // 
+            // BuyViewBindingSource
+            // 
+            this.BuyViewBindingSource.DataMember = "BuyView";
+            this.BuyViewBindingSource.DataSource = this.Database1DataSet;
+            // 
+            // BuyViewTableAdapter
+            // 
+            this.BuyViewTableAdapter.ClearBeforeFill = true;
+            // 
             // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(756, 572);
+            this.Controls.Add(this.reportViewerBuy);
             this.Controls.Add(this.reportViewerOrderBill);
             this.Controls.Add(this.reportViewerSaleBill);
             this.Name = "Bill";
@@ -107,6 +136,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Sale_ViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Order_ViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuyViewBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,5 +151,8 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerOrderBill;
         private System.Windows.Forms.BindingSource Order_ViewBindingSource;
         private Database1DataSetTableAdapters.Order_ViewTableAdapter Order_ViewTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerBuy;
+        private System.Windows.Forms.BindingSource BuyViewBindingSource;
+        private Database1DataSetTableAdapters.BuyViewTableAdapter BuyViewTableAdapter;
     }
 }

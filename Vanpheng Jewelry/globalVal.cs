@@ -34,10 +34,16 @@ namespace Vanpheng_Jewelry
             get;
             set;
         }
+        public static string Buy_id
+        {
+            get;
+            set;
+        }
         public static string Order_id
         {
             get;
             set;
         }
+        public static string User = "";
     }
 }

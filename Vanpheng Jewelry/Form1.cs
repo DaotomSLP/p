@@ -19,11 +19,16 @@ namespace Vanpheng_Jewelry
             InitializeComponent();
         }
 
-        private void Home_Load(object sender, EventArgs e)
+        public void Home_Load(object sender, EventArgs e)
         {
-            //MessageBox.Show(Directory.GetCurrentDirectory());
+                Login login = new Login();
+                showForm(login);
             lblDate.Text = DateTime.Now.ToLongDateString();
             timer1.Start();
+        }
+        public void showPanel1()
+        {
+           panel1.Visible = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -33,15 +38,23 @@ namespace Vanpheng_Jewelry
 
         private void btnMenuSale_Click(object sender, EventArgs e)
         {
-            changeMenuColor();
-            btnMenuSale.BackColor = Color.White;
-            btnMenuSale.ForeColor = Color.DarkGoldenrod;
-            hideForm();
-            globalVal.FrmSaleOrderStatus = "sale";
-            Sale_Order sale_order = new Sale_Order();
-            sale_order.MdiParent = this;
-            sale_order.Location = new Point(0, 0);
-            sale_order.Show();
+            if (globalVal.User != "")
+            {
+                changeMenuColor();
+                btnMenuSale.BackColor = Color.White;
+                btnMenuSale.ForeColor = Color.DarkGoldenrod;
+                hideForm();
+                globalVal.FrmSaleOrderStatus = "sale";
+                Sale_Order sale_order = new Sale_Order();
+                sale_order.MdiParent = this;
+                sale_order.Location = new Point(0, 0);
+                sale_order.Show();
+
+            }
+            else
+            {
+                
+            }
         }
         public void hideForm()
         {
@@ -70,12 +83,13 @@ namespace Vanpheng_Jewelry
             }
         }
 
-        private void changeMenuColor()
+        public void changeMenuColor()
         {
             btnOrder.BackColor = Color.DarkGoldenrod;
             btnMenuSale.BackColor = Color.DarkGoldenrod;
             btnImp.BackColor = Color.DarkGoldenrod;
             btnAddEmp.BackColor = Color.Transparent;
+            btnBuy.BackColor = Color.Transparent;
             btnAddPrice.BackColor = Color.Transparent;
             btnAddProd.BackColor = Color.Transparent;
             btnAddProdType.BackColor = Color.Transparent;
@@ -83,24 +97,25 @@ namespace Vanpheng_Jewelry
             btnAddSupp.BackColor = Color.Transparent;
 
             btnEditEmp.BackColor = Color.Transparent;
-            btnEditPrice.BackColor = Color.Transparent;
             btnEditProd.BackColor = Color.Transparent;
             btnEditProdT.BackColor = Color.Transparent;
             btnEditCus.BackColor = Color.Transparent;
             btnEditSupp.BackColor = Color.Transparent;
+            btnBuyReport.BackColor = Color.Transparent;
 
             btnMenuSale.ForeColor = SystemColors.ControlLightLight;
             btnOrder.ForeColor = SystemColors.ControlLightLight;
             btnImp.ForeColor = SystemColors.ControlLightLight;
+            btnBuy.ForeColor = SystemColors.ControlLightLight;
             btnAddEmp.ForeColor = SystemColors.ControlLightLight;
             btnAddPrice.ForeColor = SystemColors.ControlLightLight;
             btnAddProd.ForeColor = SystemColors.ControlLightLight;
             btnAddProdType.ForeColor = SystemColors.ControlLightLight;
             btnAddCus.ForeColor = SystemColors.ControlLightLight;
             btnAddSupp.ForeColor = SystemColors.ControlLightLight;
+            btnBuyReport.ForeColor = SystemColors.ControlLightLight;
 
             btnEditEmp.ForeColor = SystemColors.ControlLightLight;
-            btnEditPrice.ForeColor = SystemColors.ControlLightLight;
             btnEditProd.ForeColor = SystemColors.ControlLightLight;
             btnEditProdT.ForeColor = SystemColors.ControlLightLight;
             btnEditCus.ForeColor = SystemColors.ControlLightLight;
@@ -122,16 +137,32 @@ namespace Vanpheng_Jewelry
         }
         private void btnData_Click(object sender, EventArgs e)
         {
-            changeMenuColor();
-            globalVal.FrmDataStatus = "insert";
-            hideAndShowSubMenu(panelDataSubMenu);
+            if (globalVal.User != "")
+            {
+                changeMenuColor();
+                globalVal.FrmDataStatus = "insert";
+                hideAndShowSubMenu(panelDataSubMenu);
+
+            }
+            else
+            {
+
+            }
         }
 
         private void btnUpdateData_Click(object sender, EventArgs e)
         {
-            changeMenuColor();
-            globalVal.FrmDataStatus= "update";
-            hideAndShowSubMenu(panelUpdateDataSubMenu);
+            if (globalVal.User != "")
+            {
+
+                changeMenuColor();
+                globalVal.FrmDataStatus = "update";
+                hideAndShowSubMenu(panelUpdateDataSubMenu);
+            }
+            else
+            {
+
+            }
         }
         private void btnAddProd_Click(object sender, EventArgs e)
         {
@@ -214,15 +245,6 @@ namespace Vanpheng_Jewelry
             showForm(frmProdType);
         }
 
-        private void btnEditPrice_Click(object sender, EventArgs e)
-        {
-            changeMenuColor();
-            btnEditPrice.BackColor = Color.White;
-            btnEditPrice.ForeColor = Color.DarkGoldenrod;
-            hideForm();
-            frmDailyPrice frmDailyPrice = new frmDailyPrice();
-            showForm(frmDailyPrice);
-        }
 
         private void btnEditSupp_Click(object sender, EventArgs e)
         {
@@ -256,30 +278,54 @@ namespace Vanpheng_Jewelry
 
         private void btnImp_Click(object sender, EventArgs e)
         {
-            changeMenuColor();
-            btnImp.BackColor = Color.White;
-            btnImp.ForeColor = Color.DarkGoldenrod;
-            globalVal.FrmDataStatus = "addOld";
-            hideForm();
-            frmImport frmImport = new frmImport();
-            showForm(frmImport);
+            if (globalVal.User != "")
+            {
+                changeMenuColor();
+                btnImp.BackColor = Color.White;
+                btnImp.ForeColor = Color.DarkGoldenrod;
+                globalVal.FrmDataStatus = "addOld";
+                hideForm();
+                frmImport frmImport = new frmImport();
+                showForm(frmImport);
+
+            }
+            else
+            {
+
+            }
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            changeMenuColor();
-            btnOrder.BackColor = Color.White;
-            btnOrder.ForeColor = Color.DarkGoldenrod;
-            globalVal.FrmSaleOrderStatus = "order";
-            hideForm();
-            Sale_Order sale_Order = new Sale_Order();
-            showForm(sale_Order);
+            if (globalVal.User != "")
+            {
+                changeMenuColor();
+                btnOrder.BackColor = Color.White;
+                btnOrder.ForeColor = Color.DarkGoldenrod;
+                globalVal.FrmSaleOrderStatus = "order";
+                hideForm();
+                Sale_Order sale_Order = new Sale_Order();
+                showForm(sale_Order);
+
+            }
+            else
+            {
+
+            }
         }
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            changeMenuColor();
-            hideAndShowSubMenu(panelReportSubmenu);
+            if (globalVal.User != "")
+            {
+                changeMenuColor();
+                hideAndShowSubMenu(panelReportSubmenu);
+
+            }
+            else
+            {
+
+            }
         }
 
         private void btnReportProd_Click(object sender, EventArgs e)
@@ -296,8 +342,8 @@ namespace Vanpheng_Jewelry
         private void btnReportProdType_Click(object sender, EventArgs e)
         {
             changeMenuColor();
-            btnReportProd.BackColor = Color.White;
-            btnReportProd.ForeColor = Color.DarkGoldenrod;
+            btnReportProdType.BackColor = Color.White;
+            btnReportProdType.ForeColor = Color.DarkGoldenrod;
             hideForm();
             frmReportData frmReportData = new frmReportData();
             globalVal.reportStatus = "product_type";
@@ -345,6 +391,30 @@ namespace Vanpheng_Jewelry
             hideForm();
             frmReportSaleOrder frmReportSaleOrder = new frmReportSaleOrder();
             globalVal.reportStatus = "import";
+            showForm(frmReportSaleOrder);
+        }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            if (globalVal.User != "")
+            {
+                changeMenuColor();
+                btnBuy.BackColor = Color.White;
+                btnBuy.ForeColor = Color.DarkGoldenrod;
+                hideForm();
+                frmBuyProduct frmBuyProduct = new frmBuyProduct();
+                showForm(frmBuyProduct);
+            }
+        }
+
+        private void btnBuyReport_Click(object sender, EventArgs e)
+        {
+            changeMenuColor();
+            btnBuyReport.BackColor = Color.White;
+            btnBuyReport.ForeColor = Color.DarkGoldenrod;
+            hideForm();
+            frmReportSaleOrder frmReportSaleOrder = new frmReportSaleOrder();
+            globalVal.reportStatus = "buy";
             showForm(frmReportSaleOrder);
         }
     }

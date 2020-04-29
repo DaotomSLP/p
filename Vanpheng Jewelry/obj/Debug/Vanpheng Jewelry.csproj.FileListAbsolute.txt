@@ -159,3 +159,4 @@ D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\RdlCompile.compiled
 D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.csproj.CopyComplete
 D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmReportSaleOrder.resources
 D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Bill.resources
+D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Login.resources

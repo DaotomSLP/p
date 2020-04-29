@@ -39,6 +39,7 @@
             this.txtAddr = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblName = new System.Windows.Forms.Label();
             this.txtImg = new System.Windows.Forms.TextBox();
             this.btnChoose = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -51,7 +52,10 @@
             this.dgv = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.lblW = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -89,7 +93,7 @@
             this.label1.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(15, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 25);
+            this.label1.Size = new System.Drawing.Size(127, 23);
             this.label1.TabIndex = 6;
             this.label1.Text = "ຊື່ ແລະ ນາມສະກຸນ :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -99,7 +103,7 @@
             this.txtName.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(15, 61);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(353, 33);
+            this.txtName.Size = new System.Drawing.Size(353, 31);
             this.txtName.TabIndex = 8;
             // 
             // openFileDialog1
@@ -110,9 +114,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(11, 182);
+            this.label5.Location = new System.Drawing.Point(11, 161);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 25);
+            this.label5.Size = new System.Drawing.Size(52, 23);
             this.label5.TabIndex = 7;
             this.label5.Text = "ເບີໂທ :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -120,18 +124,18 @@
             // txtTel
             // 
             this.txtTel.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTel.Location = new System.Drawing.Point(15, 208);
+            this.txtTel.Location = new System.Drawing.Point(15, 187);
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(353, 33);
+            this.txtTel.Size = new System.Drawing.Size(353, 31);
             this.txtTel.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 110);
+            this.label2.Location = new System.Drawing.Point(11, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 25);
+            this.label2.Size = new System.Drawing.Size(40, 23);
             this.label2.TabIndex = 7;
             this.label2.Text = "ທີ່ຢູ່ :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,9 +143,9 @@
             // txtAddr
             // 
             this.txtAddr.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddr.Location = new System.Drawing.Point(15, 136);
+            this.txtAddr.Location = new System.Drawing.Point(15, 124);
             this.txtAddr.Name = "txtAddr";
-            this.txtAddr.Size = new System.Drawing.Size(353, 33);
+            this.txtAddr.Size = new System.Drawing.Size(353, 31);
             this.txtAddr.TabIndex = 9;
             // 
             // label3
@@ -150,7 +154,7 @@
             this.label3.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(15, 445);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 25);
+            this.label3.Size = new System.Drawing.Size(63, 23);
             this.label3.TabIndex = 10;
             this.label3.Text = "ຮູບພາບ :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -166,8 +170,12 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.txtName);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtUser);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtSalary);
             this.panel1.Controls.Add(this.txtPosition);
@@ -180,12 +188,23 @@
             this.panel1.Size = new System.Drawing.Size(390, 612);
             this.panel1.TabIndex = 14;
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(10, 5);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(61, 26);
+            this.lblName.TabIndex = 18;
+            this.lblName.Text = "ຂໍ້ມູນ :";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // txtImg
             // 
             this.txtImg.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtImg.Location = new System.Drawing.Point(76, 437);
             this.txtImg.Name = "txtImg";
-            this.txtImg.Size = new System.Drawing.Size(292, 33);
+            this.txtImg.Size = new System.Drawing.Size(292, 31);
             this.txtImg.TabIndex = 16;
             // 
             // btnChoose
@@ -208,7 +227,7 @@
             this.txtId.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(15, 3);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(353, 33);
+            this.txtId.Size = new System.Drawing.Size(353, 31);
             this.txtId.TabIndex = 8;
             this.txtId.Visible = false;
             // 
@@ -216,9 +235,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(11, 335);
+            this.label6.Location = new System.Drawing.Point(11, 285);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 25);
+            this.label6.Size = new System.Drawing.Size(72, 23);
             this.label6.TabIndex = 7;
             this.label6.Text = "ເງິນເດືອນ :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -227,9 +246,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 259);
+            this.label4.Location = new System.Drawing.Point(11, 223);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 25);
+            this.label4.Size = new System.Drawing.Size(64, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "ຕຳແໜ໋ງ :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -237,17 +256,17 @@
             // txtSalary
             // 
             this.txtSalary.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalary.Location = new System.Drawing.Point(15, 361);
+            this.txtSalary.Location = new System.Drawing.Point(15, 311);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(353, 33);
+            this.txtSalary.Size = new System.Drawing.Size(353, 31);
             this.txtSalary.TabIndex = 9;
             // 
             // txtPosition
             // 
             this.txtPosition.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPosition.Location = new System.Drawing.Point(15, 285);
+            this.txtPosition.Location = new System.Drawing.Point(15, 249);
             this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(353, 33);
+            this.txtPosition.Size = new System.Drawing.Size(353, 31);
             this.txtPosition.TabIndex = 9;
             // 
             // btnDel
@@ -309,21 +328,49 @@
             this.lblW.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblW.Location = new System.Drawing.Point(451, 567);
             this.lblW.Name = "lblW";
-            this.lblW.Size = new System.Drawing.Size(275, 29);
+            this.lblW.Size = new System.Drawing.Size(291, 26);
             this.lblW.TabIndex = 25;
             this.lblW.Text = "ກະລຸນາເລືອກຂໍ້ມູນທີ່ຕ້ອງການແກ້ໄຂ";
             this.lblW.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblName
+            // txtUser
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(10, 5);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(64, 29);
-            this.lblName.TabIndex = 18;
-            this.lblName.Text = "ຂໍ້ມູນ :";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtUser.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(19, 387);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(183, 31);
+            this.txtUser.TabIndex = 9;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(15, 361);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 23);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "User Name :";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(217, 387);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(151, 31);
+            this.txtPassword.TabIndex = 9;
+            this.txtPassword.UseSystemPasswordChar = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(213, 361);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 23);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Password :";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmEmployee
             // 
@@ -375,5 +422,9 @@
         private System.Windows.Forms.Button btnChoose;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUser;
     }
 }

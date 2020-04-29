@@ -20,6 +20,8 @@ namespace Vanpheng_Jewelry
 
         private void frmReportSaleOrder_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'Database1DataSet.BuyView' table. You can move, or remove it, as needed.
+            this.BuyViewTableAdapter.Fill(this.Database1DataSet.BuyView);
             // TODO: This line of code loads data into the 'Database1DataSet.Import' table. You can move, or remove it, as needed.
             this.ImportTableAdapter.Fill(this.Database1DataSet.Import);
 
@@ -29,6 +31,7 @@ namespace Vanpheng_Jewelry
         {
             if (globalVal.reportStatus == "sale")
             {
+                this.reportViewerBuy.Visible = false;
                 this.reportViewerImport.Visible = false;
                 this.reportViewerSale.Visible = true;
                 Database database = new Database();
@@ -41,15 +44,29 @@ namespace Vanpheng_Jewelry
             }
             else if (globalVal.reportStatus == "import")
             {
+                this.reportViewerBuy.Visible = false;
                 this.reportViewerSale.Visible = false;
                 this.reportViewerImport.Visible = true;
                 Database database = new Database();
                 DataTable dataTable = new DataTable();
-                dataTable = database.loadReport("SELECT * FROM Import WHERE Imp_date BETWEEN '" + dtpStart.Value.ToString() + "' AND '" + dtpEnd.Value.ToString() + "'");
+                dataTable = database.loadReport("SELECT * FROM ImportSummaryView WHERE Imp_date BETWEEN '" + dtpStart.Value.ToString() + "' AND '" + dtpEnd.Value.ToString() + "'");
                 ReportDataSource reportDataSource = new ReportDataSource("DataSet1", dataTable);
                 this.reportViewerImport.LocalReport.DataSources.Clear();
                 this.reportViewerImport.LocalReport.DataSources.Add(reportDataSource);
                 this.reportViewerImport.RefreshReport();
+            }
+            else if (globalVal.reportStatus == "buy")
+            {
+                this.reportViewerBuy.Visible = true;
+                this.reportViewerSale.Visible = false;
+                this.reportViewerImport.Visible = false;
+                Database database = new Database();
+                DataTable dataTable = new DataTable();
+                dataTable = database.loadReport("SELECT * FROM BuyView WHERE Buy_date BETWEEN '" + dtpStart.Value.ToString() + "' AND '" + dtpEnd.Value.ToString() + "'");
+                ReportDataSource reportDataSource = new ReportDataSource("DataSet1", dataTable);
+                this.reportViewerBuy.LocalReport.DataSources.Clear();
+                this.reportViewerBuy.LocalReport.DataSources.Add(reportDataSource);
+                this.reportViewerBuy.RefreshReport();
             }
         }
     }

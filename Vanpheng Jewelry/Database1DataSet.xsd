@@ -776,6 +776,55 @@ FROM            Order_View</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ImportSummaryViewTableAdapter" GeneratorDataComponentClassName="ImportSummaryViewTableAdapter" Name="ImportSummaryView" UserDataComponentName="ImportSummaryViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.ImportSummaryView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ImportSummaryView.*
+FROM            ImportSummaryView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Supp_name" DataSetColumn="Supp_name" />
+              <Mapping SourceColumn="Supp_id" DataSetColumn="Supp_id" />
+              <Mapping SourceColumn="Order_id" DataSetColumn="Order_id" />
+              <Mapping SourceColumn="Imp_date" DataSetColumn="Imp_date" />
+              <Mapping SourceColumn="Imp_id" DataSetColumn="Imp_id" />
+              <Mapping SourceColumn="Imp_total_price" DataSetColumn="Imp_total_price" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BuyViewTableAdapter" GeneratorDataComponentClassName="BuyViewTableAdapter" Name="BuyView" UserDataComponentName="BuyViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.BuyView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        BuyView.*
+FROM            BuyView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Cus_id" DataSetColumn="Cus_id" />
+              <Mapping SourceColumn="Cus_name" DataSetColumn="Cus_name" />
+              <Mapping SourceColumn="Buy_id" DataSetColumn="Buy_id" />
+              <Mapping SourceColumn="Buy_date" DataSetColumn="Buy_date" />
+              <Mapping SourceColumn="Buy_total" DataSetColumn="Buy_total" />
+              <Mapping SourceColumn="Buy_detail_amount" DataSetColumn="Buy_detail_amount" />
+              <Mapping SourceColumn="Buy_detail_qty" DataSetColumn="Buy_detail_qty" />
+              <Mapping SourceColumn="Buy_price" DataSetColumn="Buy_price" />
+              <Mapping SourceColumn="Buy_prod_name" DataSetColumn="Buy_prod_name" />
+              <Mapping SourceColumn="Buy_weight" DataSetColumn="Buy_weight" />
+              <Mapping SourceColumn="Buy_no" DataSetColumn="Buy_no" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1063,6 +1112,53 @@ FROM            Order_View</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="ImportSummaryView" msprop:Generator_TableClassName="ImportSummaryViewDataTable" msprop:Generator_TableVarName="tableImportSummaryView" msprop:Generator_RowChangedName="ImportSummaryViewRowChanged" msprop:Generator_TablePropName="ImportSummaryView" msprop:Generator_RowDeletingName="ImportSummaryViewRowDeleting" msprop:Generator_RowChangingName="ImportSummaryViewRowChanging" msprop:Generator_RowEvHandlerName="ImportSummaryViewRowChangeEventHandler" msprop:Generator_RowDeletedName="ImportSummaryViewRowDeleted" msprop:Generator_RowClassName="ImportSummaryViewRow" msprop:Generator_UserTableName="ImportSummaryView" msprop:Generator_RowEvArgName="ImportSummaryViewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Supp_name" msprop:Generator_ColumnVarNameInTable="columnSupp_name" msprop:Generator_ColumnPropNameInRow="Supp_name" msprop:Generator_ColumnPropNameInTable="Supp_nameColumn" msprop:Generator_UserColumnName="Supp_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Supp_id" msprop:Generator_ColumnVarNameInTable="columnSupp_id" msprop:Generator_ColumnPropNameInRow="Supp_id" msprop:Generator_ColumnPropNameInTable="Supp_idColumn" msprop:Generator_UserColumnName="Supp_id" type="xs:int" />
+              <xs:element name="Order_id" msprop:Generator_ColumnVarNameInTable="columnOrder_id" msprop:Generator_ColumnPropNameInRow="Order_id" msprop:Generator_ColumnPropNameInTable="Order_idColumn" msprop:Generator_UserColumnName="Order_id" type="xs:int" />
+              <xs:element name="Imp_date" msprop:Generator_ColumnVarNameInTable="columnImp_date" msprop:Generator_ColumnPropNameInRow="Imp_date" msprop:Generator_ColumnPropNameInTable="Imp_dateColumn" msprop:Generator_UserColumnName="Imp_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Imp_id" msprop:Generator_ColumnVarNameInTable="columnImp_id" msprop:Generator_ColumnPropNameInRow="Imp_id" msprop:Generator_ColumnPropNameInTable="Imp_idColumn" msprop:Generator_UserColumnName="Imp_id" type="xs:int" />
+              <xs:element name="Imp_total_price" msprop:Generator_ColumnVarNameInTable="columnImp_total_price" msprop:Generator_ColumnPropNameInRow="Imp_total_price" msprop:Generator_ColumnPropNameInTable="Imp_total_priceColumn" msprop:Generator_UserColumnName="Imp_total_price" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BuyView" msprop:Generator_TableClassName="BuyViewDataTable" msprop:Generator_TableVarName="tableBuyView" msprop:Generator_TablePropName="BuyView" msprop:Generator_RowDeletingName="BuyViewRowDeleting" msprop:Generator_RowChangingName="BuyViewRowChanging" msprop:Generator_RowEvHandlerName="BuyViewRowChangeEventHandler" msprop:Generator_RowDeletedName="BuyViewRowDeleted" msprop:Generator_UserTableName="BuyView" msprop:Generator_RowChangedName="BuyViewRowChanged" msprop:Generator_RowEvArgName="BuyViewRowChangeEvent" msprop:Generator_RowClassName="BuyViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cus_id" msprop:Generator_ColumnVarNameInTable="columnCus_id" msprop:Generator_ColumnPropNameInRow="Cus_id" msprop:Generator_ColumnPropNameInTable="Cus_idColumn" msprop:Generator_UserColumnName="Cus_id" type="xs:int" minOccurs="0" />
+              <xs:element name="Cus_name" msprop:Generator_ColumnVarNameInTable="columnCus_name" msprop:Generator_ColumnPropNameInRow="Cus_name" msprop:Generator_ColumnPropNameInTable="Cus_nameColumn" msprop:Generator_UserColumnName="Cus_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Buy_id" msprop:Generator_ColumnVarNameInTable="columnBuy_id" msprop:Generator_ColumnPropNameInRow="Buy_id" msprop:Generator_ColumnPropNameInTable="Buy_idColumn" msprop:Generator_UserColumnName="Buy_id" type="xs:int" />
+              <xs:element name="Buy_date" msprop:Generator_ColumnVarNameInTable="columnBuy_date" msprop:Generator_ColumnPropNameInRow="Buy_date" msprop:Generator_ColumnPropNameInTable="Buy_dateColumn" msprop:Generator_UserColumnName="Buy_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Buy_total" msprop:Generator_ColumnVarNameInTable="columnBuy_total" msprop:Generator_ColumnPropNameInRow="Buy_total" msprop:Generator_ColumnPropNameInTable="Buy_totalColumn" msprop:Generator_UserColumnName="Buy_total" type="xs:int" minOccurs="0" />
+              <xs:element name="Buy_detail_amount" msprop:Generator_ColumnVarNameInTable="columnBuy_detail_amount" msprop:Generator_ColumnPropNameInRow="Buy_detail_amount" msprop:Generator_ColumnPropNameInTable="Buy_detail_amountColumn" msprop:Generator_UserColumnName="Buy_detail_amount" type="xs:int" minOccurs="0" />
+              <xs:element name="Buy_detail_qty" msprop:Generator_ColumnVarNameInTable="columnBuy_detail_qty" msprop:Generator_ColumnPropNameInRow="Buy_detail_qty" msprop:Generator_ColumnPropNameInTable="Buy_detail_qtyColumn" msprop:Generator_UserColumnName="Buy_detail_qty" type="xs:int" minOccurs="0" />
+              <xs:element name="Buy_price" msprop:Generator_ColumnVarNameInTable="columnBuy_price" msprop:Generator_ColumnPropNameInRow="Buy_price" msprop:Generator_ColumnPropNameInTable="Buy_priceColumn" msprop:Generator_UserColumnName="Buy_price" type="xs:int" minOccurs="0" />
+              <xs:element name="Buy_prod_name" msprop:Generator_ColumnVarNameInTable="columnBuy_prod_name" msprop:Generator_ColumnPropNameInRow="Buy_prod_name" msprop:Generator_ColumnPropNameInTable="Buy_prod_nameColumn" msprop:Generator_UserColumnName="Buy_prod_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Buy_weight" msprop:Generator_ColumnVarNameInTable="columnBuy_weight" msprop:Generator_ColumnPropNameInRow="Buy_weight" msprop:Generator_ColumnPropNameInTable="Buy_weightColumn" msprop:Generator_UserColumnName="Buy_weight" type="xs:double" minOccurs="0" />
+              <xs:element name="Buy_no" msprop:Generator_ColumnVarNameInTable="columnBuy_no" msprop:Generator_ColumnPropNameInRow="Buy_no" msprop:Generator_ColumnPropNameInTable="Buy_noColumn" msprop:Generator_UserColumnName="Buy_no" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1108,6 +1204,16 @@ FROM            Order_View</CommandText>
     <xs:unique name="Order_View_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Order_View" />
       <xs:field xpath="mstns:Order_id" />
+    </xs:unique>
+    <xs:unique name="ImportSummaryView_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ImportSummaryView" />
+      <xs:field xpath="mstns:Supp_id" />
+      <xs:field xpath="mstns:Order_id" />
+      <xs:field xpath="mstns:Imp_id" />
+    </xs:unique>
+    <xs:unique name="BuyView_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:BuyView" />
+      <xs:field xpath="mstns:Buy_id" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

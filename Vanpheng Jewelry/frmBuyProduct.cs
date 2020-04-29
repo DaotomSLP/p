@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,28 +20,120 @@ namespace Vanpheng_Jewelry
 
         private void frmBuyProduct_Load(object sender, EventArgs e)
         {
-           if(globalVal.FrmBuyStatus == "my")
+            dgv.ColumnCount = 5;
+            dgv.Columns[0].Name = "ຊື່ສິນຄ້າ";
+            dgv.Columns[1].Name = "ລາຄາ";
+            dgv.Columns[2].Name = "ນ້ຳໜັກ";
+            dgv.Columns[3].Name = "ຈຳນວນ";
+            dgv.Columns[4].Name = "ລວມເປັນເງິນ";
+            
+
+            dgv.RowHeadersWidth = 20;
+            dgv.Columns[0].Width = 100;
+            dgv.Columns[1].Width = 80;
+            dgv.Columns[2].Width = 110;
+            dgv.Columns[3].Width = 60;
+            dgv.Columns[4].Width = 150;
+
+            lblTatal.Text = total.ToString();
+        }
+
+        private void clearTextbox()
+        {
+            txtPrice.Text = "";
+            txtName.Text = "";
+            numQty.Value = 1;
+            numWeight.Value = 1;
+        }
+
+        int total = 0;
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string amount = "";
+            amount = (Convert.ToInt32(txtPrice.Text) * numQty.Value).ToString();
+            total += Convert.ToInt32(amount);
+            string[] row = new string[] {  txtName.Text, txtPrice.Text, numWeight.Value.ToString(), numQty.Value.ToString(), amount };
+            dgv.Rows.Add(row);
+            lblTatal.Text = total.ToString();
+            clearTextbox();
+        }
+        int dgvSelRow;
+        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnDel.Visible = true;
+            dgvSelRow = e.RowIndex;
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            try
             {
-                loadImport_myProduct();
+                dgv.Rows.RemoveAt(dgvSelRow);
+                if (globalVal.FrmSaleOrderStatus == "sale")
+                {
+                    string price = "";
+                    price = dgv.Rows[dgvSelRow].Cells[5].Value.ToString();
+
+                    total -= Convert.ToInt32(price);
+                    lblTatal.Text = total.ToString();
+                }
             }
-            else if(globalVal.FrmBuyStatus == "new")
+            catch
             {
-                loadImport_newProduct();
+                MessageBox.Show("list is empty");
             }
         }
-        private  void loadImport_myProduct()
+
+        private void btnPrint_Click(object sender, EventArgs e)
         {
-            lbl_status.Visible = true;
-            rad_full.Visible = true;
-            rad_nfull.Visible = true;
-            lblName.Text = "ສິນຄ້າຂອງຮ້ານ";
-        }
-        private void loadImport_newProduct()
-        {
-            lbl_status.Visible = false;
-            rad_full.Visible = false;
-            rad_nfull.Visible = false;
-            lblName.Text = "ສິນຄ້າໃໝ່";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show("ພິມໃບບິນ ? :", "", buttons);
+            if (result == DialogResult.Yes)
+            {
+                Database database = new Database();
+                string Cid = database.generateId("SELECT MAX(Cus_id) FROM Customer");
+                string Bid = database.generateId("SELECT MAX(Buy_id) FROM Buy");
+                string Billno = database.generateBillNo("SELECT MAX(Buy_no) from Buy");
+                database.InsertData("INSERT INTO Customer VALUES('"+ Cid + "','"+txtName1.Text+"','"+txtTel.Text+"','"+txtAddr+"','0')");
+                database.InsertData("INSERT INTO Buy VALUES('" + Bid + "','" + DateTime.Now.ToString() + "','" + lblTatal.Text + "','" + Cid + "','"+Billno+"')");
+
+                foreach (DataGridViewRow row in dgv.Rows)
+                {
+                    database.InsertData(@"INSERT INTO Buy_detail VALUES('" +
+                            Bid + "','" + row.Cells[0].Value +
+                            "','" + row.Cells[4].Value + "','" + Convert.ToInt32(row.Cells[3].Value) + "','" +
+                            Convert.ToInt32(row.Cells[1].Value) + "','" + row.Cells[2].Value + "')");
+                }
+                //print bill :
+                Bill bill = new Bill();
+                globalVal.Buy_id = Bid;
+                globalVal.reportStatus = "BuyBill";
+                bill.ShowDialog();
+                dgv.Rows.Clear();
+
+                dgv.ColumnCount = 5;
+                dgv.Columns[0].Name = "ຊື່ສິນຄ້າ";
+                dgv.Columns[1].Name = "ລາຄາ";
+                dgv.Columns[2].Name = "ນ້ຳໜັກ";
+                dgv.Columns[3].Name = "ຈຳນວນ";
+                dgv.Columns[4].Name = "ລວມເປັນເງິນ";
+
+
+                dgv.RowHeadersWidth = 20;
+                dgv.Columns[0].Width = 100;
+                dgv.Columns[1].Width = 80;
+                dgv.Columns[2].Width = 110;
+                dgv.Columns[3].Width = 60;
+                dgv.Columns[4].Width = 150;
+
+                clearTextbox();
+                txtName.Text = "";
+                txtAddr.Text = "";
+                txtTel.Text = "";
+
+                lblTatal.Text = total.ToString();
+                MessageBox.Show("Success...");
+            }
         }
     }
 }

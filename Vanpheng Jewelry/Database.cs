@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using Microsoft.Reporting.WinForms;
+using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
 
 namespace Vanpheng_Jewelry
 {
@@ -108,6 +109,25 @@ namespace Vanpheng_Jewelry
             dataTable.Load(dr);
             return dataTable;
             
+        }
+        
+        public string Login(string username, string password)
+        {
+            string Q = "SELECT UserName FROM Employee WHERE UserName = '"+username+"' AND Password = '"+password+"'";
+            SqlConnection sqlConn = new SqlConnection(connstr);
+            sqlConn.Open();
+            comm = new SqlCommand(Q, sqlConn);
+            dr = comm.ExecuteReader();
+
+            username = "notUser";
+
+            while (dr.Read())
+            {
+                username = dr[0].ToString();
+                globalVal.User = username;
+            }
+            
+            return username;
         }
     }
 }

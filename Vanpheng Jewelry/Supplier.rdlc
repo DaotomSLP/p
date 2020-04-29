@@ -289,7 +289,6 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>1.23958in</Top>
-        <Left>0.125in</Left>
         <Height>0.625in</Height>
         <Width>6.5943in</Width>
         <ZIndex>1</ZIndex>
@@ -373,7 +372,7 @@
     <Height>4.89479cm</Height>
     <Style />
   </Body>
-  <Width>17.56837cm</Width>
+  <Width>16.93337cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>

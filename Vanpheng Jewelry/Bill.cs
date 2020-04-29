@@ -24,6 +24,7 @@ namespace Vanpheng_Jewelry
             {
                 // TODO: This line of code loads data into the 'Database1DataSet.Sale_View' table. You can move, or remove it, as needed.
                 //this.Sale_ViewTableAdapter.Fill(this.Database1DataSet.Sale_View);
+                this.reportViewerBuy.Visible = false;
                 this.reportViewerOrderBill.Visible = false;
                 this.reportViewerSaleBill.Visible = true;
                 Database database = new Database();
@@ -38,6 +39,7 @@ namespace Vanpheng_Jewelry
             {
                 // TODO: This line of code loads data into the 'Database1DataSet.Sale_View' table. You can move, or remove it, as needed.
                 //this.Sale_ViewTableAdapter.Fill(this.Database1DataSet.Sale_View);
+                this.reportViewerBuy.Visible = false;
                 this.reportViewerOrderBill.Visible = true;
                 this.reportViewerSaleBill.Visible = false;
                 Database database = new Database();
@@ -47,6 +49,21 @@ namespace Vanpheng_Jewelry
                 this.reportViewerOrderBill.LocalReport.DataSources.Clear();
                 this.reportViewerOrderBill.LocalReport.DataSources.Add(reportDataSource);
                 this.reportViewerOrderBill.RefreshReport();
+            }
+            else if(globalVal.reportStatus == "BuyBill")
+            {
+                // TODO: This line of code loads data into the 'Database1DataSet.Sale_View' table. You can move, or remove it, as needed.
+                //this.Sale_ViewTableAdapter.Fill(this.Database1DataSet.Sale_View);
+                this.reportViewerBuy.Visible = true;
+                this.reportViewerOrderBill.Visible = false;
+                this.reportViewerSaleBill.Visible = false;
+                Database database = new Database();
+                DataTable dataTable = new DataTable();
+                dataTable = database.loadReport("SELECT * FROM BuyView WHERE Buy_id = '" + globalVal.Buy_id + "'");
+                ReportDataSource reportDataSource = new ReportDataSource("DataSet1", dataTable);
+                this.reportViewerBuy.LocalReport.DataSources.Clear();
+                this.reportViewerBuy.LocalReport.DataSources.Add(reportDataSource);
+                this.reportViewerBuy.RefreshReport();
             }
         }
     }

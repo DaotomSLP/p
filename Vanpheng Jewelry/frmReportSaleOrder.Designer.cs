@@ -31,8 +31,10 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.SaleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Database1DataSet = new Vanpheng_Jewelry.Database1DataSet();
+            this.ImportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewerSale = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,11 +43,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.SaleTableAdapter = new Vanpheng_Jewelry.Database1DataSetTableAdapters.SaleTableAdapter();
             this.reportViewerImport = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.ImportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ImportTableAdapter = new Vanpheng_Jewelry.Database1DataSetTableAdapters.ImportTableAdapter();
+            this.reportViewerBuy = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.BuyViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.BuyViewTableAdapter = new Vanpheng_Jewelry.Database1DataSetTableAdapters.BuyViewTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.SaleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImportBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuyViewBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // SaleBindingSource
@@ -57,6 +62,11 @@
             // 
             this.Database1DataSet.DataSetName = "Database1DataSet";
             this.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ImportBindingSource
+            // 
+            this.ImportBindingSource.DataMember = "Import";
+            this.ImportBindingSource.DataSource = this.Database1DataSet;
             // 
             // reportViewerSale
             // 
@@ -143,20 +153,39 @@
             this.reportViewerImport.TabIndex = 19;
             this.reportViewerImport.Visible = false;
             // 
-            // ImportBindingSource
-            // 
-            this.ImportBindingSource.DataMember = "Import";
-            this.ImportBindingSource.DataSource = this.Database1DataSet;
-            // 
             // ImportTableAdapter
             // 
             this.ImportTableAdapter.ClearBeforeFill = true;
+            // 
+            // reportViewerBuy
+            // 
+            this.reportViewerBuy.AutoSize = true;
+            reportDataSource3.Name = "DataSet1";
+            reportDataSource3.Value = this.BuyViewBindingSource;
+            this.reportViewerBuy.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewerBuy.LocalReport.ReportEmbeddedResource = "Vanpheng_Jewelry.BuySummary.rdlc";
+            this.reportViewerBuy.Location = new System.Drawing.Point(238, 9);
+            this.reportViewerBuy.Name = "reportViewerBuy";
+            this.reportViewerBuy.ServerReport.BearerToken = null;
+            this.reportViewerBuy.Size = new System.Drawing.Size(652, 592);
+            this.reportViewerBuy.TabIndex = 20;
+            this.reportViewerBuy.Visible = false;
+            // 
+            // BuyViewBindingSource
+            // 
+            this.BuyViewBindingSource.DataMember = "BuyView";
+            this.BuyViewBindingSource.DataSource = this.Database1DataSet;
+            // 
+            // BuyViewTableAdapter
+            // 
+            this.BuyViewTableAdapter.ClearBeforeFill = true;
             // 
             // frmReportSaleOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1129, 611);
+            this.Controls.Add(this.reportViewerBuy);
             this.Controls.Add(this.reportViewerImport);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtpEnd);
@@ -172,6 +201,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.SaleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImportBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuyViewBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,5 +221,8 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerImport;
         private System.Windows.Forms.BindingSource ImportBindingSource;
         private Database1DataSetTableAdapters.ImportTableAdapter ImportTableAdapter;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewerBuy;
+        private System.Windows.Forms.BindingSource BuyViewBindingSource;
+        private Database1DataSetTableAdapters.BuyViewTableAdapter BuyViewTableAdapter;
     }
 }
