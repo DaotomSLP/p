@@ -42,14 +42,12 @@
             this.btnReport = new System.Windows.Forms.Button();
             this.panelUpdateDataSubMenu = new System.Windows.Forms.Panel();
             this.btnEditEmp = new System.Windows.Forms.Button();
-            this.btnEditCus = new System.Windows.Forms.Button();
             this.btnEditSupp = new System.Windows.Forms.Button();
             this.btnEditProdT = new System.Windows.Forms.Button();
             this.btnEditProd = new System.Windows.Forms.Button();
             this.btnUpdateData = new System.Windows.Forms.Button();
             this.panelDataSubMenu = new System.Windows.Forms.Panel();
             this.btnAddEmp = new System.Windows.Forms.Button();
-            this.btnAddCus = new System.Windows.Forms.Button();
             this.btnAddSupp = new System.Windows.Forms.Button();
             this.btnAddPrice = new System.Windows.Forms.Button();
             this.btnAddProdType = new System.Windows.Forms.Button();
@@ -113,7 +111,7 @@
             this.panelReportSubmenu.Controls.Add(this.btnReportProdType);
             this.panelReportSubmenu.Controls.Add(this.btnReportProd);
             this.panelReportSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelReportSubmenu.Location = new System.Drawing.Point(0, 906);
+            this.panelReportSubmenu.Location = new System.Drawing.Point(0, 789);
             this.panelReportSubmenu.Name = "panelReportSubmenu";
             this.panelReportSubmenu.Size = new System.Drawing.Size(200, 390);
             this.panelReportSubmenu.TabIndex = 25;
@@ -286,7 +284,7 @@
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnReport.Location = new System.Drawing.Point(0, 866);
+            this.btnReport.Location = new System.Drawing.Point(0, 749);
             this.btnReport.Name = "btnReport";
             this.btnReport.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnReport.Size = new System.Drawing.Size(200, 40);
@@ -300,14 +298,13 @@
             // 
             this.panelUpdateDataSubMenu.BackColor = System.Drawing.Color.Goldenrod;
             this.panelUpdateDataSubMenu.Controls.Add(this.btnEditEmp);
-            this.panelUpdateDataSubMenu.Controls.Add(this.btnEditCus);
             this.panelUpdateDataSubMenu.Controls.Add(this.btnEditSupp);
             this.panelUpdateDataSubMenu.Controls.Add(this.btnEditProdT);
             this.panelUpdateDataSubMenu.Controls.Add(this.btnEditProd);
             this.panelUpdateDataSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelUpdateDataSubMenu.Location = new System.Drawing.Point(0, 621);
+            this.panelUpdateDataSubMenu.Location = new System.Drawing.Point(0, 578);
             this.panelUpdateDataSubMenu.Name = "panelUpdateDataSubMenu";
-            this.panelUpdateDataSubMenu.Size = new System.Drawing.Size(200, 245);
+            this.panelUpdateDataSubMenu.Size = new System.Drawing.Size(200, 171);
             this.panelUpdateDataSubMenu.TabIndex = 21;
             this.panelUpdateDataSubMenu.Visible = false;
             // 
@@ -320,7 +317,7 @@
             this.btnEditEmp.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditEmp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnEditEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditEmp.Location = new System.Drawing.Point(0, 160);
+            this.btnEditEmp.Location = new System.Drawing.Point(0, 120);
             this.btnEditEmp.Name = "btnEditEmp";
             this.btnEditEmp.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnEditEmp.Size = new System.Drawing.Size(200, 40);
@@ -330,26 +327,6 @@
             this.btnEditEmp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditEmp.UseVisualStyleBackColor = false;
             this.btnEditEmp.Click += new System.EventHandler(this.btnEditEmp_Click);
-            // 
-            // btnEditCus
-            // 
-            this.btnEditCus.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditCus.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEditCus.FlatAppearance.BorderSize = 0;
-            this.btnEditCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditCus.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditCus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEditCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditCus.Location = new System.Drawing.Point(0, 120);
-            this.btnEditCus.Name = "btnEditCus";
-            this.btnEditCus.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEditCus.Size = new System.Drawing.Size(200, 40);
-            this.btnEditCus.TabIndex = 19;
-            this.btnEditCus.Text = "ຂໍ້ມູນລູກຄ້າ";
-            this.btnEditCus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditCus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEditCus.UseVisualStyleBackColor = false;
-            this.btnEditCus.Click += new System.EventHandler(this.btnEditCus_Click);
             // 
             // btnEditSupp
             // 
@@ -419,7 +396,7 @@
             this.btnUpdateData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateData.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateData.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUpdateData.Location = new System.Drawing.Point(0, 581);
+            this.btnUpdateData.Location = new System.Drawing.Point(0, 538);
             this.btnUpdateData.Name = "btnUpdateData";
             this.btnUpdateData.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btnUpdateData.Size = new System.Drawing.Size(200, 40);
@@ -433,7 +410,6 @@
             // 
             this.panelDataSubMenu.BackColor = System.Drawing.Color.Goldenrod;
             this.panelDataSubMenu.Controls.Add(this.btnAddEmp);
-            this.panelDataSubMenu.Controls.Add(this.btnAddCus);
             this.panelDataSubMenu.Controls.Add(this.btnAddSupp);
             this.panelDataSubMenu.Controls.Add(this.btnAddPrice);
             this.panelDataSubMenu.Controls.Add(this.btnAddProdType);
@@ -441,7 +417,7 @@
             this.panelDataSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDataSubMenu.Location = new System.Drawing.Point(0, 324);
             this.panelDataSubMenu.Name = "panelDataSubMenu";
-            this.panelDataSubMenu.Size = new System.Drawing.Size(200, 257);
+            this.panelDataSubMenu.Size = new System.Drawing.Size(200, 214);
             this.panelDataSubMenu.TabIndex = 16;
             this.panelDataSubMenu.Visible = false;
             // 
@@ -454,7 +430,7 @@
             this.btnAddEmp.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEmp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAddEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEmp.Location = new System.Drawing.Point(0, 200);
+            this.btnAddEmp.Location = new System.Drawing.Point(0, 160);
             this.btnAddEmp.Name = "btnAddEmp";
             this.btnAddEmp.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnAddEmp.Size = new System.Drawing.Size(200, 40);
@@ -464,26 +440,6 @@
             this.btnAddEmp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddEmp.UseVisualStyleBackColor = false;
             this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
-            // 
-            // btnAddCus
-            // 
-            this.btnAddCus.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddCus.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAddCus.FlatAppearance.BorderSize = 0;
-            this.btnAddCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddCus.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnAddCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddCus.Location = new System.Drawing.Point(0, 160);
-            this.btnAddCus.Name = "btnAddCus";
-            this.btnAddCus.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAddCus.Size = new System.Drawing.Size(200, 40);
-            this.btnAddCus.TabIndex = 19;
-            this.btnAddCus.Text = "ຂໍ້ມູນລູກຄ້າ";
-            this.btnAddCus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddCus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddCus.UseVisualStyleBackColor = false;
-            this.btnAddCus.Click += new System.EventHandler(this.btnAddCus_Click);
             // 
             // btnAddSupp
             // 
@@ -573,7 +529,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogout.Location = new System.Drawing.Point(0, 1296);
+            this.btnLogout.Location = new System.Drawing.Point(0, 1179);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(200, 109);
             this.btnLogout.TabIndex = 13;
@@ -838,14 +794,12 @@
         private System.Windows.Forms.Button btnAddProd;
         private System.Windows.Forms.Button btnAddPrice;
         private System.Windows.Forms.Button btnAddProdType;
-        private System.Windows.Forms.Button btnAddCus;
         private System.Windows.Forms.Button btnAddSupp;
         private System.Windows.Forms.Button btnAddEmp;
         private System.Windows.Forms.Button btnUpdateData;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Panel panelUpdateDataSubMenu;
         private System.Windows.Forms.Button btnEditEmp;
-        private System.Windows.Forms.Button btnEditCus;
         private System.Windows.Forms.Button btnEditSupp;
         private System.Windows.Forms.Button btnEditProdT;
         private System.Windows.Forms.Button btnEditProd;

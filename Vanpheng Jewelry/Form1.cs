@@ -93,13 +93,11 @@ namespace Vanpheng_Jewelry
             btnAddPrice.BackColor = Color.Transparent;
             btnAddProd.BackColor = Color.Transparent;
             btnAddProdType.BackColor = Color.Transparent;
-            btnAddCus.BackColor = Color.Transparent;
             btnAddSupp.BackColor = Color.Transparent;
 
             btnEditEmp.BackColor = Color.Transparent;
             btnEditProd.BackColor = Color.Transparent;
             btnEditProdT.BackColor = Color.Transparent;
-            btnEditCus.BackColor = Color.Transparent;
             btnEditSupp.BackColor = Color.Transparent;
             btnBuyReport.BackColor = Color.Transparent;
 
@@ -111,14 +109,12 @@ namespace Vanpheng_Jewelry
             btnAddPrice.ForeColor = SystemColors.ControlLightLight;
             btnAddProd.ForeColor = SystemColors.ControlLightLight;
             btnAddProdType.ForeColor = SystemColors.ControlLightLight;
-            btnAddCus.ForeColor = SystemColors.ControlLightLight;
             btnAddSupp.ForeColor = SystemColors.ControlLightLight;
             btnBuyReport.ForeColor = SystemColors.ControlLightLight;
 
             btnEditEmp.ForeColor = SystemColors.ControlLightLight;
             btnEditProd.ForeColor = SystemColors.ControlLightLight;
             btnEditProdT.ForeColor = SystemColors.ControlLightLight;
-            btnEditCus.ForeColor = SystemColors.ControlLightLight;
             btnEditSupp.ForeColor = SystemColors.ControlLightLight;
 
             btnReportProd.ForeColor = SystemColors.ControlLightLight;
@@ -205,15 +201,6 @@ namespace Vanpheng_Jewelry
             showForm(frmSupplier);
         }
 
-        private void btnAddCus_Click(object sender, EventArgs e)
-        {
-            changeMenuColor();
-            btnAddCus.BackColor = Color.White;
-            btnAddCus.ForeColor = Color.DarkGoldenrod;
-            hideForm();
-            frmCustomer frmCustomer = new frmCustomer();
-            showForm(frmCustomer);
-        }
 
         private void btnAddEmp_Click(object sender, EventArgs e)
         {
@@ -256,15 +243,6 @@ namespace Vanpheng_Jewelry
             showForm(frmSupplier);
         }
 
-        private void btnEditCus_Click(object sender, EventArgs e)
-        {
-            changeMenuColor();
-            btnEditCus.BackColor = Color.White;
-            btnEditCus.ForeColor = Color.DarkGoldenrod;
-            hideForm();
-            frmCustomer frmCustomer = new frmCustomer();
-            showForm(frmCustomer);
-        }
 
         private void btnEditEmp_Click(object sender, EventArgs e)
         {
