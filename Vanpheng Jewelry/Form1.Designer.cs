@@ -35,7 +35,6 @@
             this.btnReportImportSum = new System.Windows.Forms.Button();
             this.btnReportSaleSum = new System.Windows.Forms.Button();
             this.btnReportEmp = new System.Windows.Forms.Button();
-            this.btnReportCus = new System.Windows.Forms.Button();
             this.btnReportSupp = new System.Windows.Forms.Button();
             this.btnReportProdType = new System.Windows.Forms.Button();
             this.btnReportProd = new System.Windows.Forms.Button();
@@ -106,14 +105,13 @@
             this.panelReportSubmenu.Controls.Add(this.btnReportImportSum);
             this.panelReportSubmenu.Controls.Add(this.btnReportSaleSum);
             this.panelReportSubmenu.Controls.Add(this.btnReportEmp);
-            this.panelReportSubmenu.Controls.Add(this.btnReportCus);
             this.panelReportSubmenu.Controls.Add(this.btnReportSupp);
             this.panelReportSubmenu.Controls.Add(this.btnReportProdType);
             this.panelReportSubmenu.Controls.Add(this.btnReportProd);
             this.panelReportSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelReportSubmenu.Location = new System.Drawing.Point(0, 789);
             this.panelReportSubmenu.Name = "panelReportSubmenu";
-            this.panelReportSubmenu.Size = new System.Drawing.Size(200, 390);
+            this.panelReportSubmenu.Size = new System.Drawing.Size(200, 319);
             this.panelReportSubmenu.TabIndex = 25;
             this.panelReportSubmenu.Visible = false;
             // 
@@ -126,7 +124,7 @@
             this.btnBuyReport.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuyReport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnBuyReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuyReport.Location = new System.Drawing.Point(0, 305);
+            this.btnBuyReport.Location = new System.Drawing.Point(0, 265);
             this.btnBuyReport.Name = "btnBuyReport";
             this.btnBuyReport.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnBuyReport.Size = new System.Drawing.Size(200, 40);
@@ -146,7 +144,7 @@
             this.btnReportImportSum.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportImportSum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnReportImportSum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportImportSum.Location = new System.Drawing.Point(0, 240);
+            this.btnReportImportSum.Location = new System.Drawing.Point(0, 200);
             this.btnReportImportSum.Name = "btnReportImportSum";
             this.btnReportImportSum.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnReportImportSum.Size = new System.Drawing.Size(200, 65);
@@ -166,7 +164,7 @@
             this.btnReportSaleSum.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportSaleSum.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnReportSaleSum.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportSaleSum.Location = new System.Drawing.Point(0, 200);
+            this.btnReportSaleSum.Location = new System.Drawing.Point(0, 160);
             this.btnReportSaleSum.Name = "btnReportSaleSum";
             this.btnReportSaleSum.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnReportSaleSum.Size = new System.Drawing.Size(200, 40);
@@ -186,7 +184,7 @@
             this.btnReportEmp.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportEmp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnReportEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportEmp.Location = new System.Drawing.Point(0, 160);
+            this.btnReportEmp.Location = new System.Drawing.Point(0, 120);
             this.btnReportEmp.Name = "btnReportEmp";
             this.btnReportEmp.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnReportEmp.Size = new System.Drawing.Size(200, 40);
@@ -196,25 +194,6 @@
             this.btnReportEmp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReportEmp.UseVisualStyleBackColor = false;
             this.btnReportEmp.Click += new System.EventHandler(this.btnReportEmp_Click);
-            // 
-            // btnReportCus
-            // 
-            this.btnReportCus.BackColor = System.Drawing.Color.Transparent;
-            this.btnReportCus.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReportCus.FlatAppearance.BorderSize = 0;
-            this.btnReportCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReportCus.Font = new System.Drawing.Font("Phetsarath OT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportCus.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnReportCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportCus.Location = new System.Drawing.Point(0, 120);
-            this.btnReportCus.Name = "btnReportCus";
-            this.btnReportCus.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnReportCus.Size = new System.Drawing.Size(200, 40);
-            this.btnReportCus.TabIndex = 19;
-            this.btnReportCus.Text = "ລາຍງານຂໍ້ມູນລູກຄ້າ";
-            this.btnReportCus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReportCus.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReportCus.UseVisualStyleBackColor = false;
             // 
             // btnReportSupp
             // 
@@ -529,7 +508,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogout.Location = new System.Drawing.Point(0, 1179);
+            this.btnLogout.Location = new System.Drawing.Point(0, 1108);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(200, 109);
             this.btnLogout.TabIndex = 13;
@@ -808,7 +787,6 @@
         private System.Windows.Forms.Panel panelReportSubmenu;
         private System.Windows.Forms.Button btnReportSaleSum;
         private System.Windows.Forms.Button btnReportEmp;
-        private System.Windows.Forms.Button btnReportCus;
         private System.Windows.Forms.Button btnReportSupp;
         private System.Windows.Forms.Button btnReportProdType;
         private System.Windows.Forms.Button btnReportProd;
