@@ -21,11 +21,11 @@ namespace Vanpheng_Jewelry
         private void frmBuyProduct_Load(object sender, EventArgs e)
         {
             dgv.ColumnCount = 5;
-            dgv.Columns[0].Name = "ຊື່ສິນຄ້າ";
-            dgv.Columns[1].Name = "ລາຄາ";
-            dgv.Columns[2].Name = "ນ້ຳໜັກ";
-            dgv.Columns[3].Name = "ຈຳນວນ";
-            dgv.Columns[4].Name = "ລວມເປັນເງິນ";
+            dgv.Columns[0].Name = "Mùa hàng";
+            dgv.Columns[1].Name = "Giá";
+            dgv.Columns[2].Name = "Cân nặng";
+            dgv.Columns[3].Name = "Số";
+            dgv.Columns[4].Name = "Bao gồm tiền";
             
 
             dgv.RowHeadersWidth = 20;
@@ -87,7 +87,7 @@ namespace Vanpheng_Jewelry
         private void btnPrint_Click(object sender, EventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show("ພິມໃບບິນ ? :", "", buttons);
+            DialogResult result = MessageBox.Show("In hóa đơn ? :", "", buttons);
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();
@@ -112,11 +112,11 @@ namespace Vanpheng_Jewelry
                 dgv.Rows.Clear();
 
                 dgv.ColumnCount = 5;
-                dgv.Columns[0].Name = "ຊື່ສິນຄ້າ";
-                dgv.Columns[1].Name = "ລາຄາ";
-                dgv.Columns[2].Name = "ນ້ຳໜັກ";
-                dgv.Columns[3].Name = "ຈຳນວນ";
-                dgv.Columns[4].Name = "ລວມເປັນເງິນ";
+                dgv.Columns[0].Name = "Mùa hàng";
+                dgv.Columns[1].Name = "Giá";
+                dgv.Columns[2].Name = "Cân nặng";
+                dgv.Columns[3].Name = "Số";
+                dgv.Columns[4].Name = "Bao gồm tiền";
 
 
                 dgv.RowHeadersWidth = 20;

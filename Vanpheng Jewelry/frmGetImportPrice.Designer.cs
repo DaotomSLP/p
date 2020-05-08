@@ -36,20 +36,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Phetsarath OT", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(96, 54);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(185, 30);
+            this.label4.Size = new System.Drawing.Size(175, 24);
             this.label4.TabIndex = 26;
-            this.label4.Text = "ກະລຸນາປ້ອນລາຄາ :";
+            this.label4.Text = "Vui lòng nhập giá :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtPrice
             // 
-            this.txtPrice.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(66, 98);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(242, 31);
+            this.txtPrice.Size = new System.Drawing.Size(242, 26);
             this.txtPrice.TabIndex = 25;
             // 
             // btnOk
@@ -57,13 +57,13 @@
             this.btnOk.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.btnOk.FlatAppearance.BorderSize = 0;
             this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOk.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOk.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnOk.Location = new System.Drawing.Point(66, 144);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(242, 31);
             this.btnOk.TabIndex = 27;
-            this.btnOk.Text = "ຕົກລົງ";
+            this.btnOk.Text = "ok";
             this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 

@@ -37,7 +37,7 @@ namespace Vanpheng_Jewelry
         {
             lblTatal.Visible = true;
             cboSupp.Visible = false;
-            lblHead.Text = "ການຂາຍ";
+            lblHead.Text = "Bán hàng";
             label1.Text = "Total";
             DgvLoad();
             loadProduct("WHERE Prod_instock > 0 Order by Prod_id DESC");
@@ -50,8 +50,8 @@ namespace Vanpheng_Jewelry
         {
             lblTatal.Visible = false;
             cboSupp.Visible = true;
-            label1.Text = "ຜູ້ສະໜອງສິນຄ້າ";
-            lblHead.Text = "ການສັ່ງຊື້";
+            label1.Text = "Nhà cũng cấp sản phẩm";
+            lblHead.Text = "Đơn đặt hàng";
             DgvLoad();
             loadProduct("Order by Prod_id DESC");
             ComboBoxLoadProd_type();
@@ -67,12 +67,12 @@ namespace Vanpheng_Jewelry
             if (globalVal.FrmSaleOrderStatus == "sale")
             {
                 dgv.ColumnCount = 6;
-                dgv.Columns[0].Name = "ລະຫັດ";
-                dgv.Columns[1].Name = "ຊື່ສິນຄ້າ";
-                dgv.Columns[2].Name = "ລາຄາລາຍ";
-                dgv.Columns[3].Name = "ນ້ຳໜັກ";
-                dgv.Columns[4].Name = "ຈຳນວນ";
-                dgv.Columns[5].Name = "ລາຄາ";
+                dgv.Columns[0].Name = "id";
+                dgv.Columns[1].Name = "Mùa hàng";
+                dgv.Columns[2].Name = "Giá theo mẫu";
+                dgv.Columns[3].Name = "Cân nặng";
+                dgv.Columns[4].Name = "Số";
+                dgv.Columns[5].Name = "Giá";
 
                 dgv.RowHeadersWidth = 20;
                 dgv.Columns[0].Width = 50;
@@ -86,9 +86,9 @@ namespace Vanpheng_Jewelry
             else if(globalVal.FrmSaleOrderStatus == "order")
             {
                 dgv.ColumnCount = 3;
-                dgv.Columns[0].Name = "ລະຫັດ";
-                dgv.Columns[1].Name = "ຊື່ສິນຄ້າ";
-                dgv.Columns[2].Name = "ຈຳນວນ";
+                dgv.Columns[0].Name = "id";
+                dgv.Columns[1].Name = "Mùa hàng";
+                dgv.Columns[2].Name = "Số";
 
                 dgv.RowHeadersWidth = 20;
                 dgv.Columns[0].Width = 50;
@@ -134,15 +134,15 @@ namespace Vanpheng_Jewelry
         {
             GroupBox group = new GroupBox();
             group.Text = product[1].ToString();
-            group.Font = new Font("Phetsarath OT", 12, FontStyle.Bold);
+            group.Font = new Font("Times New Roman", 12, FontStyle.Bold);
             group.Height = 300;
             group.Name = product[0].ToString();
             group.ForeColor = Color.Crimson;
 
             Button button = new Button();
-            button.Text = "ເພີ່ມ";
+            button.Text = "Thêm";
             button.ForeColor = Color.White;
-            button.Font = new Font("Phetsarath OT", 12, FontStyle.Bold);
+            button.Font = new Font("Times New Roman", 12, FontStyle.Bold);
             button.Name = product[0].ToString();
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderSize = 0;
@@ -180,56 +180,56 @@ namespace Vanpheng_Jewelry
                 string w = product[i].ToString();
                 if (Convert.ToInt32(w) > 0 && i==5)
                 {
-                    label.Text = "ນ້ຳໜັກ  "+product[i].ToString()+" ບາດ";
+                    label.Text = "Cân nặng  " + product[i].ToString()+ " cây";
                     
                     while (dr.Read())
                     {
                         price =Convert.ToInt32( product[3]) + (Convert.ToInt32(dr[1])* Convert.ToInt32(product[i]));
                     }
-                    label2.Text = "ລາຄາ : " + price.ToString() + "  (ກີບ) :";
+                    label2.Text = "Giá : " + price.ToString() + "  (VND) :";
                     textBox.Text = price.ToString();
                 }
                 else if (Convert.ToInt32(product[i]) > 0 && i == 6)
                 {
-                    label.Text = "ນ້ຳໜັກ  " + product[i].ToString() + " ສະຫຼຶງ";
+                    label.Text = "Cân nặng  " + product[i].ToString() + " chỉ";
                     while (dr.Read())
                     {
                         price = Convert.ToInt32(product[3]) + (Convert.ToInt32(dr[2]) * Convert.ToInt32(product[i]));
                     }
-                    label2.Text = "ລາຄາ : "+ price.ToString() + "  (ກີບ) :";
+                    label2.Text = "Giá : " + price.ToString() + "  (VND) :";
                     textBox.Text = price.ToString();
                 }
                 else if (Convert.ToInt32(product[i]) > 0 && i == 7)
                 {
-                    label.Text = "ນ້ຳໜັກ  " + product[i].ToString() + " ຫຸນ";
+                    label.Text = "Cân nặng  " + product[i].ToString() + " phân";
                     while (dr.Read())
                     {
                         price = Convert.ToInt32(product[3]) + (Convert.ToInt32(dr[3]) * Convert.ToInt32(product[i]));
                     }
-                    label2.Text = "ລາຄາ : " + price.ToString() + "  (ກີບ) :";
+                    label2.Text = "Giá : " + price.ToString() + "  (VND) :";
                         textBox.Text= price.ToString();
                 }
 
                 textBox.Visible = false;
             }
-            labelDesignPri.Text = "ລາຄາລາຍ : "+product[3];
+            labelDesignPri.Text = "Giá theo mẫu : " + product[3];
             labelDesignPri.ForeColor = Color.Black;
-            labelDesignPri.Font = new Font("Phetsarath OT", 12, FontStyle.Regular);
+            labelDesignPri.Font = new Font("Times New Roman", 12, FontStyle.Regular);
             labelDesignPri.Dock = DockStyle.Bottom;
 
             label.ForeColor = Color.Black;
-            label.Font = new Font("Phetsarath OT", 12, FontStyle.Regular);
+            label.Font = new Font("Times New Roman", 12, FontStyle.Regular);
             label.Dock = DockStyle.Bottom;
 
             textBox.ForeColor = Color.Crimson;
             textBox.BackColor = Color.Moccasin;
-            textBox.Font = new Font("Phetsarath OT", 12);
+            textBox.Font = new Font("Times New Roman", 12);
             textBox.Dock = DockStyle.Bottom;
             textBox.Enabled = false;
 
 
             label2.ForeColor = Color.Crimson;
-            label2.Font = new Font("Phetsarath OT", 12, FontStyle.Bold);
+            label2.Font = new Font("Times New Roman", 12, FontStyle.Bold);
             label2.Dock = DockStyle.Bottom;
 
             
@@ -318,15 +318,15 @@ namespace Vanpheng_Jewelry
                         DsPrice = dr["Design_price"].ToString();
                         if (dr["Prod_weight1"].ToString() != "0")
                         {
-                            weight = dr["Prod_weight1"].ToString() + " ບາດ";
+                            weight = dr["Prod_weight1"].ToString() + " cây";
                         }
                         else if (dr["Prod_weight2"].ToString() != "0")
                         {
-                            weight = dr["Prod_weight2"].ToString() + " ສະຫຼຶງ";
+                            weight = dr["Prod_weight2"].ToString() + " chỉ";
                         }
                         else if (dr["Prod_weight3"].ToString() != "0")
                         {
-                            weight = dr["Prod_weight3"].ToString() + " ຫຸນ";
+                            weight = dr["Prod_weight3"].ToString() + " phân";
                         }
                     }
                     dr.Close();
@@ -428,7 +428,7 @@ namespace Vanpheng_Jewelry
             if (globalVal.FrmSaleOrderStatus == "sale")
             {
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result = MessageBox.Show("ພິມໃບບິນ ? :", "", buttons);
+                DialogResult result = MessageBox.Show("In hóa đơn ? :", "", buttons);
                 if (result == DialogResult.Yes)
                 {
 
@@ -472,7 +472,7 @@ namespace Vanpheng_Jewelry
             else if(globalVal.FrmSaleOrderStatus == "order")
             {
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result = MessageBox.Show("ພິມໃບສັ່ງຊື້ ? :", "", buttons);
+                DialogResult result = MessageBox.Show("In đặt hàng ? :", "", buttons);
                 if (result == DialogResult.Yes)
                 {
                     Database database = new Database();

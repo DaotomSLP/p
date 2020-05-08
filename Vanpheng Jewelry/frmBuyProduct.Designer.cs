@@ -68,13 +68,13 @@
             this.btnDel.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.btnDel.FlatAppearance.BorderSize = 0;
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDel.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDel.Location = new System.Drawing.Point(785, 569);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(159, 38);
             this.btnDel.TabIndex = 20;
-            this.btnDel.Text = "ລົບ";
+            this.btnDel.Text = "Xóa";
             this.btnDel.UseVisualStyleBackColor = false;
             this.btnDel.Visible = false;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
@@ -84,13 +84,13 @@
             this.btnAdd.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdd.Location = new System.Drawing.Point(15, 233);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(170, 35);
             this.btnAdd.TabIndex = 12;
-            this.btnAdd.Text = "ເພີ່ມ";
+            this.btnAdd.Text = "Thêm :";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -101,12 +101,12 @@
             // lblProd
             // 
             this.lblProd.AutoSize = true;
-            this.lblProd.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProd.Location = new System.Drawing.Point(11, 71);
             this.lblProd.Name = "lblProd";
-            this.lblProd.Size = new System.Drawing.Size(52, 23);
+            this.lblProd.Size = new System.Drawing.Size(76, 19);
             this.lblProd.TabIndex = 7;
-            this.lblProd.Text = "ຊື່ສິນຄ້າ";
+            this.lblProd.Text = "Mùa hàng :";
             this.lblProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
@@ -116,7 +116,7 @@
             this.panel2.BackColor = System.Drawing.Color.Moccasin;
             this.panel2.Controls.Add(this.dgv);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(569, 21);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(557, 496);
@@ -139,7 +139,7 @@
             this.button1.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(349, 563);
             this.button1.Name = "button1";
@@ -168,59 +168,59 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(301, 166);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(187, 31);
+            this.txtPrice.Size = new System.Drawing.Size(187, 26);
             this.txtPrice.TabIndex = 23;
             // 
             // txtName
             // 
-            this.txtName.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(15, 97);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(473, 31);
+            this.txtName.Size = new System.Drawing.Size(473, 26);
             this.txtName.TabIndex = 23;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(297, 140);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 23);
+            this.label2.Size = new System.Drawing.Size(37, 19);
             this.label2.TabIndex = 22;
-            this.label2.Text = "ລາຄາ";
+            this.label2.Text = "Giá :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(161, 140);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 23);
+            this.label1.Size = new System.Drawing.Size(94, 19);
             this.label1.TabIndex = 22;
-            this.label1.Text = "ນ້ຳໜັກ (g)";
+            this.label1.Text = "Cân nặng (g) :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblQty
             // 
             this.lblQty.AutoSize = true;
-            this.lblQty.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQty.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQty.Location = new System.Drawing.Point(11, 142);
             this.lblQty.Name = "lblQty";
-            this.lblQty.Size = new System.Drawing.Size(62, 23);
+            this.lblQty.Size = new System.Drawing.Size(33, 19);
             this.lblQty.TabIndex = 22;
-            this.lblQty.Text = "ຈຳນວນ :";
+            this.lblQty.Text = "Số :";
             this.lblQty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // numWeight
             // 
-            this.numWeight.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numWeight.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numWeight.Location = new System.Drawing.Point(165, 166);
             this.numWeight.Name = "numWeight";
-            this.numWeight.Size = new System.Drawing.Size(99, 31);
+            this.numWeight.Size = new System.Drawing.Size(99, 26);
             this.numWeight.TabIndex = 21;
             this.numWeight.Value = new decimal(new int[] {
             1,
@@ -230,10 +230,10 @@
             // 
             // numQty
             // 
-            this.numQty.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numQty.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numQty.Location = new System.Drawing.Point(14, 166);
             this.numQty.Name = "numQty";
-            this.numQty.Size = new System.Drawing.Size(118, 31);
+            this.numQty.Size = new System.Drawing.Size(118, 26);
             this.numQty.TabIndex = 21;
             this.numQty.Value = new decimal(new int[] {
             1,
@@ -244,12 +244,12 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.Location = new System.Drawing.Point(10, 9);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(60, 26);
+            this.lblName.Size = new System.Drawing.Size(91, 22);
             this.lblName.TabIndex = 19;
-            this.lblName.Text = "ສິນຄ້າ";
+            this.lblName.Text = "Sản phẩm";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnPrint
@@ -257,20 +257,20 @@
             this.btnPrint.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.btnPrint.FlatAppearance.BorderSize = 0;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPrint.Location = new System.Drawing.Point(951, 569);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(159, 38);
             this.btnPrint.TabIndex = 21;
-            this.btnPrint.Text = "ພິມໃບບິນ";
+            this.btnPrint.Text = "In hóa đơn";
             this.btnPrint.UseVisualStyleBackColor = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // lblTatal
             // 
             this.lblTatal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTatal.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTatal.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTatal.Location = new System.Drawing.Point(641, 520);
             this.lblTatal.Name = "lblTatal";
             this.lblTatal.Size = new System.Drawing.Size(266, 29);
@@ -282,10 +282,10 @@
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(568, 520);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 29);
+            this.label3.Size = new System.Drawing.Size(57, 23);
             this.label3.TabIndex = 25;
             this.label3.Text = "Tatal :";
             // 
@@ -310,66 +310,66 @@
             this.label4.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(10, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 26);
+            this.label4.Size = new System.Drawing.Size(202, 26);
             this.label4.TabIndex = 24;
-            this.label4.Text = "ຂໍ້ມູນລູກຄ້າ :";
+            this.label4.Text = "Thông tin khách hàng :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtName1
             // 
-            this.txtName1.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName1.Location = new System.Drawing.Point(15, 79);
             this.txtName1.Name = "txtName1";
-            this.txtName1.Size = new System.Drawing.Size(456, 31);
+            this.txtName1.Size = new System.Drawing.Size(456, 26);
             this.txtName1.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(15, 53);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 23);
+            this.label5.Size = new System.Drawing.Size(111, 19);
             this.label5.TabIndex = 6;
-            this.label5.Text = "ຊື່ລູກຄ້າ :";
+            this.label5.Text = "Tên khách hàng :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(11, 201);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 23);
+            this.label6.Size = new System.Drawing.Size(58, 19);
             this.label6.TabIndex = 7;
-            this.label6.Text = "ທີ່ຢູ່ :";
+            this.label6.Text = "Địa chỉ :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtAddr
             // 
-            this.txtAddr.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddr.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddr.Location = new System.Drawing.Point(15, 227);
             this.txtAddr.Name = "txtAddr";
-            this.txtAddr.Size = new System.Drawing.Size(456, 31);
+            this.txtAddr.Size = new System.Drawing.Size(456, 26);
             this.txtAddr.TabIndex = 9;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(11, 129);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 23);
+            this.label7.Size = new System.Drawing.Size(95, 19);
             this.label7.TabIndex = 7;
-            this.label7.Text = "ເບີໂທ :";
+            this.label7.Text = "Số điện thoại :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtTel
             // 
-            this.txtTel.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel.Location = new System.Drawing.Point(15, 155);
             this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(456, 31);
+            this.txtTel.Size = new System.Drawing.Size(456, 26);
             this.txtTel.TabIndex = 9;
             // 
             // frmBuyProduct

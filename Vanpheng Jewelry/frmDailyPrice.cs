@@ -40,33 +40,33 @@ namespace Vanpheng_Jewelry
             btnSave.Visible = true;
             btnDel.Visible = false;
             lblW.Visible = false;
-            btnSave.Text = "ເພີ່ມ";
-            lblName.Text = "ເພີ່ມຂໍ້ມູນລາຄາປະຈຳວັນ";
+            btnSave.Text = "Thêm";
+            lblName.Text = "Thêm thông tin giá hàng ngày";
         }
         private void LoadByUpdate()
         {
             btnSave.Visible = false;
             btnDel.Visible = false;
             lblW.Visible = true;
-            btnSave.Text = "ບັນທຶກການແກ້ໄຂ";
-            lblName.Text = "ແກ້ໄຂຂໍ້ມູນລາຄາປະຈຳວັນ";
+            btnSave.Text = "Lưu thông tin sửa lại";
+            lblName.Text = "Chỉnh sửa thông tin giá hàng ngày";
         }
         private void loadData()
         {
             Database database = new Database();
             SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Daily_Price");
             DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("ວັນທີ່");
-            dataTable.Columns.Add("ລາຄາຕໍ່ 1 ບາດ");
-            dataTable.Columns.Add("ລາຄາຕໍ່ 1 ສະຫຼຶງ");
-            dataTable.Columns.Add("ລາຄາຕໍ່ 1 ຫຸນ");
+            dataTable.Columns.Add("Ngày");
+            dataTable.Columns.Add("Giá/cây");
+            dataTable.Columns.Add("Giá/chỉ");
+            dataTable.Columns.Add("Giá/phân");
             while (dr.Read())
             {
                 DataRow row = dataTable.NewRow();
-                row["ວັນທີ່"] = dr["DailyPrice_Date"];
-                row["ລາຄາຕໍ່ 1 ບາດ"] = dr["DailyPrice_Ba"];
-                row["ລາຄາຕໍ່ 1 ສະຫຼຶງ"] = dr["DailyPrice_Sl"];
-                row["ລາຄາຕໍ່ 1 ຫຸນ"] = dr["DailyPrice_Ho"];
+                row["Ngày"] = dr["DailyPrice_Date"];
+                row["Giá/cây"] = dr["DailyPrice_Ba"];
+                row["Giá/chỉ"] = dr["DailyPrice_Sl"];
+                row["Giá/phân"] = dr["DailyPrice_Ho"];
                 dataTable.Rows.Add(row);
             }
             dgv.DataSource = dataTable;
@@ -108,7 +108,7 @@ namespace Vanpheng_Jewelry
         private void btnDel_Click(object sender, EventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show("ຕ້ອງການລົບຂໍ້ມູນ ຫຼືບໍ່ :", "", buttons);
+            DialogResult result = MessageBox.Show("Muốn xóa dữ liệu hay không :", "", buttons);
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();

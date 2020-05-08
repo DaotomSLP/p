@@ -37,8 +37,8 @@ namespace Vanpheng_Jewelry
             btnSave.Visible = true;
             btnDel.Visible = false;
             lblW.Visible = false;
-            btnSave.Text = "ເພີ່ມ";
-            lblName.Text = "ເພີ່ມຂໍ້ມູນພະນັກງານ";
+            btnSave.Text = "Thêm";
+            lblName.Text = "Thêm thông tin nhân viên";
         }
         private void LoadByUpdate()
         {
@@ -60,40 +60,40 @@ namespace Vanpheng_Jewelry
             btnSave.Visible = false;
             btnDel.Visible = false;
             lblW.Visible = true;
-            btnSave.Text = "ບັນທຶກການແກ້ໄຂ";
-            lblName.Text = "ແກ້ໄຂຂໍ້ມູນພະນັກງານ";
+            btnSave.Text = "Lưu thông tin sửa lại";
+            lblName.Text = "Chỉnh sửa thông tin nhân viên";
         }
         private void loadData()
         {
             Database database = new Database();
             SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Employee");
             DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("ລະຫັດ");
-            dataTable.Columns.Add("ຊື່");
-            dataTable.Columns.Add("ເບີໂທ");
-            dataTable.Columns.Add("ທີ່ຢູ່");
-            dataTable.Columns.Add("ຕຳແໜ່ງ");
-            dataTable.Columns.Add("ເງິນເດືອນ");
-            dataTable.Columns.Add("ຮູບ");
+            dataTable.Columns.Add("id");
+            dataTable.Columns.Add("Tên");
+            dataTable.Columns.Add("Số điện thoại");
+            dataTable.Columns.Add("Địa chỉ");
+            dataTable.Columns.Add("Chức vụ");
+            dataTable.Columns.Add("Tiền lương");
+            dataTable.Columns.Add("Mẫu");
             if(globalVal.User == "Admin")
             {
-                dataTable.Columns.Add("ຊື່ຜູ້ໃຊ້");
-                dataTable.Columns.Add("ລະຫັດຜ່ານ");
+                dataTable.Columns.Add("user name");
+                dataTable.Columns.Add("password");
             }
             while (dr.Read())
             {
                 DataRow row = dataTable.NewRow();
-                row["ລະຫັດ"] = dr["Emp_id"];
-                row["ຊື່"] = dr["Emp_name"];
-                row["ເບີໂທ"] = dr["Emp_tel"];
-                row["ທີ່ຢູ່"] = dr["Emp_addr"];
-                row["ຕຳແໜ່ງ"] = dr["Emp_position"];
-                row["ເງິນເດືອນ"] = dr["Emp_salary"];
-                row["ຮູບ"] = dr["Emp_img"];
+                row["id"] = dr["Emp_id"];
+                row["Tên"] = dr["Emp_name"];
+                row["Số điện thoại"] = dr["Emp_tel"];
+                row["Địa chỉ"] = dr["Emp_addr"];
+                row["Chức vụ"] = dr["Emp_position"];
+                row["Tiền lương"] = dr["Emp_salary"];
+                row["Mẫu"] = dr["Emp_img"];
                 if (globalVal.User == "Admin")
                 {
-                    row["ຊື່ຜູ້ໃຊ້"] = dr["UserName"];
-                    row["ລະຫັດຜ່ານ"] = dr["Password"];
+                    row["user name"] = dr["UserName"];
+                    row["password"] = dr["Password"];
                 }
                 dataTable.Rows.Add(row);
             }
@@ -138,7 +138,7 @@ namespace Vanpheng_Jewelry
         private void SaveUpdate()
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show("ຕ້ອງການແກ້ໄຂຂໍ້ມູນ ຫຼືບໍ່ :", "", buttons);
+            DialogResult result = MessageBox.Show("Có cần chỉnh sửa dữ liệu hay không :", "", buttons);
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();
@@ -193,7 +193,7 @@ namespace Vanpheng_Jewelry
         private void btnDel_Click(object sender, EventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show("ຕ້ອງການລົບຂໍ້ມູນ ຫຼືບໍ່ :", "", buttons);
+            DialogResult result = MessageBox.Show("Muốn xóa dữ liệu hay không :", "", buttons);
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();

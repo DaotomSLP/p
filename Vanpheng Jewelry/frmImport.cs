@@ -41,17 +41,17 @@ namespace Vanpheng_Jewelry
             }
             
             DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("ລະຫັດ");
-            dataTable.Columns.Add("ລະຫັດໃບສັ່ງຊື້");
-            dataTable.Columns.Add("ຊື່ຜູ້ສະໜອງ");
-            dataTable.Columns.Add("ວັນທີ່ສັ່ງຊື້");
+            dataTable.Columns.Add("id");
+            dataTable.Columns.Add("Mã đặt hàng");
+            dataTable.Columns.Add("Tên người cũng cấp");
+            dataTable.Columns.Add("Ngày đặt hàng");
             while (dr.Read())
             {
                 DataRow row = dataTable.NewRow();
-                row["ລະຫັດ"] = dr["Order_id"];
-                row["ລະຫັດໃບສັ່ງຊື້"] = dr["Order_no"];
-                row["ຊື່ຜູ້ສະໜອງ"] = dr["Supp_name"];
-                row["ວັນທີ່ສັ່ງຊື້"] = dr["Order_date"];
+                row["id"] = dr["Order_id"];
+                row["Mã đặt hàng"] = dr["Order_no"];
+                row["Tên người cũng cấp"] = dr["Supp_name"];
+                row["Ngày đặt hàng"] = dr["Order_date"];
                 dataTable.Rows.Add(row);
             }
             dgv_Orders.DataSource = dataTable;
@@ -66,10 +66,10 @@ namespace Vanpheng_Jewelry
         private void dgvDetail_Create()
         {
             dgvOrder_details.ColumnCount = 4;
-            dgvOrder_details.Columns[0].Name = "ລະຫັດ";
-            dgvOrder_details.Columns[1].Name = "ລະຫັດສິນຄ້າ";
-            dgvOrder_details.Columns[2].Name = "ຈຳນວນ";
-            dgvOrder_details.Columns[3].Name = "ລາຄາ";
+            dgvOrder_details.Columns[0].Name = "id";
+            dgvOrder_details.Columns[1].Name = "Mã sản phẩm";
+            dgvOrder_details.Columns[2].Name = "Số";
+            dgvOrder_details.Columns[3].Name = "Giá";
 
             dgvOrder_details.RowHeadersWidth = 20;
             dgvOrder_details.Columns[0].Width = 50;
@@ -144,7 +144,7 @@ namespace Vanpheng_Jewelry
         {
             bool is_Order_success = true;
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show("ບັນທຶກການນຳເຂົ້າ ? :", "", buttons);
+            DialogResult result = MessageBox.Show("Lưu nhập khẩu ? :", "", buttons);
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();

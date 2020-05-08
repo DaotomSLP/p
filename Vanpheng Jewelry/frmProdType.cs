@@ -40,16 +40,16 @@ namespace Vanpheng_Jewelry
             btnSave.Visible = true;
             btnDel.Visible = true;
             lblW.Visible = false;
-            btnSave.Text = "ເພີ່ມ";
-            lblName.Text = "ເພີ່ມຂໍ້ມູນປະເພດສິນຄ້າ";
+            btnSave.Text = "Thêm";
+            lblName.Text = "Thêm thông tin loại sản phẩm";
         }
         private void LoadByUpdate()
         {
             btnSave.Visible = false;
             btnDel.Visible = false;
             lblW.Visible = true;
-            btnSave.Text = "ບັນທຶກການແກ້ໄຂ";
-            lblName.Text = "ແກ້ໄຂຂໍ້ມູນປະເພດສິນຄ້າ";
+            btnSave.Text = "Lưu thông tin sửa lại";
+            lblName.Text = "Chỉnh sửa thông tin loại sản phẩm";
         }
 
         private void loadData()
@@ -57,13 +57,13 @@ namespace Vanpheng_Jewelry
             Database database = new Database();
             SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Product_Type WHERE enable = '0'");
             DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("ລະຫັດ");
-            dataTable.Columns.Add("ຊື່ປະເພດສິນຄ້າ");
+            dataTable.Columns.Add("Mã các loại sản phẩm");
+            dataTable.Columns.Add("Tên Loại sản phẩm");
             while (dr.Read())
             {
                 DataRow row = dataTable.NewRow();
-                row["ລະຫັດ"] = dr["ProdType_id"];
-                row["ຊື່ປະເພດສິນຄ້າ"] = dr["ProdType_name"];
+                row["Mã các loại sản phẩm"] = dr["ProdType_id"];
+                row["Tên Loại sản phẩm"] = dr["ProdType_name"];
                 dataTable.Rows.Add(row);
             }
             dgvProductType.DataSource = dataTable;
@@ -99,7 +99,7 @@ namespace Vanpheng_Jewelry
         private void SaveUpdate()
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show("ຕ້ອງການແກ້ໄຂຂໍ້ມູນ ຫຼືບໍ່ :", "", buttons);
+            DialogResult result = MessageBox.Show("Có cần chỉnh sửa dữ liệu hay không :", "", buttons);
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();
@@ -135,7 +135,7 @@ namespace Vanpheng_Jewelry
         private void btnDel_Click(object sender, EventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show("ຕ້ອງການລົບຂໍ້ມູນ ຫຼືບໍ່ :", "", buttons);
+            DialogResult result = MessageBox.Show("Muốn xóa dữ liệu hay không :", "", buttons);
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();

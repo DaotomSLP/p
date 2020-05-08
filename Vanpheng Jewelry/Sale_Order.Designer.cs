@@ -61,10 +61,10 @@
             // 
             // txtSearch1
             // 
-            this.txtSearch1.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch1.Location = new System.Drawing.Point(19, 48);
             this.txtSearch1.Name = "txtSearch1";
-            this.txtSearch1.Size = new System.Drawing.Size(227, 31);
+            this.txtSearch1.Size = new System.Drawing.Size(227, 26);
             this.txtSearch1.TabIndex = 10;
             // 
             // btnSearchbyCate
@@ -72,13 +72,13 @@
             this.btnSearchbyCate.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.btnSearchbyCate.FlatAppearance.BorderSize = 0;
             this.btnSearchbyCate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchbyCate.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchbyCate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchbyCate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSearchbyCate.Location = new System.Drawing.Point(604, 48);
             this.btnSearchbyCate.Name = "btnSearchbyCate";
             this.btnSearchbyCate.Size = new System.Drawing.Size(98, 31);
             this.btnSearchbyCate.TabIndex = 12;
-            this.btnSearchbyCate.Text = "ຄົ້ນຫາ";
+            this.btnSearchbyCate.Text = "Tìm kiếm";
             this.btnSearchbyCate.UseVisualStyleBackColor = false;
             this.btnSearchbyCate.Click += new System.EventHandler(this.btnSearchbyCate_Click);
             // 
@@ -87,13 +87,13 @@
             this.btnPrint.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.btnPrint.FlatAppearance.BorderSize = 0;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPrint.Location = new System.Drawing.Point(960, 578);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(159, 46);
             this.btnPrint.TabIndex = 13;
-            this.btnPrint.Text = "ພິມໃບບິນ";
+            this.btnPrint.Text = "In hóa đơn ";
             this.btnPrint.UseVisualStyleBackColor = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
@@ -102,23 +102,23 @@
             this.btnDelLi.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.btnDelLi.FlatAppearance.BorderSize = 0;
             this.btnDelLi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelLi.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelLi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelLi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDelLi.Location = new System.Drawing.Point(782, 578);
             this.btnDelLi.Name = "btnDelLi";
             this.btnDelLi.Size = new System.Drawing.Size(159, 46);
             this.btnDelLi.TabIndex = 14;
-            this.btnDelLi.Text = "ລົບ";
+            this.btnDelLi.Text = "Xóa";
             this.btnDelLi.UseVisualStyleBackColor = false;
             this.btnDelLi.Click += new System.EventHandler(this.btnDelLi_Click);
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Phetsarath OT", 12F);
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(362, 48);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(240, 31);
+            this.comboBox1.Size = new System.Drawing.Size(240, 27);
             this.comboBox1.TabIndex = 15;
             // 
             // btnSearchbyNo
@@ -126,13 +126,13 @@
             this.btnSearchbyNo.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.btnSearchbyNo.FlatAppearance.BorderSize = 0;
             this.btnSearchbyNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchbyNo.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchbyNo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchbyNo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSearchbyNo.Location = new System.Drawing.Point(248, 48);
             this.btnSearchbyNo.Name = "btnSearchbyNo";
             this.btnSearchbyNo.Size = new System.Drawing.Size(98, 31);
             this.btnSearchbyNo.TabIndex = 12;
-            this.btnSearchbyNo.Text = "ຄົ້ນຫາ";
+            this.btnSearchbyNo.Text = "Tìm kiếm";
             this.btnSearchbyNo.UseVisualStyleBackColor = false;
             this.btnSearchbyNo.Click += new System.EventHandler(this.btnSearchbyNo_Click);
             // 
@@ -143,7 +143,7 @@
             this.panel2.BackColor = System.Drawing.Color.Moccasin;
             this.panel2.Controls.Add(this.dgv);
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(727, 89);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(392, 431);
@@ -166,7 +166,7 @@
             this.button1.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(349, 563);
             this.button1.Name = "button1";
@@ -180,17 +180,17 @@
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(727, 532);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 29);
+            this.label1.Size = new System.Drawing.Size(57, 23);
             this.label1.TabIndex = 23;
             this.label1.Text = "Tatal :";
             // 
             // lblTatal
             // 
             this.lblTatal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblTatal.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTatal.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTatal.Location = new System.Drawing.Point(800, 532);
             this.lblTatal.Name = "lblTatal";
             this.lblTatal.Size = new System.Drawing.Size(266, 29);
@@ -199,30 +199,30 @@
             // 
             // txtId
             // 
-            this.txtId.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(727, 48);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(227, 31);
+            this.txtId.Size = new System.Drawing.Size(227, 26);
             this.txtId.TabIndex = 10;
             this.txtId.Visible = false;
             // 
             // lblHead
             // 
-            this.lblHead.Font = new System.Drawing.Font("Phetsarath OT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHead.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHead.Location = new System.Drawing.Point(14, 15);
             this.lblHead.Name = "lblHead";
             this.lblHead.Size = new System.Drawing.Size(142, 23);
             this.lblHead.TabIndex = 24;
-            this.lblHead.Text = "ການຂາຍ";
+            this.lblHead.Text = "Bán hàng";
             this.lblHead.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cboSupp
             // 
-            this.cboSupp.Font = new System.Drawing.Font("Phetsarath OT", 12F);
+            this.cboSupp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSupp.FormattingEnabled = true;
             this.cboSupp.Location = new System.Drawing.Point(863, 530);
             this.cboSupp.Name = "cboSupp";
-            this.cboSupp.Size = new System.Drawing.Size(256, 31);
+            this.cboSupp.Size = new System.Drawing.Size(256, 27);
             this.cboSupp.TabIndex = 25;
             // 
             // Sale_Order
