@@ -9,11 +9,14 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>ລາຍງານປະເພດສິນຄ້າທັງໝົດ</Value>
+                <Value>Báo cáo loại sản phẩm</Value>
                 <Style>
-                  <FontFamily>phetsarath</FontFamily>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
                   <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -60,11 +63,14 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ລະຫັດ</Value>
+                              <Value>Mã các loại sản phẩm</Value>
                               <Style>
-                                <FontFamily>phetsarath</FontFamily>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#000000</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -95,11 +101,14 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ຊື່ປະເພດສິນຄ້າ</Value>
+                              <Value>Tên Loại sản phẩm</Value>
                               <Style>
-                                <FontFamily>phetsarath</FontFamily>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#000000</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -137,7 +146,7 @@
                             <TextRun>
                               <Value>=Fields!ProdType_id.Value</Value>
                               <Style>
-                                <FontFamily>phetsarath</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
@@ -171,7 +180,7 @@
                             <TextRun>
                               <Value>=Fields!ProdType_name.Value</Value>
                               <Style>
-                                <FontFamily>phetsarath</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
@@ -233,9 +242,27 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>ວັນທີ :</Value>
+                <Value>Ngày</Value>
                 <Style>
-                  <FontFamily>phetsarath</FontFamily>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value> :</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
                   <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
@@ -247,7 +274,6 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.55902in</Top>
-        <Left>0.21874in</Left>
         <Height>0.33333in</Height>
         <Width>0.73834in</Width>
         <ZIndex>2</ZIndex>
@@ -261,7 +287,7 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
-      <Textbox Name="Textbox8">
+      <Textbox Name="Textbox9">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
         <Paragraphs>
@@ -270,7 +296,7 @@
               <TextRun>
                 <Value>=FormatDateTime(Now(),DateFormat.ShortDate)</Value>
                 <Style>
-                  <FontFamily>phetsarath</FontFamily>
+                  <FontFamily>Times New Roman</FontFamily>
                   <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
@@ -282,7 +308,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.55902in</Top>
-        <Left>0.98485in</Left>
+        <Left>0.76611in</Left>
         <Height>0.33333in</Height>
         <Width>1.26959in</Width>
         <ZIndex>3</ZIndex>

@@ -9,11 +9,14 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>ລາຍງານລວມຍອດການຮັບຊື້</Value>
+                <Value>Báo cáo nhận tài khoản</Value>
                 <Style>
-                  <FontFamily>phetsarath</FontFamily>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
                   <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -66,9 +69,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ລະຫັດໃບບິນ</Value>
+                              <Value>Mã hoá đơn</Value>
                               <Style>
-                                <FontFamily>phetsarath</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
@@ -101,11 +104,14 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ວັນທີ</Value>
+                              <Value>Ngày</Value>
                               <Style>
-                                <FontFamily>phetsarath</FontFamily>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#000000</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -136,11 +142,14 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ຍອດເງິນ</Value>
+                              <Value>Bao gồm tiền</Value>
                               <Style>
-                                <FontFamily>phetsarath</FontFamily>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#000000</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -171,11 +180,14 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ຊື່ລູກຄ້າ</Value>
+                              <Value>Tên khách hàng</Value>
                               <Style>
-                                <FontFamily>phetsarath</FontFamily>
+                                <FontStyle>Normal</FontStyle>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
+                                <TextDecoration>None</TextDecoration>
+                                <Color>#000000</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -213,7 +225,7 @@
                             <TextRun>
                               <Value>=Fields!Buy_no.Value</Value>
                               <Style>
-                                <FontFamily>phetsarath</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
@@ -247,7 +259,7 @@
                             <TextRun>
                               <Value>=FormatDateTime(Fields!Buy_date.Value,DateFormat.ShortDate)</Value>
                               <Style>
-                                <FontFamily>phetsarath</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
@@ -281,7 +293,7 @@
                             <TextRun>
                               <Value>=Format(Fields!Buy_total.Value,"#,###")</Value>
                               <Style>
-                                <FontFamily>phetsarath</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
@@ -315,7 +327,7 @@
                             <TextRun>
                               <Value>=Fields!Cus_name.Value</Value>
                               <Style>
-                                <FontFamily>phetsarath</FontFamily>
+                                <FontFamily>Times New Roman</FontFamily>
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
@@ -381,7 +393,7 @@
               <TextRun>
                 <Value>Total :</Value>
                 <Style>
-                  <FontFamily>phetsarath</FontFamily>
+                  <FontFamily>Times New Roman</FontFamily>
                   <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -417,7 +429,7 @@
               <TextRun>
                 <Value>=Format(CDbl(Sum(Fields!Buy_total.Value, "DataSet1")),"#,###.00")</Value>
                 <Style>
-                  <FontFamily>phetsarath</FontFamily>
+                  <FontFamily>Times New Roman</FontFamily>
                   <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -451,9 +463,9 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>ກີບ</Value>
+                <Value>VND</Value>
                 <Style>
-                  <FontFamily>phetsarath</FontFamily>
+                  <FontFamily>Times New Roman</FontFamily>
                   <FontSize>14pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
@@ -487,9 +499,27 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>ວັນທີ :</Value>
+                <Value>Ngày</Value>
                 <Style>
-                  <FontFamily>phetsarath</FontFamily>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>9pt</FontSize>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value> :</Value>
+                <Style>
+                  <FontFamily>Times New Roman</FontFamily>
                   <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
@@ -523,7 +553,7 @@
               <TextRun>
                 <Value>=FormatDateTime(Now(),DateFormat.ShortDate)</Value>
                 <Style>
-                  <FontFamily>phetsarath</FontFamily>
+                  <FontFamily>Times New Roman</FontFamily>
                   <FontSize>12pt</FontSize>
                 </Style>
               </TextRun>
