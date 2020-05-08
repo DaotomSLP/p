@@ -21,7 +21,7 @@ namespace Vanpheng_Jewelry
 
         public void Home_Load(object sender, EventArgs e)
         {
-                Login login = new Login();
+            Login login = new Login();
                 showForm(login);
             lblDate.Text = DateTime.Now.ToLongDateString();
             timer1.Start();

@@ -60,14 +60,12 @@ C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\Vanpheng Jewelry.exe
 C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\Vanpheng Jewelry.pdb
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.csprojAssemblyReference.cache
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Home.resources
-C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmCustomer.resources
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmDailyPrice.resources
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmEmployee.resources
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmProdType.resources
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmProduct.resources
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmSupplier.resources
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Properties.Resources.resources
-C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Sale.resources
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.csproj.GenerateResource.cache
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.csproj.CoreCompileInputs.cache
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.exe
@@ -160,3 +158,69 @@ D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.csproj.CopyComp
 D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmReportSaleOrder.resources
 D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Bill.resources
 D:\work\windowbase\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Login.resources
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\EnvDTE.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\stdole.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\Microsoft.MSXML.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\de\Microsoft.ReportViewer.Design.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\fr\Microsoft.ReportViewer.Design.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\it\Microsoft.ReportViewer.Design.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\ja\Microsoft.ReportViewer.Design.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\ko\Microsoft.ReportViewer.Design.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\pt\Microsoft.ReportViewer.Design.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\ru\Microsoft.ReportViewer.Design.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Bill.resources
+C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmGetImportPrice.resources
+C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmImport.resources
+C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmReportData.resources
+C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmReportSaleOrder.resources
+C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Login.resources
+C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Sale_Order.resources
+C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.csproj.CopyComplete

@@ -34,7 +34,7 @@ namespace Vanpheng_Jewelry
             database.InsertData(@"INSERT INTO Product VALUES('" + txtId.Text + "',N'" +
                 txtName.Text + "',N'" + txtPictureName.Text + "','" +
                 txtPrice.Text + "','" + comboBox1.SelectedValue + "','" +
-                weigBa.Value + "','" + weigSl.Value + "','" + weigHo.Value + "','0')");
+                weigBa.Value + "','" + weigSl.Value + "','" + weigHo.Value + "','0','0')");
             loadData();
             ClearTextBox();
             MessageBox.Show("Insert Success ...");

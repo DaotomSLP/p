@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 using Microsoft.Reporting.WinForms;
 using Microsoft.ReportingServices.ReportProcessing.ReportObjectModel;
+using System.IO;
 
 namespace Vanpheng_Jewelry
 {
@@ -17,11 +18,13 @@ namespace Vanpheng_Jewelry
         SqlDataReader dr;
         SqlCommand comm;
         DataTable dataTable;
-        public string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\work\windowbase\p\Vanpheng Jewelry\Database1.mdf;Integrated Security=True";
+        string current_path = Directory.GetCurrentDirectory();
+
 
         public SqlDataReader LoadData(String Q)
         {
-            SqlConnection sqlConn = new SqlConnection(connstr);
+            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
+        SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();
             comm = new SqlCommand(Q, sqlConn);
             dr = comm.ExecuteReader();
@@ -31,6 +34,7 @@ namespace Vanpheng_Jewelry
 
         public void InsertData(String Q)
         {
+            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
             SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();
             comm = new SqlCommand(Q, sqlConn);
@@ -39,6 +43,7 @@ namespace Vanpheng_Jewelry
 
         public void UpdateData(String Q)
         {
+            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
             SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();
             comm = new SqlCommand(Q, sqlConn);
@@ -47,6 +52,7 @@ namespace Vanpheng_Jewelry
 
         public void DeleteData(String Q)
         {
+            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
             SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();
             comm = new SqlCommand(Q, sqlConn);
@@ -54,6 +60,7 @@ namespace Vanpheng_Jewelry
         }
         public string generateBillNo(string Q)
         {
+            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
             SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();
             comm = new SqlCommand(Q, sqlConn);
@@ -77,6 +84,7 @@ namespace Vanpheng_Jewelry
         }
         public string generateId(String Q)
         {
+            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
             SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();
             comm = new SqlCommand(Q, sqlConn);
@@ -101,6 +109,7 @@ namespace Vanpheng_Jewelry
 
         public DataTable loadReport(string sql)
         {
+            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
             SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();
             comm = new SqlCommand(sql, sqlConn);
@@ -113,6 +122,7 @@ namespace Vanpheng_Jewelry
         
         public string Login(string username, string password)
         {
+            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
             string Q = "SELECT UserName FROM Employee WHERE UserName = '"+username+"' AND Password = '"+password+"'";
             SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();

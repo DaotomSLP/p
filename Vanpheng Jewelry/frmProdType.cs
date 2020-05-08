@@ -92,7 +92,7 @@ namespace Vanpheng_Jewelry
         {
             Database database = new Database();
             database.InsertData(@"INSERT INTO dbo.Product_Type VALUES('" +
-                txtProdTId.Text + "',N'" + txtProdTName.Text + "')");
+                txtProdTId.Text + "',N'" + txtProdTName.Text + "','0')");
             loadData();
             ClearTextBox();
         }
