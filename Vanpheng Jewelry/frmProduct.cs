@@ -44,7 +44,7 @@ namespace Vanpheng_Jewelry
         private void SaveUpdate()
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show("ແກ້ໄຂຂໍ້ມູນ ຫຼືບໍ່ :", "", buttons);
+            DialogResult result = MessageBox.Show("Có cần chỉnh sửa dữ liệu hay không :", "", buttons);
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();
@@ -103,8 +103,8 @@ namespace Vanpheng_Jewelry
             label4.Visible = true;
             comboBox1.Visible = true;
 
-            lblHead.Text = "ເພີ່ມຂໍ້ມູນສິນຄ້າ :";
-            btnSave.Text = "ເພີ່ມ";
+            lblHead.Text = "Thêm thông tin sản phẩm :";
+            btnSave.Text = "Thêm";
         }
         private void LoadByUpdate()
         {
@@ -128,8 +128,8 @@ namespace Vanpheng_Jewelry
             label4.Visible = true;
             comboBox1.Visible = true;
 
-            lblHead.Text = "ແກ້ໄຂຂໍ້ມູນສິນຄ້າ :";
-            btnSave.Text = "ບັນທຶກການແກ້ໄຂ";
+            lblHead.Text = "Chỉnh sửa thông tin sản phẩm :";
+            btnSave.Text = "Lưu thông tin sửa lại";
         }
 
      
@@ -151,25 +151,25 @@ namespace Vanpheng_Jewelry
             Database database = new Database();
             SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Product WHERE enable = '0' ORDER BY Prod_id DESC");
             DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("ລະຫັດ");
-            dataTable.Columns.Add("ຊື່ສິນຄ້າ");
-            dataTable.Columns.Add("ລາຄາລາຍ");
-            dataTable.Columns.Add("ນ້ຳໜັກ(ບາດ)");
-            dataTable.Columns.Add("ນ້ຳໜັກ(ສະຫຼຶງ)");
-            dataTable.Columns.Add("ນ້ຳໜັກ(ຫຸນ)");
-            dataTable.Columns.Add("ຈຳນວນ");
-            dataTable.Columns.Add("ຮູບ");
+            dataTable.Columns.Add("id");
+            dataTable.Columns.Add("Mã sản phẩm");
+            dataTable.Columns.Add("Giá theo mẫu");
+            dataTable.Columns.Add("Cân nặng(cây)");
+            dataTable.Columns.Add("Cân nặng(chỉ)");
+            dataTable.Columns.Add("Cân nặng(phân)");
+            dataTable.Columns.Add("Số");
+            dataTable.Columns.Add("Mẫu");
             while (dr.Read())
             {
                 DataRow row = dataTable.NewRow();
-                row["ລະຫັດ"] = dr["Prod_id"];
-                row["ຊື່ສິນຄ້າ"] = dr["Prod_name"];
-                row["ລາຄາລາຍ"] = dr["Design_price"];
-                row["ນ້ຳໜັກ(ບາດ)"] = dr["Prod_weight1"];
-                row["ນ້ຳໜັກ(ສະຫຼຶງ)"] = dr["Prod_weight2"];
-                row["ນ້ຳໜັກ(ຫຸນ)"] = dr["Prod_weight3"];
-                row["ຮູບ"] = dr["Prod_img"];
-                row["ຈຳນວນ"] = dr["Prod_instock"];
+                row["id"] = dr["Prod_id"];
+                row["Mã sản phẩm"] = dr["Prod_name"];
+                row["Giá theo mẫu"] = dr["Design_price"];
+                row["Cân nặng(cây)"] = dr["Prod_weight1"];
+                row["Cân nặng(chỉ)"] = dr["Prod_weight2"];
+                row["Cân nặng(phân)"] = dr["Prod_weight3"];
+                row["Mẫu"] = dr["Prod_img"];
+                row["Số"] = dr["Prod_instock"];
                 dataTable.Rows.Add(row);
             }
             dgvProduct.DataSource = dataTable;
@@ -226,7 +226,7 @@ namespace Vanpheng_Jewelry
         private void btnDel_Click(object sender, EventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show("ຕ້ອງການລົບຂໍ້ມູນ ຫຼືບໍ່ :", "", buttons);
+            DialogResult result = MessageBox.Show("Muốn xóa dữ liệu hay không :", "", buttons);
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();

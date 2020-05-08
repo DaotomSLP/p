@@ -37,33 +37,33 @@ namespace Vanpheng_Jewelry
             btnSave.Visible = true;
             btnDel.Visible = false;
             lblW.Visible = false;
-            btnSave.Text = "ເພີ່ມ";
-            lblName.Text = "ເພີ່ມຂໍ້ມູນຜູ້ສະໜອງ";
+            btnSave.Text = "Thêm";
+            lblName.Text = "Thêm thông tin nhà cũng cấp";
         }
         private void LoadByUpdate()
         {
             btnSave.Visible = false;
             btnDel.Visible = false;
             lblW.Visible = true;
-            btnSave.Text = "ບັນທຶກການແກ້ໄຂ";
-            lblName.Text = "ແກ້ໄຂຂໍ້ມູນຜູ້ສະໜອງ";
+            btnSave.Text = "Lưu thông tin sửa lại";
+            lblName.Text = "Chỉnh sửa thông tin nhà cũng cấp";
         }
         private void loadData()
         {
             Database database = new Database();
             SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Supplier WHERE enable = '0'");
             DataTable dataTable = new DataTable();
-            dataTable.Columns.Add("ລະຫັດ");
-            dataTable.Columns.Add("ຊື່");
-            dataTable.Columns.Add("ເບີໂທ");
-            dataTable.Columns.Add("ທີ່ຢູ່");
+            dataTable.Columns.Add("id");
+            dataTable.Columns.Add("Tên");
+            dataTable.Columns.Add("Số điện thoại");
+            dataTable.Columns.Add("Địa chỉ");
             while (dr.Read())
             {
                 DataRow row = dataTable.NewRow();
-                row["ລະຫັດ"] = dr["Supp_id"];
-                row["ຊື່"] = dr["Supp_name"];
-                row["ເບີໂທ"] = dr["Supp_tel"];
-                row["ທີ່ຢູ່"] = dr["Supp_addr"];
+                row["id"] = dr["Supp_id"];
+                row["Tên"] = dr["Supp_name"];
+                row["Số điện thoại"] = dr["Supp_tel"];
+                row["Địa chỉ"] = dr["Supp_addr"];
                 dataTable.Rows.Add(row);
             }
             dgv.DataSource = dataTable;
@@ -93,7 +93,7 @@ namespace Vanpheng_Jewelry
         private void SaveUpdate()
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show("ຕ້ອງການແກ້ໄຂຂໍ້ມູນ ຫຼືບໍ່ :", "", buttons);
+            DialogResult result = MessageBox.Show("Có cần chỉnh sửa dữ liệu hay không :", "", buttons);
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();
@@ -134,7 +134,7 @@ namespace Vanpheng_Jewelry
         private void btnDel_Click(object sender, EventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show("ຕ້ອງການລົບຂໍ້ມູນ ຫຼືບໍ່ :", "", buttons);
+            DialogResult result = MessageBox.Show("Muốn xóa dữ liệu hay không :", "", buttons);
             if (result == DialogResult.Yes)
             {
                 Database database = new Database();
