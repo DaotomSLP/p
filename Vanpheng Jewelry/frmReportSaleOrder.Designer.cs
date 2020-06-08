@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.SaleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Database1DataSet = new Vanpheng_Jewelry.Database1DataSet();
+            this.vanpheng_jewelryDataSet = new Vanpheng_Jewelry.vanpheng_jewelryDataSet();
             this.ImportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BuyViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewerSale = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -42,13 +42,13 @@
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.dtpEnd = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
-            this.SaleTableAdapter = new Vanpheng_Jewelry.Database1DataSetTableAdapters.SaleTableAdapter();
+            this.SaleTableAdapter = new Vanpheng_Jewelry.vanpheng_jewelryDataSetTableAdapters.SaleTableAdapter();
             this.reportViewerImport = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.ImportTableAdapter = new Vanpheng_Jewelry.Database1DataSetTableAdapters.ImportTableAdapter();
+            this.ImportTableAdapter = new Vanpheng_Jewelry.vanpheng_jewelryDataSetTableAdapters.ImportTableAdapter();
             this.reportViewerBuy = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.BuyViewTableAdapter = new Vanpheng_Jewelry.Database1DataSetTableAdapters.BuyViewTableAdapter();
+            this.BuyViewTableAdapter = new Vanpheng_Jewelry.vanpheng_jewelryDataSetTableAdapters.BuyViewTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.SaleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vanpheng_jewelryDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImportBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuyViewBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -56,29 +56,29 @@
             // SaleBindingSource
             // 
             this.SaleBindingSource.DataMember = "Sale";
-            this.SaleBindingSource.DataSource = this.Database1DataSet;
+            this.SaleBindingSource.DataSource = this.vanpheng_jewelryDataSet;
             // 
-            // Database1DataSet
+            // vanpheng_jewelryDataSet
             // 
-            this.Database1DataSet.DataSetName = "Database1DataSet";
-            this.Database1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.vanpheng_jewelryDataSet.DataSetName = "vanpheng_jewelryDataSet";
+            this.vanpheng_jewelryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ImportBindingSource
             // 
             this.ImportBindingSource.DataMember = "Import";
-            this.ImportBindingSource.DataSource = this.Database1DataSet;
+            this.ImportBindingSource.DataSource = this.vanpheng_jewelryDataSet;
             // 
             // BuyViewBindingSource
             // 
             this.BuyViewBindingSource.DataMember = "BuyView";
-            this.BuyViewBindingSource.DataSource = this.Database1DataSet;
+            this.BuyViewBindingSource.DataSource = this.vanpheng_jewelryDataSet;
             // 
             // reportViewerSale
             // 
             this.reportViewerSale.AutoSize = true;
-            reportDataSource4.Name = "DataSet1";
-            reportDataSource4.Value = this.SaleBindingSource;
-            this.reportViewerSale.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "vanpheng_jewelryDataSet";
+            reportDataSource1.Value = this.SaleBindingSource;
+            this.reportViewerSale.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewerSale.LocalReport.ReportEmbeddedResource = "Vanpheng_Jewelry.SaleSumary.rdlc";
             this.reportViewerSale.Location = new System.Drawing.Point(238, 9);
             this.reportViewerSale.Name = "reportViewerSale";
@@ -147,9 +147,9 @@
             // reportViewerImport
             // 
             this.reportViewerImport.AutoSize = true;
-            reportDataSource5.Name = "DataSet1";
-            reportDataSource5.Value = this.ImportBindingSource;
-            this.reportViewerImport.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource2.Name = "vanpheng_jewelryDataSet";
+            reportDataSource2.Value = this.ImportBindingSource;
+            this.reportViewerImport.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewerImport.LocalReport.ReportEmbeddedResource = "Vanpheng_Jewelry.ImportSumary.rdlc";
             this.reportViewerImport.Location = new System.Drawing.Point(238, 9);
             this.reportViewerImport.Name = "reportViewerImport";
@@ -165,9 +165,9 @@
             // reportViewerBuy
             // 
             this.reportViewerBuy.AutoSize = true;
-            reportDataSource6.Name = "DataSet1";
-            reportDataSource6.Value = this.BuyViewBindingSource;
-            this.reportViewerBuy.LocalReport.DataSources.Add(reportDataSource6);
+            reportDataSource3.Name = "vanpheng_jewelryDataSet";
+            reportDataSource3.Value = this.BuyViewBindingSource;
+            this.reportViewerBuy.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewerBuy.LocalReport.ReportEmbeddedResource = "Vanpheng_Jewelry.BuySummary.rdlc";
             this.reportViewerBuy.Location = new System.Drawing.Point(238, 9);
             this.reportViewerBuy.Name = "reportViewerBuy";
@@ -199,7 +199,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmReportSaleOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SaleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Database1DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vanpheng_jewelryDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImportBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuyViewBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -216,13 +216,13 @@
         private System.Windows.Forms.DateTimePicker dtpEnd;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource SaleBindingSource;
-        private Database1DataSet Database1DataSet;
-        private Database1DataSetTableAdapters.SaleTableAdapter SaleTableAdapter;
+        private vanpheng_jewelryDataSet vanpheng_jewelryDataSet;
+        private vanpheng_jewelryDataSetTableAdapters.SaleTableAdapter SaleTableAdapter;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerImport;
         private System.Windows.Forms.BindingSource ImportBindingSource;
-        private Database1DataSetTableAdapters.ImportTableAdapter ImportTableAdapter;
+        private vanpheng_jewelryDataSetTableAdapters.ImportTableAdapter ImportTableAdapter;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewerBuy;
         private System.Windows.Forms.BindingSource BuyViewBindingSource;
-        private Database1DataSetTableAdapters.BuyViewTableAdapter BuyViewTableAdapter;
+        private vanpheng_jewelryDataSetTableAdapters.BuyViewTableAdapter BuyViewTableAdapter;
     }
 }

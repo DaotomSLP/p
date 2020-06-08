@@ -23,7 +23,7 @@ namespace Vanpheng_Jewelry
 
         public SqlDataReader LoadData(String Q)
         {
-            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
+            string connstr = @"Data Source=DESKTOP-QCAJFHA;Initial Catalog=vanpheng_jewelry;Integrated Security=True";
         SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();
             comm = new SqlCommand(Q, sqlConn);
@@ -34,7 +34,7 @@ namespace Vanpheng_Jewelry
 
         public void InsertData(String Q)
         {
-            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
+            string connstr = @"Data Source=DESKTOP-QCAJFHA;Initial Catalog=vanpheng_jewelry;Integrated Security=True";
             SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();
             comm = new SqlCommand(Q, sqlConn);
@@ -43,7 +43,7 @@ namespace Vanpheng_Jewelry
 
         public void UpdateData(String Q)
         {
-            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
+            string connstr = @"Data Source=DESKTOP-QCAJFHA;Initial Catalog=vanpheng_jewelry;Integrated Security=True";
             SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();
             comm = new SqlCommand(Q, sqlConn);
@@ -52,7 +52,7 @@ namespace Vanpheng_Jewelry
 
         public void DeleteData(String Q)
         {
-            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
+            string connstr = @"Data Source=DESKTOP-QCAJFHA;Initial Catalog=vanpheng_jewelry;Integrated Security=True";
             SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();
             comm = new SqlCommand(Q, sqlConn);
@@ -60,7 +60,7 @@ namespace Vanpheng_Jewelry
         }
         public string generateBillNo(string Q)
         {
-            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
+            string connstr = @"Data Source=DESKTOP-QCAJFHA;Initial Catalog=vanpheng_jewelry;Integrated Security=True";
             SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();
             comm = new SqlCommand(Q, sqlConn);
@@ -84,7 +84,7 @@ namespace Vanpheng_Jewelry
         }
         public string generateId(String Q)
         {
-            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
+            string connstr = @"Data Source=DESKTOP-QCAJFHA;Initial Catalog=vanpheng_jewelry;Integrated Security=True";
             SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();
             comm = new SqlCommand(Q, sqlConn);
@@ -109,7 +109,7 @@ namespace Vanpheng_Jewelry
 
         public DataTable loadReport(string sql)
         {
-            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
+            string connstr = @"Data Source=DESKTOP-QCAJFHA;Initial Catalog=vanpheng_jewelry;Integrated Security=True";
             SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();
             comm = new SqlCommand(sql, sqlConn);
@@ -122,7 +122,7 @@ namespace Vanpheng_Jewelry
         
         public string Login(string username, string password)
         {
-            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + current_path + @"\Database1.mdf;Integrated Security=True";
+            string connstr = @"Data Source=DESKTOP-QCAJFHA;Initial Catalog=vanpheng_jewelry;Integrated Security=True";
             string Q = "SELECT UserName FROM Employee WHERE UserName = '"+username+"' AND Password = '"+password+"'";
             SqlConnection sqlConn = new SqlConnection(connstr);
             sqlConn.Open();

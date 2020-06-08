@@ -451,7 +451,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
+        <DataSetName>vanpheng_jewelryDataSet</DataSetName>
         <Top>1.51042in</Top>
         <Left>0.07in</Left>
         <Height>0.71875in</Height>
@@ -478,7 +478,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=First(Fields!Bill_no.Value, "DataSet1")</Value>
+                <Value>=First(Fields!Bill_no.Value, "vanpheng_jewelryDataSet")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>9pt</FontSize>
@@ -511,7 +511,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>=FormatDateTime(First(Fields!Sale_date.Value, "DataSet1"),DateFormat.ShortDate)</Value>
+                <Value>=FormatDateTime(First(Fields!Sale_date.Value, "vanpheng_jewelryDataSet"),DateFormat.ShortDate)</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>9pt</FontSize>
@@ -697,7 +697,7 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="Database1DataSet">
+    <DataSource Name="vanpheng_jewelryDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
@@ -706,9 +706,9 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="vanpheng_jewelryDataSet">
       <Query>
-        <DataSourceName>Database1DataSet</DataSourceName>
+        <DataSourceName>vanpheng_jewelryDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -754,8 +754,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Database1DataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\work\windowbase\p\Vanpheng Jewelry\Database1DataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>vanpheng_jewelryDataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\work\windowbase\p\Vanpheng Jewelry\vanpheng_jewelryDataSet.xsd</rd:SchemaPath>
         <rd:TableName>Sale_View</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

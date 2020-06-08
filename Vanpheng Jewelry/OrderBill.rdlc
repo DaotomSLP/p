@@ -295,7 +295,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
+        <DataSetName>vanpheng_jewelryDataSet</DataSetName>
         <Top>1.48958in</Top>
         <Height>0.625in</Height>
         <Width>6.5943in</Width>
@@ -348,7 +348,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=First(Fields!Order_no.Value, "DataSet1")</Value>
+                <Value>=First(Fields!Order_no.Value, "vanpheng_jewelryDataSet")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -435,7 +435,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=FormatDateTime(First(Fields!Order_date.Value, "DataSet1"),DateFormat.ShortDate)</Value>
+                <Value>=FormatDateTime(First(Fields!Order_date.Value, "vanpheng_jewelryDataSet"),DateFormat.ShortDate)</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>12pt</FontSize>
@@ -567,7 +567,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="vanpheng_jewelryDataSet">
       <Query>
         <DataSourceName>Database1DataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>

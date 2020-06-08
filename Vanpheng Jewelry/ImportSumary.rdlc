@@ -299,7 +299,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
+        <DataSetName>vanpheng_jewelryDataSet</DataSetName>
         <Top>1.27084in</Top>
         <Left>0.02056in</Left>
         <Height>0.625in</Height>
@@ -355,7 +355,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>=Format(CDbl(Sum(Fields!Imp_total_price.Value, "DataSet1")),"#,###.00")</Value>
+                <Value>=Format(CDbl(Sum(Fields!Imp_total_price.Value, "vanpheng_jewelryDataSet")),"#,###.00")</Value>
                 <Style>
                   <FontFamily>Times New Roman</FontFamily>
                   <FontSize>14pt</FontSize>
@@ -522,7 +522,7 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="Database1DataSet">
+    <DataSource Name="vanpheng_jewelryDataSet">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
@@ -531,9 +531,9 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="vanpheng_jewelryDataSet">
       <Query>
-        <DataSourceName>Database1DataSet</DataSourceName>
+        <DataSourceName>vanpheng_jewelryDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
@@ -563,8 +563,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Database1DataSet</rd:DataSetName>
-        <rd:SchemaPath>D:\work\windowbase\p\Vanpheng Jewelry\Database1DataSet.xsd</rd:SchemaPath>
+        <rd:DataSetName>vanpheng_jewelryDataSet</rd:DataSetName>
+        <rd:SchemaPath>D:\work\windowbase\p\Vanpheng Jewelry\vanpheng_jewelryDataSet.xsd</rd:SchemaPath>
         <rd:TableName>ImportSummaryView</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

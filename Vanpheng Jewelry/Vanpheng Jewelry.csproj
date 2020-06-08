@@ -174,6 +174,11 @@
       <DependentUpon>Sale_Order.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="vanpheng_jewelryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vanpheng_jewelryDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +262,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="vanpheng_jewelryDataSet.xsc">
+      <DependentUpon>vanpheng_jewelryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="vanpheng_jewelryDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vanpheng_jewelryDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vanpheng_jewelryDataSet.xss">
+      <DependentUpon>vanpheng_jewelryDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -30,7 +30,7 @@ namespace Vanpheng_Jewelry
                 Database database = new Database();
                 DataTable dataTable = new DataTable();
                 dataTable = database.loadReport("SELECT * FROM Sale_View WHERE Sale_id = '"+globalVal.Sale_id+"'");
-                ReportDataSource reportDataSource = new ReportDataSource("DataSet1", dataTable);
+                ReportDataSource reportDataSource = new ReportDataSource("vanpheng_jewelryDataSet", dataTable);
                 this.reportViewerSaleBill.LocalReport.DataSources.Clear();
                 this.reportViewerSaleBill.LocalReport.DataSources.Add(reportDataSource);
                 this.reportViewerSaleBill.RefreshReport();
@@ -45,7 +45,7 @@ namespace Vanpheng_Jewelry
                 Database database = new Database();
                 DataTable dataTable = new DataTable();
                 dataTable = database.loadReport("SELECT * FROM Order_View WHERE Order_id = '" + globalVal.Order_id + "'");
-                ReportDataSource reportDataSource = new ReportDataSource("DataSet1", dataTable);
+                ReportDataSource reportDataSource = new ReportDataSource("vanpheng_jewelryDataSet", dataTable);
                 this.reportViewerOrderBill.LocalReport.DataSources.Clear();
                 this.reportViewerOrderBill.LocalReport.DataSources.Add(reportDataSource);
                 this.reportViewerOrderBill.RefreshReport();
@@ -60,7 +60,7 @@ namespace Vanpheng_Jewelry
                 Database database = new Database();
                 DataTable dataTable = new DataTable();
                 dataTable = database.loadReport("SELECT * FROM BuyView WHERE Buy_id = '" + globalVal.Buy_id + "'");
-                ReportDataSource reportDataSource = new ReportDataSource("DataSet1", dataTable);
+                ReportDataSource reportDataSource = new ReportDataSource("vanpheng_jewelryDataSet", dataTable);
                 this.reportViewerBuy.LocalReport.DataSources.Clear();
                 this.reportViewerBuy.LocalReport.DataSources.Add(reportDataSource);
                 this.reportViewerBuy.RefreshReport();

@@ -224,6 +224,7 @@
             this.btnDel.TabIndex = 27;
             this.btnDel.Text = "Xóa";
             this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click_1);
             // 
             // frmSupplier
             // 

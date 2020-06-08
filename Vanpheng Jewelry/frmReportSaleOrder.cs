@@ -20,10 +20,10 @@ namespace Vanpheng_Jewelry
 
         private void frmReportSaleOrder_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'Database1DataSet.BuyView' table. You can move, or remove it, as needed.
-            this.BuyViewTableAdapter.Fill(this.Database1DataSet.BuyView);
-            // TODO: This line of code loads data into the 'Database1DataSet.Import' table. You can move, or remove it, as needed.
-            this.ImportTableAdapter.Fill(this.Database1DataSet.Import);
+            // TODO: This line of code loads data into the 'vanpheng_jewelryDataSet.BuyView' table. You can move, or remove it, as needed.
+            this.BuyViewTableAdapter.Fill(this.vanpheng_jewelryDataSet.BuyView);
+            // TODO: This line of code loads data into the 'vanpheng_jewelryDataSet.Import' table. You can move, or remove it, as needed.
+            this.ImportTableAdapter.Fill(this.vanpheng_jewelryDataSet.Import);
 
         }
 
@@ -37,7 +37,7 @@ namespace Vanpheng_Jewelry
                 Database database = new Database();
                 DataTable dataTable = new DataTable();
                 dataTable = database.loadReport("SELECT * FROM Sale WHERE Sale_date BETWEEN '" + dtpStart.Value.ToString() + "' AND '" + dtpEnd.Value.ToString() + "'");
-                ReportDataSource reportDataSource = new ReportDataSource("DataSet1", dataTable);
+                ReportDataSource reportDataSource = new ReportDataSource("vanpheng_jewelryDataSet", dataTable);
                 this.reportViewerSale.LocalReport.DataSources.Clear();
                 this.reportViewerSale.LocalReport.DataSources.Add(reportDataSource);
                 this.reportViewerSale.RefreshReport();
@@ -50,7 +50,7 @@ namespace Vanpheng_Jewelry
                 Database database = new Database();
                 DataTable dataTable = new DataTable();
                 dataTable = database.loadReport("SELECT * FROM ImportSummaryView WHERE Imp_date BETWEEN '" + dtpStart.Value.ToString() + "' AND '" + dtpEnd.Value.ToString() + "'");
-                ReportDataSource reportDataSource = new ReportDataSource("DataSet1", dataTable);
+                ReportDataSource reportDataSource = new ReportDataSource("vanpheng_jewelryDataSet", dataTable);
                 this.reportViewerImport.LocalReport.DataSources.Clear();
                 this.reportViewerImport.LocalReport.DataSources.Add(reportDataSource);
                 this.reportViewerImport.RefreshReport();
@@ -63,7 +63,7 @@ namespace Vanpheng_Jewelry
                 Database database = new Database();
                 DataTable dataTable = new DataTable();
                 dataTable = database.loadReport("SELECT * FROM BuyView WHERE Buy_date BETWEEN '" + dtpStart.Value.ToString() + "' AND '" + dtpEnd.Value.ToString() + "'");
-                ReportDataSource reportDataSource = new ReportDataSource("DataSet1", dataTable);
+                ReportDataSource reportDataSource = new ReportDataSource("vanpheng_jewelryDataSet", dataTable);
                 this.reportViewerBuy.LocalReport.DataSources.Clear();
                 this.reportViewerBuy.LocalReport.DataSources.Add(reportDataSource);
                 this.reportViewerBuy.RefreshReport();

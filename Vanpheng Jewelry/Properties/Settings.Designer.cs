@@ -33,5 +33,16 @@ namespace Vanpheng_Jewelry.Properties {
                 return ((string)(this["Database1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-QCAJFHA;Initial Catalog=vanpheng_jewelry;Integrated Security=" +
+            "True")]
+        public string vanpheng_jewelryConnectionString {
+            get {
+                return ((string)(this["vanpheng_jewelryConnectionString"]));
+            }
+        }
     }
 }

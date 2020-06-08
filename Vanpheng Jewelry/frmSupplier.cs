@@ -70,17 +70,7 @@ namespace Vanpheng_Jewelry
             dr.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (globalVal.FrmDataStatus == "insert")
-            {
-                SaveInsert();
-            }
-            else if (globalVal.FrmDataStatus == "update")
-            {
-                SaveUpdate();
-            }
-        }
+
         private void SaveInsert()
         {
             Database database = new Database();
@@ -131,7 +121,20 @@ namespace Vanpheng_Jewelry
             }
         }
 
-        private void btnDel_Click(object sender, EventArgs e)
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+            if (globalVal.FrmDataStatus == "insert")
+            {
+                SaveInsert();
+            }
+            else if (globalVal.FrmDataStatus == "update")
+            {
+                SaveUpdate();
+            }
+        }
+
+        private void btnDel_Click_1(object sender, EventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result = MessageBox.Show("Muốn xóa dữ liệu hay không :", "", buttons);
@@ -147,11 +150,6 @@ namespace Vanpheng_Jewelry
             {
 
             }
-        }
-
-        private void btnSave_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }
