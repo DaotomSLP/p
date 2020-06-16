@@ -138,7 +138,7 @@ namespace Vanpheng_Jewelry
         private void ComboBoxLoad()
         {
             Database database = new Database();
-            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Product_Type");
+            SqlDataReader dr = database.LoadData(@"SELECT * FROM dbo.Product_Type WHERE enable=0");
             DataTable dataTable = new DataTable();
             dataTable.Load(dr);
                 comboBox1.DisplayMember = "ProdType_name";

@@ -15021,7 +15021,7 @@ SELECT Order_id, Order_date, Order_no, Supp_id, Orders_is_success FROM Orders WH
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Product] ([Prod_id], [Prod_name], [Prod_img], [Design_price], [ProdType_id], [Prod_weight1], [Prod_weight2], [Prod_weight3], [Prod_instock], [enable]) VALUES (@Prod_id, @Prod_name, @Prod_img, @Design_price, @ProdType_id, @Prod_weight1, @Prod_weight2, @Prod_weight3, @Prod_instock, @enable);
-SELECT Prod_id, Prod_name, Prod_img, Design_price, ProdType_id, Prod_weight1, Prod_weight2, Prod_weight3, Prod_instock, enable FROM Product WHERE (Prod_id = @Prod_id)";
+SELECT Prod_id, Prod_name, Prod_img, Design_price, ProdType_id, Prod_weight1, Prod_weight2, Prod_weight3, Prod_instock, enable FROM Product WHERE (Prod_id = @Prod_id) ORDER BY Prod_id DESC";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15036,7 +15036,7 @@ SELECT Prod_id, Prod_name, Prod_img, Design_price, ProdType_id, Prod_weight1, Pr
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Product] SET [Prod_id] = @Prod_id, [Prod_name] = @Prod_name, [Prod_img] = @Prod_img, [Design_price] = @Design_price, [ProdType_id] = @ProdType_id, [Prod_weight1] = @Prod_weight1, [Prod_weight2] = @Prod_weight2, [Prod_weight3] = @Prod_weight3, [Prod_instock] = @Prod_instock, [enable] = @enable WHERE (([Prod_id] = @Original_Prod_id) AND ((@IsNull_Prod_name = 1 AND [Prod_name] IS NULL) OR ([Prod_name] = @Original_Prod_name)) AND ((@IsNull_Prod_img = 1 AND [Prod_img] IS NULL) OR ([Prod_img] = @Original_Prod_img)) AND ((@IsNull_Design_price = 1 AND [Design_price] IS NULL) OR ([Design_price] = @Original_Design_price)) AND ((@IsNull_ProdType_id = 1 AND [ProdType_id] IS NULL) OR ([ProdType_id] = @Original_ProdType_id)) AND ((@IsNull_Prod_weight1 = 1 AND [Prod_weight1] IS NULL) OR ([Prod_weight1] = @Original_Prod_weight1)) AND ((@IsNull_Prod_weight2 = 1 AND [Prod_weight2] IS NULL) OR ([Prod_weight2] = @Original_Prod_weight2)) AND ((@IsNull_Prod_weight3 = 1 AND [Prod_weight3] IS NULL) OR ([Prod_weight3] = @Original_Prod_weight3)) AND ((@IsNull_Prod_instock = 1 AND [Prod_instock] IS NULL) OR ([Prod_instock] = @Original_Prod_instock)) AND ((@IsNull_enable = 1 AND [enable] IS NULL) OR ([enable] = @Original_enable)));
-SELECT Prod_id, Prod_name, Prod_img, Design_price, ProdType_id, Prod_weight1, Prod_weight2, Prod_weight3, Prod_instock, enable FROM Product WHERE (Prod_id = @Prod_id)";
+SELECT Prod_id, Prod_name, Prod_img, Design_price, ProdType_id, Prod_weight1, Prod_weight2, Prod_weight3, Prod_instock, enable FROM Product WHERE (Prod_id = @Prod_id) ORDER BY Prod_id DESC";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Prod_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Prod_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15083,7 +15083,8 @@ SELECT Prod_id, Prod_name, Prod_img, Design_price, ProdType_id, Prod_weight1, Pr
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT Prod_id, Prod_name, Prod_img, Design_price, ProdType_id, Prod_weight1, Pro" +
-                "d_weight2, Prod_weight3, Prod_instock, enable FROM dbo.Product";
+                "d_weight2, Prod_weight3, Prod_instock, enable FROM dbo.Product WHERE enable = \'0" +
+                "\' ORDER BY Prod_id DESC";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -15678,7 +15679,8 @@ SELECT ProdType_id, ProdType_name, enable FROM Product_Type WHERE (ProdType_id =
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ProdType_id, ProdType_name, enable FROM dbo.Product_Type";
+            this._commandCollection[0].CommandText = "SELECT ProdType_id, ProdType_name, enable FROM dbo.Product_Type WHERE enable = 0 " +
+                "";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -16657,10 +16659,8 @@ SELECT Sale_id, Sale_date, Total_amount, Bill_no FROM Sale WHERE (Sale_id = @Sal
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_enable", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "enable", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Supplier] ([Supp_id], [Supp_name], [Supp_tel], [Supp_addr], [e" +
-                "nable]) VALUES (@Supp_id, @Supp_name, @Supp_tel, @Supp_addr, @enable);\r\nSELECT S" +
-                "upp_id, Supp_name, Supp_tel, Supp_addr, enable FROM Supplier WHERE (Supp_id = @S" +
-                "upp_id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Supplier] ([Supp_id], [Supp_name], [Supp_tel], [Supp_addr], [enable]) VALUES (@Supp_id, @Supp_name, @Supp_tel, @Supp_addr, @enable);
+SELECT Supp_id, Supp_name, Supp_tel, Supp_addr, enable FROM Supplier WHERE (Supp_id = @Supp_id) ORDER BY Supp_id DESC";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Supp_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Supp_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Supp_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Supp_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -16670,7 +16670,7 @@ SELECT Sale_id, Sale_date, Total_amount, Bill_no FROM Sale WHERE (Sale_id = @Sal
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Supplier] SET [Supp_id] = @Supp_id, [Supp_name] = @Supp_name, [Supp_tel] = @Supp_tel, [Supp_addr] = @Supp_addr, [enable] = @enable WHERE (([Supp_id] = @Original_Supp_id) AND ((@IsNull_Supp_name = 1 AND [Supp_name] IS NULL) OR ([Supp_name] = @Original_Supp_name)) AND ((@IsNull_Supp_tel = 1 AND [Supp_tel] IS NULL) OR ([Supp_tel] = @Original_Supp_tel)) AND ((@IsNull_Supp_addr = 1 AND [Supp_addr] IS NULL) OR ([Supp_addr] = @Original_Supp_addr)) AND ((@IsNull_enable = 1 AND [enable] IS NULL) OR ([enable] = @Original_enable)));
-SELECT Supp_id, Supp_name, Supp_tel, Supp_addr, enable FROM Supplier WHERE (Supp_id = @Supp_id)";
+SELECT Supp_id, Supp_name, Supp_tel, Supp_addr, enable FROM Supplier WHERE (Supp_id = @Supp_id) ORDER BY Supp_id DESC";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Supp_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Supp_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Supp_name", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Supp_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -16701,7 +16701,8 @@ SELECT Supp_id, Supp_name, Supp_tel, Supp_addr, enable FROM Supplier WHERE (Supp
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Supp_id, Supp_name, Supp_tel, Supp_addr, enable FROM dbo.Supplier";
+            this._commandCollection[0].CommandText = "SELECT Supp_id, Supp_name, Supp_tel, Supp_addr, enable FROM dbo.Supplier WHERE en" +
+                "able = \'0\' ORDER BY Supp_id DESC";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
