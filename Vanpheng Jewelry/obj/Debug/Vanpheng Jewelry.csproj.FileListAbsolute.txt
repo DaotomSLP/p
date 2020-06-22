@@ -224,10 +224,6 @@ C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.frmReportSaleOrde
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Login.resources
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng_Jewelry.Sale_Order.resources
 C:\t\Window_base\p\Vanpheng Jewelry\obj\Debug\Vanpheng Jewelry.csproj.CopyComplete
-D:\finalproject\p\Vanpheng Jewelry\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-D:\finalproject\p\Vanpheng Jewelry\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-D:\finalproject\p\Vanpheng Jewelry\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-D:\finalproject\p\Vanpheng Jewelry\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 D:\finalproject\p\Vanpheng Jewelry\bin\Debug\Database1.mdf
 D:\finalproject\p\Vanpheng Jewelry\bin\Debug\Database1_log.ldf
 D:\finalproject\p\Vanpheng Jewelry\bin\Debug\Vanpheng Jewelry.exe.config

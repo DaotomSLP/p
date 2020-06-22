@@ -40,7 +40,7 @@ namespace Vanpheng_Jewelry
             lblHead.Text = "Bán hàng";
             label1.Text = "Total";
             DgvLoad();
-            loadProduct("WHERE Prod_instock > 0 Order by Prod_id DESC");
+            loadProduct("WHERE Prod_instock > 0 AND enable = 0 Order by Prod_id DESC");
             ComboBoxLoadProd_type();
             Database database = new Database();
             txtId.Text = database.generateId("SELECT MAX(Sale_id) FROM Sale").ToString();
@@ -53,7 +53,7 @@ namespace Vanpheng_Jewelry
             label1.Text = "Nhà cũng cấp sản phẩm";
             lblHead.Text = "Đơn đặt hàng";
             DgvLoad();
-            loadProduct("Order by Prod_id DESC");
+            loadProduct("WHERE enable =0  Order by Prod_id DESC");
             ComboBoxLoadProd_type();
             Database database = new Database();
             txtId.Text = database.generateId("SELECT MAX(Order_id) FROM Orders").ToString();

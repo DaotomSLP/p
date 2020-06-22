@@ -130,7 +130,7 @@ namespace Vanpheng_Jewelry
             Database database = new Database();
             SqlDataReader dr = database.LoadData(@"SELECT P.Prod_id,Prod_name,Order_qty FROM dbo.Orders O
             INNER JOIN dbo.Order_detail Od ON O.Order_id=Od.Order_id INNER JOIN 
-             Product P ON Od.Prod_id=P.Prod_id WHERE O.Order_id = '"+txtOrder_id.Text+ "' AND Od.Order_is_success = 1");
+             Product P ON Od.Prod_id=P.Prod_id WHERE O.Order_id = '"+txtOrder_id.Text+ "' AND Od.Order_is_success = 1 AND P.enable = 0");
             while (dr.Read())
             {
                 dgvOrder_details.Rows.Add(
